@@ -6,3 +6,4 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = <h1>Faux Flix</h1>
     ReactDOM.render(title, root);
 });
+
