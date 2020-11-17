@@ -13,5 +13,27 @@
     "redux": "^4.0.5",
     "webpack": "^5.4.0",
     "webpack-cli": "^4.2.0"
-  }
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "webpack.comfig.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherCFleming/FauxFlix.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristopherCFleming/FauxFlix/issues"
+  },
+  "homepage": "https://github.com/ChristopherCFleming/FauxFlix#readme"
 }
