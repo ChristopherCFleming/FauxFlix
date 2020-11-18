@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //Components
+import GreetingContainer from './greeting/greeting_container'
 import Root from './root';
 import configureStore from '../store/store';
 
@@ -9,17 +10,9 @@ import configureStore from '../store/store';
 const App = () => (
     <div>
         <header>
-            <Link to="/" className="header-link">
-                <h1>Faux Flix</h1>
-                <GreetingContainer />
-            </Link>
+            <h1>Faux Flix</h1>
+            <GreetingContainer />
         </header>
-        <Switch>
-            <AuthRoute exact path="/login" component={LogInFormContainer} />
-            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-            <Route exact path="/" component={SearchContainer} />
-        </Switch>
     </div>
 );
-
 export default App;
