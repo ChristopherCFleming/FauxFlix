@@ -11,6 +11,7 @@ const App = () => (
         <header>
             <Link to="/" className="header-link">
                 <h1>Faux Flix</h1>
+                <GreetingContainer />
             </Link>
         </header>
         <Switch>
