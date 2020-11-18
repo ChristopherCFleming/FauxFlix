@@ -12,7 +12,6 @@ const App = () => (
             <Link to="/" className="header-link">
                 <h1>Faux Flix</h1>
             </Link>
-            <GreetingContainer />
         </header>
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
