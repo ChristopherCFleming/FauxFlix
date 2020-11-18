@@ -11,5 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 =======
     const store = configureStore();
     ReactDOM.render(<Root store={store}/>, root);
+<<<<<<< HEAD
 >>>>>>> auth
 });
+=======
+});
+>>>>>>> auth
