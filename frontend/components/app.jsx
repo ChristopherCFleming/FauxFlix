@@ -1,6 +1,7 @@
 //React
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
 //Components
 import GreetingContainer from './greeting/greeting_container';
 import Root from './root';
