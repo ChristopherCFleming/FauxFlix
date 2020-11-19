@@ -8,6 +8,7 @@ import Root from './root';
 import configureStore from '../store/store';
 import LoginContainer from './session_form/login_container';
 import SignupContainer from './session_form/signup_form_container';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
 const App = () => (
@@ -16,8 +17,8 @@ const App = () => (
             <h1>Faux Flix</h1>
             <GreetingContainer />
         </header>
-        <Route path="/login" component={LoginContainer} />
-        <Route path="/signup" component={SignupContainer} />
+        <AuthRoute path="/login" component={LoginContainer} />
+        <AuthRoute path="/signup" component={SignupContainer} />
     </div>
 );
 export default App;
