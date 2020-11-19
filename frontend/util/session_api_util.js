@@ -1,6 +1,6 @@
 export const login = user => (
     $.ajax({
-        method: 'POST',
+        method: 'POST',   
         url: '/api/session',
         data: { user }
     })
@@ -20,3 +20,7 @@ export const logout = () => (
         url: '/api/session'
     })
 );
+
+window.login = login;   
+window.signup = signup;  //doeesn't seem to work...
+window.logout = logout;

@@ -8,9 +8,9 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login(@user)
-      render "api/users/show"
+      render "api/users/show"   #Show isn't defined here. How can we get to show?
     else
-      render json: ["Invalid email/password combination"], status: 401
+      render json: ["Incorrect password. Please try again or you can reset your password."], status: 401
     end
   end
 
@@ -20,7 +20,8 @@ class Api::SessionsController < ApplicationController
       logout
       render "api/users/show"
     else
-      render json: ["Nobody signed in"], status: 404
+      # render json: ["Nobody signed in"], status: 404  #was this, but need to redirect to login page
+      render "api/session/create"
     end
   end
 end
