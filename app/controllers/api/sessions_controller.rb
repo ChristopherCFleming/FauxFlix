@@ -1,6 +1,6 @@
 class Api::SessionsController < ApplicationController
   
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
 
 
   def create
@@ -8,7 +8,7 @@ class Api::SessionsController < ApplicationController
       params[:user][:email],
       params[:user][:password]
     )
-
+    debugger
     if @user
       login(@user)
       render "api/users/show"   #Show isn't defined here. How can we get to show?

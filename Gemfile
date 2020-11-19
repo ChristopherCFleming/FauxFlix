@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 gem 'jquery-rails'
+gem 'bcrypt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 # Use postgresql as the database for Active Record
@@ -50,7 +51,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
-  gem 'bcrypt'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
