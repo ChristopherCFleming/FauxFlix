@@ -19,7 +19,6 @@ const receiveErrors = errors => ({
 });
 
 export const signup = user => dispatch => {
-    debugger;
     return APIUtil.signup(user)
     .then(user => (dispatch(receiveCurrentUser(user))
     ), err => (dispatch(receiveErrors(err.responseJSON)) //Adding errors here, right?
@@ -27,7 +26,6 @@ export const signup = user => dispatch => {
 };
 
 export const login = user => dispatch => {
-    // debugger;
     return APIUtil.login(user)
     .then(user => (dispatch(receiveCurrentUser(user))
     ), err => (dispatch(receiveErrors(err.responseJSON))

@@ -8,7 +8,7 @@ class Api::SessionsController < ApplicationController
       params[:user][:email],
       params[:user][:password]
     )
-    debugger
+  
     if @user
       login(@user)
       render "api/users/show"   #Show isn't defined here. How can we get to show?
