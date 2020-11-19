@@ -1,25 +1,23 @@
 //React
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
 //Components
+import GreetingContainer from './greeting/greeting_container';
 import Root from './root';
 import configureStore from '../store/store';
+import LoginContainer from './session_form/login_container';
+import SignupContainer from './session_form/signup_form_container';
 
 
 const App = () => (
     <div>
         <header>
-            <Link to="/" className="header-link">
-                <h1>Faux Flix</h1>
-                <GreetingContainer />
-            </Link>
+            <h1>Faux Flix</h1>
+            <GreetingContainer />
         </header>
-        <Switch>
-            <AuthRoute exact path="/login" component={LogInFormContainer} />
-            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-            <Route exact path="/" component={SearchContainer} />
-        </Switch>
+        <Route path="/login" component={LoginContainer} />
+        <Route path="/signup" component={SignupContainer} />
     </div>
 );
-
 export default App;
