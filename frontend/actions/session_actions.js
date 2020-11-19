@@ -4,7 +4,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
-const receiveCurrentUser = currentUser => ({  //Export const was here before, but changed it to regular const.
+const receiveCurrentUser = currentUser => ({ 
     type: RECEIVE_CURRENT_USER,
     currentUser
 });
@@ -21,15 +21,14 @@ const receiveErrors = errors => ({
 export const signup = user => dispatch => (
     APIUtil.signup(user)
     .then(user => (dispatch(receiveCurrentUser(user))
-    ), err => (dispatch(receiveErrors(err.responseJSON)) //copied this part. What's going on?
+    ), err => (dispatch(receiveErrors(err.responseJSON)) //Adding errors here, right?
     ))
 );
 
 export const login = user => dispatch => (
-    APIUtil.login(user).then(user => (
-        dispatch(receiveCurrentUser(user))
-    ), err => (
-        dispatch(receiveErrors(err.responseJSON))
+    APIUtil.login(user)
+    .then(user => (dispatch(receiveCurrentUser(user))
+    ), err => (dispatch(receiveErrors(err.responseJSON))
     ))
 );
 
