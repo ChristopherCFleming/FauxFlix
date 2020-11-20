@@ -11,14 +11,21 @@ import SignupContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
+
 const App = () => (
     <div>
         <header>
-            <h1>Faux Flix</h1>
+            <link rel="stylesheet" href="../../app/assets/stylesheets/main_stylesheet.css" type="text/css" />
+            <h1>FauxFlix - Watch TV Shows Online, Watch Movies Online</h1>
+            
             <GreetingContainer />
+
         </header>
+        <p class="testing">Testing</p>
+
         <AuthRoute path="/login" component={LoginContainer} />
         <AuthRoute path="/signup" component={SignupContainer} />
+        <h1></h1>
     </div>
 );
 export default App;
