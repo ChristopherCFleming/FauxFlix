@@ -10,14 +10,12 @@ import LoginContainer from './session_form/login_container';
 import SignupContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
-
-
 const App = () => (
     <div>
         <header>
             <link rel="stylesheet" href="../../app/assets/stylesheets/main_stylesheet.css" type="text/css" />
             <h1>FauxFlix - Watch TV Shows Online, Watch Movies Online</h1>
-            <img src={window.backgroundURL} alt="Background Image" />
+            <img src={window.backgroundURL} alt="Background Image" className="background"/>
             <GreetingContainer />
 
         </header>
