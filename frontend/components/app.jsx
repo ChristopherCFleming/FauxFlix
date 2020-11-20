@@ -17,11 +17,12 @@ const App = () => (
         <header>
             <link rel="stylesheet" href="../../app/assets/stylesheets/main_stylesheet.css" type="text/css" />
             <h1>FauxFlix - Watch TV Shows Online, Watch Movies Online</h1>
-            
+            <img src={window.backgroundURL} alt="Background Image" />
             <GreetingContainer />
 
         </header>
-        <p class="testing">Testing</p>
+        <p className="testing">Testing</p>
+
 
         <AuthRoute path="/login" component={LoginContainer} />
         <AuthRoute path="/signup" component={SignupContainer} />
