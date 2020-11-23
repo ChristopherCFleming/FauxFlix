@@ -3,5 +3,7 @@ class Video < ApplicationRecord
 
     has_many :video_genres,
         foreign_key: :video_id,
-        clas_name: :VideoGenre
+        class_name: :VideoGenre
+
+    has_one_attached :video
 end

@@ -4,6 +4,5 @@ class CreateGenres < ActiveRecord::Migration[5.2]
       t.string :genre, null: false
       t.timestamps
     end
-    add_index :genres, :genre
   end
 end
