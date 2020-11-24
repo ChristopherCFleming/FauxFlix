@@ -8,12 +8,14 @@ import Root from './root';
 import configureStore from '../store/store';
 import LoginContainer from './session_form/login_container';
 import SignupContainer from './session_form/signup_form_container';
+// import stylesheet from '../../app/assets/stylesheets/main_stylesheet.css'    //Do I even need this?
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div>
         <header>
             <link rel="stylesheet" href="../../app/assets/stylesheets/main_stylesheet.css" type="text/css" />
+            {/* <%= stylesheet_link_tag "main_stylesheet" %> How to use this?? */}
             <h1>FauxFlix - Watch TV Shows Online, Watch Movies Online</h1>
             <img src={window.backgroundURL} alt="Background Image" className="background"/>
             <GreetingContainer />
