@@ -9,7 +9,7 @@
 #  updated_at  :datetime         not null
 #
 class Video < ApplicationRecord
-    validates :title, :description, :genre_id, null: false
+    validates :title, :description, null: false
 
     has_many :video_genres,
         foreign_key: :video_id,
