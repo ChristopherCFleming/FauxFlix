@@ -14,10 +14,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
     <div>
         <header>
-            <link rel="stylesheet" href="../../app/assets/stylesheets/main_stylesheet.css" type="text/css" />
-            {/* <%= stylesheet_link_tag "main_stylesheet" %> How to use this?? */}
             <h1>FauxFlix - Watch TV Shows Online, Watch Movies Online</h1>
-            <img src={window.backgroundURL} alt="Background Image" className="background"/>
+            {/* <img src={window.backgroundURL} alt="Background Image" className="background"/> */}
             <GreetingContainer />
 
         </header>

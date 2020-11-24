@@ -15,5 +15,9 @@ class Video < ApplicationRecord
         foreign_key: :video_id,
         class_name: :VideoGenre
 
+    has_many :genres,
+        through: :video_genres,
+        source: :genre
+
     has_one_attached :video
 end
