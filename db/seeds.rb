@@ -13,9 +13,23 @@ User.destroy_all
 VideoGenre.destroy_all
 
 sabrina = Video.create!(title: "The Chilling Adventures of Sabrina", description: "Magic and mischief collide as half-human, half-witch Sabrina navigates between two worlds: mortal teen life and her family's legacy, the Church of Night")
+sabrinav = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina_final.mp4')
+sabrina.video.attach(io: sabrinav, filename: 'sabrina_final.mp4')
+
 sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from cities around the globe begin having experiences that defy explanation.")
+sense8v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8_final.mp4')
+sense8.video.attach(io: sense8v, filename: 'sense8_final.mp4')
+
 becoming = Video.create!(title: "Becoming", description: "Joyful. Honest. Inspiring. Michelle Obama brings us up clsoe and behind the scenes of her history-making book tour.")
+becomingv = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/becoming_final.mp4')
+becoming.video.attach(io: becomingv, filename: 'becoming_final.mp4')
+
 hill_house = Video.create!(title: "The Haunting of Hill House", description: "Flashing between past and present, a fractured family confronts haunting memories of their old home and the terrifying events that drove them from it.")
+hill_housev = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/hill_house_final.mp4')
+hill_house.video.attach(io: hill_housev, filename: 'hill_house_final.mp4')
+
+
+
 
 horror = Genre.create!(genre: "Horror")
 dark = Genre.create!(genre: "Dark")

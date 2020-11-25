@@ -1,2 +1,3 @@
-json.extract! @video, :title, :description
-json.videoURL url_for(@video.video)
+@videos.each do |video|
+    json.extract! :title, :description, :video
+end
