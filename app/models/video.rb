@@ -20,4 +20,5 @@ class Video < ApplicationRecord
         source: :genre
 
     has_one_attached :video
+
 end

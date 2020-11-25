@@ -1,15 +1,9 @@
 class API::VideosController < ApplicationController
     def show
-        @video = Video.find(params[:id])
+        @video = Video.find_by(params[:id])
         render "api/videos/show"
-        # render :show   what's difference?
+        # render :show   here, no difference. BUT, if wanted to render a different show page from a different controller, must use the above version.
     end
-
-    #trying to render all from genre
-    # def show
-    #     @videos = Video.all.select(video => video.genre == params[:genre])
-    #     render "api/videos/show"
-    # end
 
     def index
         @videos = Video.all
