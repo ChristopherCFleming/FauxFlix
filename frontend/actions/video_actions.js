@@ -17,12 +17,12 @@ const receiveVideo = video => {
     }
 }
 
-export const allVideos = videos => dispatch => {
-    return APIVideoUtil.allVideos(videos)
+export const allVideos = () => dispatch => {
+    return APIVideoUtil.allVideos()
     .then(videos => dispatch(receiveVideos(videos)))
 }
 
-export const showVideo = video => dispatch => {
-    return APIVideoUtil.showVideos(video)
-        .then(video => dispatch(receiveVideo(video)))
+export const showVideo = video_id => dispatch => {
+    return APIVideoUtil.showVideos(video_id)
+        .then(payload_video => dispatch(receiveVideo(payload_video)))
 }

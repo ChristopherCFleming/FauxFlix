@@ -4,5 +4,5 @@ import videosReducer from './videos_reducer';
 
 export default combineReducers({
     users,
-    videosReducer
+    videosReducer,
 });
