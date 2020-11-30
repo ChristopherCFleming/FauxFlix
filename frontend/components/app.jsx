@@ -20,7 +20,7 @@ const App = () => (
             <GreetingContainer />
 
         </header>
-        <p className="testing">Testing</p>
+        
 
 
         <AuthRoute path="/login" component={LoginContainer} />
