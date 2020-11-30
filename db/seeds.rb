@@ -30,7 +30,6 @@ hill_house.video.attach(io: hill_housev, filename: 'hill_house_final.mp4')
 
 
 
-
 horror = Genre.create!(genre: "Horror")
 dark = Genre.create!(genre: "Dark")
 comedy = Genre.create!(genre: "Comedy")
