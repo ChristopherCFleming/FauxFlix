@@ -17,7 +17,7 @@ const App = () => (
         <header>
             <h1>FauxFlix - Watch TV Shows Online, Watch Movies Online</h1>
             <img src={window.backgroundURL} alt="Background Image" className="background"/>
-            <GreetingContainer />
+            
 
         </header>
         
