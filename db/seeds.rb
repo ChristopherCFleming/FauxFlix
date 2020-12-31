@@ -181,7 +181,3 @@ VideoGenre.create!(video_id: unbreakable.id, genre_id: comedy.id)
 VideoGenre.create!(video_id: witcher.id, genre_id: dark.id)
 VideoGenre.create!(video_id: witcher.id, genre_id: drama.id)
 VideoGenre.create!(video_id: witcher.id, genre_id: fantasy.id)
-
-
-
-
