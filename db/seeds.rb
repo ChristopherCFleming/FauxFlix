@@ -167,4 +167,9 @@ VideoGenre.create!(video_id: stranger_things.id, genre_id: sci_fi.id)
 VideoGenre.create!(video_id: stranger_things.id, genre_id: drama.id)
 VideoGenre.create!(video_id: stranger_things.id, genre_id: fantasy.id)
 
-VideoGenre.create!(video_id: .id, genre_id: .id)
+VideoGenre.create!(video_id: politician.id, genre_id: comedy.id)
+VideoGenre.create!(video_id: politician.id, genre_id: politics.id)
+VideoGenre.create!(video_id: politician.id, genre_id: drama.id)
+
+VideoGenre.create!(video_id: tidying_up.id, genre_id: reality_tv.id)
+
