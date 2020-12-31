@@ -16,21 +16,27 @@ demoUser = User.create(email:"testing0@gmail.com", password: "testing0");
 
 sabrina = Video.create!(title: "The Chilling Adventures of Sabrina", description: "Magic and mischief collide as half-human, half-witch Sabrina navigates between two worlds: mortal teen life and her family's legacy, the Church of Night")
 sabrinav = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina_final.mp4')
-sabrina_thumb = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina.jpg')
 sabrina.video.attach(io: sabrinav, filename: 'sabrina_final.mp4')
-sabrina.thumbnail_url.attach(io: sabrina_thumb, filename: "sabrina.jpg")
+sabrina_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina.jpg')
+sabrina.thumbnail_url.attach(io: sabrina_t, filename: "sabrina.jpg")
 
 sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from cities around the globe begin having experiences that defy explanation.")
 sense8v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8_final.mp4')
 sense8.video.attach(io: sense8v, filename: 'sense8_final.mp4')
+sense8_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8.jpg')
+sense8.thumbnail_url.attach(io: sense8_t, filename: "sense8.jpg")
 
 becoming = Video.create!(title: "Becoming", description: "Joyful. Honest. Inspiring. Michelle Obama brings us up clsoe and behind the scenes of her history-making book tour.")
 becomingv = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/becoming_final.mp4')
 becoming.video.attach(io: becomingv, filename: 'becoming_final.mp4')
+becoming_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/becoming.jpg')
+becoming.thumbnail_url.attach(io: becoming_t, filename: "becoming.jpg")
 
 hill_house = Video.create!(title: "The Haunting of Hill House", description: "Flashing between past and present, a fractured family confronts haunting memories of their old home and the terrifying events that drove them from it.")
 hill_housev = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/hill_house_final.mp4')
 hill_house.video.attach(io: hill_housev, filename: 'hill_house_final.mp4')
+hill_house_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/haunting.jpg')
+hill_house.thumbnail_url.attach(io: hill_house_t, filename: "haunting.jpg")
 
 
 
