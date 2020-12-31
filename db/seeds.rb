@@ -123,6 +123,7 @@ psychological = Genre.create!(genre: "Psychological Thriller")
 politics = Genre.create!(genre: "Politics")
 reality_tv = Genre.create!(genre: "Reality Television")
 
+
 VideoGenre.create!(video_id: sabrina.id, genre_id: horror.id)
 VideoGenre.create!(video_id: sabrina.id, genre_id: dark.id)
 VideoGenre.create!(video_id: sabrina.id, genre_id: comedy.id)
@@ -137,3 +138,24 @@ VideoGenre.create!(video_id: becoming.id, genre_id: politics.id)
 VideoGenre.create!(video_id: hill_house.id, genre_id: horror.id)
 VideoGenre.create!(video_id: hill_house.id, genre_id: dark.id)
 VideoGenre.create!(video_id: hill_house.id, genre_id: psychological.id)
+
+VideoGenre.create!(video_id: house_of_cards.id, genre_id: horror.id)
+VideoGenre.create!(video_id: house_of_cards.id, genre_id: psychological.id)
+VideoGenre.create!(video_id: house_of_cards.id, genre_id: drama.id)
+
+VideoGenre.create!(video_id: maniac.id, genre_id: dark.id)
+VideoGenre.create!(video_id: maniac.id, genre_id: sci_fi.id)
+VideoGenre.create!(video_id: maniac.id, genre_id: psychological.id)
+
+VideoGenre.create!(video_id: queens_gambit.id, genre_id: dark.id)
+VideoGenre.create!(video_id: queens_gambit.id, genre_id: drama.id)
+VideoGenre.create!(video_id: queens_gambit.id, genre_id: psychological.id)
+
+VideoGenre.create!(video_id: ratched.id, genre_id: dark.id)
+VideoGenre.create!(video_id: ratched.id, genre_id: drama.id)
+VideoGenre.create!(video_id: ratched.id, genre_id: psychological.id)
+
+VideoGenre.create!(video_id: russian_doll.id, genre_id: .id)
+VideoGenre.create!(video_id: russian_doll.id, genre_id: .id)
+VideoGenre.create!(video_id: russian_doll.id, genre_id: .id)
+
