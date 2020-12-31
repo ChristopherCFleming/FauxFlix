@@ -12,10 +12,13 @@ Genre.destroy_all
 User.destroy_all
 VideoGenre.destroy_all
 
+demoUser = User.create(email:"testing0@gmail.com", password: "testing0");
+
 sabrina = Video.create!(title: "The Chilling Adventures of Sabrina", description: "Magic and mischief collide as half-human, half-witch Sabrina navigates between two worlds: mortal teen life and her family's legacy, the Church of Night")
 sabrinav = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina_final.mp4')
-sabrina_thumb = open('')
+sabrina_thumb = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina.jpg')
 sabrina.video.attach(io: sabrinav, filename: 'sabrina_final.mp4')
+sabrina.thumbnail_url.attach(io: sabrina_thumb, filename: "sabrina.jpg")
 
 sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from cities around the globe begin having experiences that defy explanation.")
 sense8v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8_final.mp4')
