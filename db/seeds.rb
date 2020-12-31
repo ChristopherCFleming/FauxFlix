@@ -14,6 +14,7 @@ VideoGenre.destroy_all
 
 sabrina = Video.create!(title: "The Chilling Adventures of Sabrina", description: "Magic and mischief collide as half-human, half-witch Sabrina navigates between two worlds: mortal teen life and her family's legacy, the Church of Night")
 sabrinav = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina_final.mp4')
+sabrina_thumb = open('')
 sabrina.video.attach(io: sabrinav, filename: 'sabrina_final.mp4')
 
 sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from cities around the globe begin having experiences that defy explanation.")
