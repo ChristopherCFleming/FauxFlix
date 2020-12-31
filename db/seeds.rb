@@ -14,23 +14,18 @@ VideoGenre.destroy_all
 
 demoUser = User.create(email:"testing0@gmail.com", password: "testing0");
 
-sabrina = Video.create!(title: "The Chilling Adventures of Sabrina", description: "Magic and mischief collide as half-human, half-witch Sabrina navigates between two worlds: mortal teen life and her family's legacy, the Church of Night")
-sabrinav = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina_final.mp4')
-sabrina.video.attach(io: sabrinav, filename: 'sabrina_final.mp4')
-sabrina_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina.jpg')
-sabrina.thumbnail_url.attach(io: sabrina_t, filename: "sabrina.jpg")
-
-sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from cities around the globe begin having experiences that defy explanation.")
-sense8v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8_final.mp4')
-sense8.video.attach(io: sense8v, filename: 'sense8_final.mp4')
-sense8_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8.jpg')
-sense8.thumbnail_url.attach(io: sense8_t, filename: "sense8.jpg")
 
 becoming = Video.create!(title: "Becoming", description: "Joyful. Honest. Inspiring. Michelle Obama brings us up clsoe and behind the scenes of her history-making book tour.")
 becomingv = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/becoming_final.mp4')
 becoming.video.attach(io: becomingv, filename: 'becoming_final.mp4')
 becoming_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/becoming.jpg')
 becoming.thumbnail_url.attach(io: becoming_t, filename: "becoming.jpg")
+
+great_british = Video.create!(title: "The Great British Baking Show", description: "The search for Britain's best amateur baker is back as 12 passionate baking fans compete for the title.")
+great_british_v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/the_great_british_baking_show_final.mp4')
+great_british.video.attach(io: great_british_v, filename: 'the_great_british_baking_show_final.mp4')
+great_british_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/great_british.jpg')
+great_british.thumbnail_url.attach(io: great_british_t, filename: "great_british.jpg")
 
 hill_house = Video.create!(title: "The Haunting of Hill House", description: "Flashing between past and present, a fractured family confronts haunting memories of their old home and the terrifying events that drove them from it.")
 hill_housev = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/hill_house_final.mp4')
@@ -68,11 +63,23 @@ russian_doll.video.attach(io: russian_doll_v, filename: 'russian_doll_final.mp4'
 russian_doll_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/russian_doll.jpg')
 russian_doll.thumbnail_url.attach(io: russian_doll_t, filename: "russian_doll.jpg")
 
-sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from different parts of the world discover that they are sensates, human beings who are mentally and emotionally linked.")
-sense8_v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8_final.mp4')
-sense8.video.attach(io: sense8_v, filename: 'sense8_final.mp4')
+sabrina = Video.create!(title: "The Chilling Adventures of Sabrina", description: "Magic and mischief collide as half-human, half-witch Sabrina navigates between two worlds: mortal teen life and her family's legacy, the Church of Night")
+sabrinav = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina_final.mp4')
+sabrina.video.attach(io: sabrinav, filename: 'sabrina_final.mp4')
+sabrina_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina.jpg')
+sabrina.thumbnail_url.attach(io: sabrina_t, filename: "sabrina.jpg")
+
+sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from cities around the globe begin having experiences that defy explanation.")
+sense8v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8_final.mp4')
+sense8.video.attach(io: sense8v, filename: 'sense8_final.mp4')
 sense8_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8.jpg')
 sense8.thumbnail_url.attach(io: sense8_t, filename: "sense8.jpg")
+
+politician = Video.create!(title: "The Politician", description: "Wealthy high school student Payton Hobart has known since he was 7 years old that he is going to be the president of the United States.")
+politician_v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/the_politician_final.mp4')
+politician.video.attach(io: the_politician_v, filename: 'the_politician_final.mp4')
+politician_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/politician.jpg')
+politician.thumbnail_url.attach(io: the_politician_t, filename: "politician.jpg")
 
 space_force = Video.create!(title: "Space Force", description: "General Mark Naird (Steve Carell) is tasked with establishing the sixth branch of the United States Armed Forces, the United States Space Force.")
 space_force_v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/space_force_final.mp4')
@@ -92,17 +99,17 @@ tidying_up.video.attach(io: tidying_up_v, filename: 'tidying_up_with_marie_kondo
 tidying_up_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/tidying_up.jpg')
 tidying_up.thumbnail_url.attach(io: tidying_up_t, filename: "tidying_up.jpg")
 
-tidying_up = Video.create!(title: "Tidying Up with Marie Kondo", description: "When people lead busy lives, their homes sometimes become cluttered with things piling up over time. In this series, renowned tidying expert Marie Kondo tries to help folks declutter their homes -- and their lives.")
-tidying_up_v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/tidying_up_with_marie_kondo_final.mp4')
-tidying_up.video.attach(io: tidying_up_v, filename: 'tidying_up_with_marie_kondo_final.mp4')
-tidying_up_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/tidying_up.jpg')
-tidying_up.thumbnail_url.attach(io: tidying_up_t, filename: "tidying_up.jpg")
-
 unbreakable = Video.create!(title: "Unbreakable Kimmy Schmidt", description: "Rescued after 15 years in a cult, Kimmy Schmidt decides to reclaim her life by venturing to New York, where she experiences everyday life with wide-eyed enthusiasm.")
 unbreakable_v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/unbreakable_kimmy_schmidt_final.mp4')
 unbreakable.video.attach(io: unbreakable_v, filename: 'unbreakable_kimmy_schmidt_final.mp4')
 unbreakable_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/unbreakable.jpg')
 unbreakable.thumbnail_url.attach(io: unbreakable_t, filename: "unbreakable.jpg")
+
+witcher = Video.create!(title: "The Witcher", description: "The witcher Geralt, a mutated monster hunter, struggles to find his place in a world in which people often prove more wicked than beasts.")
+witcher_v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/witcher_final.mp4')
+witcher.video.attach(io: witcher_v, filename: 'witcher_final.mp4')
+witcher_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/witcher.jpg')
+witcher.thumbnail_url.attach(io: witcher_t, filename: "witcher.jpg")
 
 
 
