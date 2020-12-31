@@ -136,6 +136,7 @@ VideoGenre.create!(video_id: sense8.id, genre_id: fantasy.id)
 VideoGenre.create!(video_id: great_british.id, genre_id: reality_tv.id)
 
 VideoGenre.create!(video_id: becoming.id, genre_id: politics.id)
+VideoGenre.create!(video_id: becoming.id, genre_id: reality_tv.id)
 
 VideoGenre.create!(video_id: hill_house.id, genre_id: horror.id)
 VideoGenre.create!(video_id: hill_house.id, genre_id: dark.id)
