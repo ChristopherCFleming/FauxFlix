@@ -133,6 +133,8 @@ VideoGenre.create!(video_id: sense8.id, genre_id: sci_fi.id)
 VideoGenre.create!(video_id: sense8.id, genre_id: drama.id)
 VideoGenre.create!(video_id: sense8.id, genre_id: fantasy.id)
 
+VideoGenre.create!(video_id: great_british.id, genre_id: reality_tv.id)
+
 VideoGenre.create!(video_id: becoming.id, genre_id: politics.id)
 
 VideoGenre.create!(video_id: hill_house.id, genre_id: horror.id)
@@ -155,9 +157,9 @@ VideoGenre.create!(video_id: ratched.id, genre_id: dark.id)
 VideoGenre.create!(video_id: ratched.id, genre_id: drama.id)
 VideoGenre.create!(video_id: ratched.id, genre_id: psychological.id)
 
-VideoGenre.create!(video_id: russian_doll.id, genre_id: .id)
-VideoGenre.create!(video_id: russian_doll.id, genre_id: .id)
-VideoGenre.create!(video_id: russian_doll.id, genre_id: .id)
+VideoGenre.create!(video_id: russian_doll.id, genre_id: dark.id)
+VideoGenre.create!(video_id: russian_doll.id, genre_id: comedy.id)
+VideoGenre.create!(video_id: russian_doll.id, genre_id: psychological.id)
 
 VideoGenre.create!(video_id: space_force.id, genre_id: comedy.id)
 VideoGenre.create!(video_id: space_force.id, genre_id: sci_fi.id)
@@ -172,4 +174,13 @@ VideoGenre.create!(video_id: politician.id, genre_id: politics.id)
 VideoGenre.create!(video_id: politician.id, genre_id: drama.id)
 
 VideoGenre.create!(video_id: tidying_up.id, genre_id: reality_tv.id)
+
+VideoGenre.create!(video_id: unbreakable.id, genre_id: comedy.id)
+
+VideoGenre.create!(video_id: witcher.id, genre_id: dark.id)
+VideoGenre.create!(video_id: witcher.id, genre_id: drama.id)
+VideoGenre.create!(video_id: witcher.id, genre_id: fantasy.id)
+
+
+
 
