@@ -5,9 +5,8 @@ class Api::GenresController < ApplicationController
     #     render :index
     # end
     
-    def show
-        @genre = Genre.find_by(params[:id])
-        @videos_in_genre = @genre.video_ids
-        render "api/genre/id"
+    def index
+        @genres = Genre.all.includes(:videos)
+        render :index
     end
 end
