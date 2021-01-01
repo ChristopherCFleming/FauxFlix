@@ -1,13 +1,14 @@
-export const showVideo = video_id => {
+
+export const fetchVideo = (videoId)=>{
     return $.ajax({
-        method: 'GET',
-        url: `/api/videos/${video_id}`,
+        url: `api/videos/${videoId}`
     })
 };
 
-export const allVideos = () => {
+export const fetchVideosByGenre = (genreId, type)=>{
     return $.ajax({
-        method: 'GET',
-        url: `/api/videos`
+        url: type ? 
+        `api/genres/${genreId}/videos/?type=${type}` : 
+        `api/genres/${genreId}/videos`
     })
-}
+};
