@@ -79,9 +79,9 @@ sense8.thumbnail.attach(io: sense8_t, filename: "sense8.jpg")
 
 politician = Video.create!(title: "The Politician", description: "Wealthy high school student Payton Hobart has known since he was 7 years old that he is going to be the president of the United States.")
 politician_v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/the_politician_final.mp4')
-politician.video.attach(io: the_politician_v, filename: 'the_politician_final.mp4')
+politician.video.attach(io: politician_v, filename: 'the_politician_final.mp4')
 politician_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/politician.jpg')
-politician.thumbnail.attach(io: the_politician_t, filename: "politician.jpg")
+politician.thumbnail.attach(io: politician_t, filename: "politician.jpg")
 
 space_force = Video.create!(title: "Space Force", description: "General Mark Naird (Steve Carell) is tasked with establishing the sixth branch of the United States Armed Forces, the United States Space Force.")
 space_force_v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/space_force_final.mp4')
