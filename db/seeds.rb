@@ -28,7 +28,7 @@ great_british_v = open('/Users/christophercfleming/Desktop/netflix_trailers/Shor
 great_british.video.attach(io: great_british_v, filename: 'the_great_british_baking_show_final.mp4')
 great_british_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/great_british.jpg')
 great_british.thumbnail.attach(io: great_british_t, filename: "great_british.jpg")
-great_british.save!
+great_british.save
 
 # hill_house = Video.create!(title: "The Haunting of Hill House", description: "Flashing between past and present, a fractured family confronts haunting memories of their old home and the terrifying events that drove them from it.")
 # hill_housev = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/hill_house_final.mp4')
