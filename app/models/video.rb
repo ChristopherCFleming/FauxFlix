@@ -21,6 +21,8 @@ class Video < ApplicationRecord
 
     has_one_attached :video
 
+    has_one_attached :thumbnail
+
     def self.find_all
         Video.with_attached_thumbnail_url.all.includes(:genres)
     end
