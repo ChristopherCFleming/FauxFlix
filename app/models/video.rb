@@ -24,15 +24,15 @@ class Video < ApplicationRecord
     has_one_attached :thumbnail
 
     def self.find_all
-        Video.with_attached_thumbnail_url.all.includes(:genres)
+        Video.with_attached_thumbnail.all.includes(:genres)
     end
 
     def self.find_by_id(id)
-        Video.with_attached_video_url.with_attached_thumbnail_url.find_by(id: id)
+        Video.with_attached_video.with_attached_thumbnail.find_by(id: id)
     end
 
     def self.find_all_by_genre(id)
-        Video.joins(:Video_genre).with_attached_thumbnail_url.where('video_type= ? AND genreslinks.genre_id = ?', type, genre_id).includes(:genres)
+        Video.joins(:Video_genre).with_attached_thumbnail.where('video_type= ? AND video_genres.genre_id = ?', type, genre_id).includes(:genres)
     end
 
 end
