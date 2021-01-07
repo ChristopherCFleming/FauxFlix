@@ -13,7 +13,7 @@ class SessionForm extends React.Component {
 
     update(field) {
         return e => this.setState({
-            [field]: e.currentTarget.value
+            [field]: e.currentTarget.valu
         });
     }
 
@@ -40,7 +40,7 @@ class SessionForm extends React.Component {
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     Unlimited movies, TV shows, and more.
-          <br />
+                <br />
           Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
                     <div className="login-form">
