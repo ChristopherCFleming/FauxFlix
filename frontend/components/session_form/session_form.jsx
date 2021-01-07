@@ -13,7 +13,7 @@ class SessionForm extends React.Component {
 
     update(field) {
         return e => this.setState({
-            [field]: e.currentTarget.valu
+            [field]: e.currentTarget.value
         });
     }
 
