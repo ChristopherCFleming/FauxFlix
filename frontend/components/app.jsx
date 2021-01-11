@@ -22,12 +22,12 @@ const App = () => (
         </header>
         
 
-
-        <AuthRoute path="/login" component={LoginContainer} />
-        <AuthRoute path="/signup" component={SignupContainer} />
-        <protectedRoute path="/videos" component={VideosContainer} />
-        {/* <protectedRoute path="/videos/:id" component={VideosContainer} />  How to do wildcard here? */}
-        <h1></h1>
+        <Switch>
+            <AuthRoute path="/login" component={LoginContainer} />
+            <AuthRoute path="/signup" component={SignupContainer} />
+            <protectedRoute path="/videos" component={VideosContainer} />
+            {/* <protectedRoute path="/videos/:id" component={VideosContainer} />  How to do wildcard here? */}
+        </Switch>
     </div>
 );
 export default App;
