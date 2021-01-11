@@ -13,16 +13,17 @@ import VideosContainer from './videos/video_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-    <div>
+    <div className="Entire App">
         <header>
             <h1>FauxFlix - Watch TV Shows Online, Watch Movies Online</h1>
-            <img src={window.backgroundURL} alt="Background Image" className="background"/>
+            {/* <img src={window.backgroundURL} alt="Background Image" className="background"/> */}
             <GreetingContainer />
 
         </header>
         
 
         <Switch>
+            <Route path="/" componend={GreetingContainer} />
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer} />
             <protectedRoute path="/videos" component={VideosContainer} />
