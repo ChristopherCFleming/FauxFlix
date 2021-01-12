@@ -16,13 +16,12 @@ const App = () => (
     <div className="Entire App">
         <header>
             <h1>FauxFlix - Watch TV Shows Online, Watch Movies Online</h1>
-            <GreetingContainer />
 
         </header>
         
 
         <Switch>
-            {/* <Route path="/" componend={GreetingContainer} /> */}
+            <AuthRoute exact path="/" component={GreetingContainer} />
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer} />
             <protectedRoute path="/videos" component={VideosContainer} />
