@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
  
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
-        <nav className="login-signup">
-            <h1>FauxFlix - Watch TV Shows Online, Watch Movies Online</h1>
+        <body>
+            
             <img src={window.logoURL} alt="FauxFlix Logo" className="logo"/>
             <img src={window.backgroundURL} alt="Background Image" className="background"/>
             <Link to="/login">Sign In</Link>
             <Link to="/signup">Get Started</Link>
-        </nav>
+        </body>
+        
     );
     const personalGreeting = () => (
         <hgroup className="header-group">
