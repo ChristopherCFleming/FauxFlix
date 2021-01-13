@@ -16,7 +16,7 @@ const Greeting = ({ currentUser, logout }) => {
                     <a href="#" className="btn brn-xl">
                         Demo Login <i className="fas fa-chevron-right btn-icon"></i>
                     </a>
-                    {/* <img src={window.backgroundURL} alt="Background Image" className="background"/> */}
+                    {/* <img src={window.backgroundURL} alt="Background Image" className="backgroundImage"/> */}
                 </div>
                 <Link to="/login">Sign In</Link>
                 <Link to="/signup">Get Started</Link>
