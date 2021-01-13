@@ -14,12 +14,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div className="Entire App">
-        <head>
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"></link>
-            <title>FauxFlix - Watch TV Shows Online, Watch Movies Online</title>
-        </head>
 
-
+        
         <Switch>
             <AuthRoute exact path="/" component={GreetingContainer} />
             <AuthRoute path="/login" component={LoginContainer} />
