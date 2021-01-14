@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     background: #000;
     color: #999;
@@ -43,18 +43,80 @@ img {
     // viewport Height, the height of the window. Takes up 93 slices of whatever 100 slices of the viewport
     position: relative;
     background: image-url('background.jpg') no-repeat center center/cover;
-}
 
-.splashPageTop {
-    position: relative;
-    height: 90px;
-    .logo {
-        width: 170px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .splashPageTop {
+        position: relative;
+        height: 90px;
+    
+        .logo {
+            width: 155px;
+            position: absolute;
+            top: 30%;
+            right: 85%;
+            // transform: translate(-50%, -50%);
+        }
+    
+        #login {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .splashPageContent {
+        position: relative;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 9rem;
     }
 }
 
 
+
+
+
+
+
+
+
+
+// button styling
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: .4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    margin-right: .5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0, 0.45);
+    border-radius: 2px; 
+    cursor: pointer;
+
+}
+
+
+#login {
+    border-radius: 5px;
+}
+
+
+#demoLogin {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
+}
+
+#demoLogin {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
+}

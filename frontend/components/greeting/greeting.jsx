@@ -8,18 +8,19 @@ const Greeting = ({ currentUser, logout }) => {
             <header className="splashPage">
                 <div className="splashPageTop">
                     <img src={window.logoURL} alt="FauxFlix Logo" className="logo"/>
-                    <a href="#" className="btn btn-rounded"></a>
+                    {/* <a href="#" className="btn btn-rounded">sign in</a> */}
+                    <Link  id="login" className="btn" to="/login">Sign In</Link>
                 </div>
                 <div className="splashPageContent">
                     <h1>Unlimited movies, TV shows, and more.</h1>
+                    <Link to="/signup">Get Started</Link>
                     <p>Watch anywhere. Cancel anytime.</p>
-                    <a href="#" className="btn brn-xl">
+                    <a href="#" id="demoLogin" className="btn">
                         Demo Login <i className="fas fa-chevron-right btn-icon"></i>
                     </a>
                     {/* <img src={window.backgroundURL} alt="Background Image" className="backgroundImage"/>  */}
                 </div>
-                <Link to="/login">Sign In</Link>
-                <Link to="/signup">Get Started</Link>
+                
             </header>
         </body>
         
