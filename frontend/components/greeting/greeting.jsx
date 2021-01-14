@@ -21,8 +21,16 @@ const Greeting = ({ currentUser, logout }) => {
                     </a>
                     {/* <img src={window.backgroundURL} alt="Background Image" className="backgroundImage"/>  */}
                 </div>
-                
+                <div className="firstSubsectionContainer">
+                    <div className="TV">
+                        <img src={window.tvURL} alt="TV" className="TV"/>
+                        <div class="TVanimation">
+                            
+                        </div>
+                    </div>
+                </div>
             </header>
+
         </body>
         
     );
