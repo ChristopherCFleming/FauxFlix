@@ -48,18 +48,13 @@ img {
 .splashPageTop {
     position: relative;
     height: 90px;
-
-    // .logo {
-    //     width: 170px;
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    // }
+    .logo {
+        width: 170px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
-.logo {
-    width: 170px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
+

@@ -6,7 +6,7 @@ const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <body>
             <header className="splashPage">
-                <div className="splahsPageTop">
+                <div className="splashPageTop">
                     <img src={window.logoURL} alt="FauxFlix Logo" className="logo"/>
                     <a href="#" className="btn btn-rounded"></a>
                 </div>
