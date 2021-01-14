@@ -5,18 +5,18 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <body>
-            <header class="splashPage">
-                <div class="splahsPageTop">
+            <header className="splashPage">
+                <div className="splahsPageTop">
                     <img src={window.logoURL} alt="FauxFlix Logo" className="logo"/>
-                    <a href="#" class="btn btn-rounded"></a>
+                    <a href="#" className="btn btn-rounded"></a>
                 </div>
-                <div class="splashPageContent">
+                <div className="splashPageContent">
                     <h1>Unlimited movies, TV shows, and more.</h1>
                     <p>Watch anywhere. Cancel anytime.</p>
                     <a href="#" className="btn brn-xl">
                         Demo Login <i className="fas fa-chevron-right btn-icon"></i>
                     </a>
-                    {/* <img src={window.backgroundURL} alt="Background Image" className="backgroundImage"/> */}
+                    {/* <img src={window.backgroundURL} alt="Background Image" className="backgroundImage"/>  */}
                 </div>
                 <Link to="/login">Sign In</Link>
                 <Link to="/signup">Get Started</Link>

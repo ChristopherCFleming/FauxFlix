@@ -13,9 +13,7 @@ import VideosContainer from './videos/video_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-    <div className="Entire App">
-
-        
+    <main className="entireApp">
         <Switch>
             <AuthRoute exact path="/" component={GreetingContainer} />
             <AuthRoute path="/login" component={LoginContainer} />
@@ -23,6 +21,8 @@ const App = () => (
             <protectedRoute path="/videos" component={VideosContainer} />
             {/* <protectedRoute path="/videos/:id" component={VideosContainer} />  How to do wildcard here? */}
         </Switch>
-    </div>
+    </main>
+
+    
 );
 export default App;
