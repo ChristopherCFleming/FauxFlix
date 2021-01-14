@@ -19,7 +19,6 @@ const Greeting = ({ currentUser, logout }) => {
                     <a href="#" id="demoLogin" className="btn">
                         Demo Login
                     </a>
-                    {/* <img src={window.backgroundURL} alt="Background Image" className="backgroundImage"/>  */}
                 </div>
                 <div className="firstSubsectionContainer subsection">
                     <img src={window.tvURL} alt="TV" className="TV"/>
