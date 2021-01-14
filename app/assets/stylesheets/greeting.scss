@@ -50,10 +50,13 @@ img {
     
         .logo {
             width: 155px;
+            // position: absolute;
+            // top: 30%;
+            // right: 85%;
             position: absolute;
-            top: 30%;
-            right: 85%;
-            // transform: translate(-50%, -50%);
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
         }
     
         #login {
@@ -73,6 +76,26 @@ img {
         align-items: center;
         text-align: center;
         margin-top: 9rem;
+
+        h1 {
+            font-weight: 700;
+            font-size: 3.1rem;
+            line-height: 1.1;
+            margin: 0 0 2rem;
+        }
+
+        p {
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.25rem;
+            margin: 0 0 2rem;
+        }
+        h4 {
+            margin: 0 0 1rem;
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -109,14 +132,13 @@ img {
 }
 
 
-#demoLogin {
-    font-size: 2rem;
-    padding: 1.5rem 2.1rem;
+#createAccount {
+    font-size: 1.7rem;
+    padding: 0.9rem 2.6rem;
     text-transform: uppercase;
 }
 
 #demoLogin {
-    font-size: 2rem;
-    padding: 1.5rem 2.1rem;
-    text-transform: uppercase;
+    border-radius: 5px;
+    margin: 1rem;
 }

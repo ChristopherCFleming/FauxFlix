@@ -12,9 +12,10 @@ const Greeting = ({ currentUser, logout }) => {
                     <Link  id="login" className="btn" to="/login">Sign In</Link>
                 </div>
                 <div className="splashPageContent">
-                    <h1>Unlimited movies, TV shows, and more.</h1>
-                    <Link to="/signup">Get Started</Link>
+                    <h1>Unlimited movies, TV <br/> shows, and more.</h1>
                     <p>Watch anywhere. Cancel anytime.</p>
+                    <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+                    <Link to="/signup" id="createAccount" className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
                     <a href="#" id="demoLogin" className="btn">
                         Demo Login <i className="fas fa-chevron-right btn-icon"></i>
                     </a>
