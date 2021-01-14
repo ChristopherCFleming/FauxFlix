@@ -39,7 +39,7 @@ img {
 
 .splashPage {
     width: 100%;
-    height: 93vh;
+    height: 89vh;
     // viewport Height, the height of the window. Takes up 93 slices of whatever 100 slices of the viewport
     position: relative;
     background: image-url('background.jpg') no-repeat center center/cover;
@@ -47,6 +47,7 @@ img {
     .splashPageTop {
         position: relative;
         height: 90px;
+        z-index: 2;
     
         .logo {
             width: 155px;
@@ -76,6 +77,7 @@ img {
         align-items: center;
         text-align: center;
         margin-top: 9rem;
+        z-index: 2;
 
         h1 {
             font-weight: 700;
@@ -99,7 +101,16 @@ img {
     }
 }
 
-
+.splashPage::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0, 0.6);
+    box-shadow: inset -2rem -2rem 4rem black;
+}
 
 
 
