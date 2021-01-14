@@ -150,6 +150,10 @@ img {
 }
 
 #demoLogin {
-    border-radius: 5px;
+    border-radius: 50px;
     margin: 1rem;
+}
+
+#demoLogin:hover {
+    background: rgb(65, 64, 64);
 }

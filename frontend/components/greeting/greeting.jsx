@@ -17,17 +17,18 @@ const Greeting = ({ currentUser, logout }) => {
                     <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
                     <Link to="/signup" id="createAccount" className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
                     <a href="#" id="demoLogin" className="btn">
-                        Demo Login <i className="fas fa-chevron-right btn-icon"></i>
+                        Demo Login
                     </a>
                     {/* <img src={window.backgroundURL} alt="Background Image" className="backgroundImage"/>  */}
                 </div>
-                <div className="firstSubsectionContainer">
-                    <div className="TV">
-                        <img src={window.tvURL} alt="TV" className="TV"/>
-                        <div class="TVanimation">
-                            
-                        </div>
-                    </div>
+                <div className="firstSubsectionContainer subsection">
+                    <img src={window.tvURL} alt="TV" className="TV"/>
+                </div>
+                <div className="secondSubsectionContainer subsection">
+                    <img src={window.handheldURL} alt="handheld" className="handheld"/>
+                </div>
+                <div className="thirdSubsectionContainer subsection">
+                    <img src={window.allDevicesURL} alt="allDevices" className="allDevices"/>
                 </div>
             </header>
 
