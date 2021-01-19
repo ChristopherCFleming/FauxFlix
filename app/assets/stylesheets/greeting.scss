@@ -110,11 +110,38 @@ p {
 
 .subsection {
     padding: 100px;
-    border-top: 4px solid #302f2f;
+    border-top: 8px solid #302f2f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    
+     h1 {
+         font-weight: 700;
+         font-size: 3.1rem;
+         line-height: 1.1;
+         margin: .75em 0 .25em;
+     }
+
+     p {
+         text-transform: uppercase;
+         color: #fff;
+         font-weight: 400;
+         font-size: 1.4rem;
+         line-height: 1.25rem;
+         margin: .75em 0 .25em;
+        display: block;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+     }
 }
 
 .firstSubsectionContainer {
     margin: 100px 0 0 0;
+
 }
 
 

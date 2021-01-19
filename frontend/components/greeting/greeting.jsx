@@ -21,12 +21,24 @@ const Greeting = ({ currentUser, logout }) => {
                     </a>
                 </div>
                 <div className="firstSubsectionContainer subsection">
+                    <div className="firstSubsectionText">
+                        <h1>Enjoy on your TV.</h1>
+                        <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                    </div>
                     <img src={window.tvURL} alt="TV" className="TV"/>
                 </div>
                 <div className="secondSubsectionContainer subsection">
                     <img src={window.handheldURL} alt="handheld" className="handheld"/>
+                    <div className="secondSubsectionText">
+                        <h1>Download your shows to watch offline.</h1>
+                        <p>Save your favorites easily and always have something to watch.</p>
+                    </div>
                 </div>
                 <div className="thirdSubsectionContainer subsection">
+                    <div className="thirdSubsectionText">
+                        <h1>Watch everywhere.</h1>
+                        <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</p>
+                    </div>
                     <img src={window.allDevicesURL} alt="allDevices" className="allDevices"/>
                 </div>
             </header>
