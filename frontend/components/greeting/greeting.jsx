@@ -15,7 +15,10 @@ const Greeting = ({ currentUser, logout }) => {
                     <h1>Unlimited movies, TV <br/> shows, and more.</h1>
                     <p>Watch anywhere. Cancel anytime.</p>
                     <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
-                    <Link to="/signup" id="createAccount" className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
+                    <div className="emailInput">
+                        <input type="email" name="email" class="inputBar" value="" autocomplete="email"></input>
+                        <Link to="/signup" id="createAccount" className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
+                    </div>
                     <a href="#" id="demoLogin" className="btn">
                         Demo Login
                     </a>
