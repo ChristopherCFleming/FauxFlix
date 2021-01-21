@@ -83,16 +83,16 @@ p {
         }
 
         p {
-            text-transform: uppercase;
             color: #fff;
             font-weight: 400;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             line-height: 1.25rem;
             margin: 0 0 2rem;
         }
         h4 {
             margin: 0 0 1rem;
             font-size: 1.2rem;
+            font-weight: 400;
         }
     }
 }
@@ -125,11 +125,10 @@ p {
      }
 
      p {
-         text-transform: uppercase;
          color: #fff;
          font-weight: 400;
-         font-size: 1.4rem;
-         line-height: 1.25rem;
+         font-size: 1.7rem;
+         line-height: 2rem;
          margin: .75em 0 .25em;
         display: block;
         margin-block-start: 0.83em;
@@ -144,7 +143,9 @@ p {
 
 }
 
-
+.description {
+    color: red;
+}
 
 
 
