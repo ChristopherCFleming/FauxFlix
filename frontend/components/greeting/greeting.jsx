@@ -31,7 +31,7 @@ class Greeting extends React.Component {
                         <p>Watch anywhere. Cancel anytime.</p>
                         <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
                         <div className="emailInput">
-                            <input type="email" name="email" class="inputBar" value={this.state.email} onChange={this.update("email")} autocomplete="email"></input>
+                            <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")} autocomplete="email"></input>
                             <Link to="/signup" id="createAccount" className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
                         </div>
                         <a href="#" id="demoLogin" className="btn">
