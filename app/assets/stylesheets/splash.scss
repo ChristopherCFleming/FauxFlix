@@ -40,7 +40,7 @@ p {
     position: relative;
     background: image-url('background.jpg') no-repeat center center/cover;
 
-    .splashPageTop {
+    .splashPageHeader {
         position: relative;
         height: 90px;
         z-index: 2;
@@ -162,7 +162,10 @@ p {
             width: 4rem;
             height: auto;
             margin: 1rem 1rem 1rem 1rem;
+        }
 
+        i {
+            font-size: 2rem;
         }
     
     }
@@ -187,7 +190,6 @@ p {
     box-shadow: 0 1px 0 rgba(0,0,0, 0.45);
     border-radius: 2px; 
     cursor: pointer;
-
 }
 
 .inputBar {
