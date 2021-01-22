@@ -115,7 +115,18 @@ class SplashPage extends React.Component {
                     </div>
                     <footer className="splashFooter">
                         <div className="contactLinks">
-                            <p>testing again</p>
+                            <a id="portfolio" href="https://christophercfleming.github.io/" target="_blank">
+                                <img src={window.personURL} alt="Portfolio" className="contactIcon"></img>
+                            </a>
+                            <a id="linkedin" href="https://www.linkedin.com/in/christophercfleming/" target="_blank">
+                                <img src={window.linkedinURL} alt="LinkedIn" className="contactIcon"></img>
+                            </a>
+                            <a id="github" href="https://github.com/ChristopherCFleming" target="_blank">
+                                <img src={window.githubURL} alt="GitHub" className="contactIcon"></img>
+                            </a>
+                            <a href="https://angel.co/u/christopher-c-fleming">
+                                <img src={window.angellist} alt="AngelList" target="_blank" className="contactIcon"></img>
+                            </a>
                         </div>
                     </footer>
                 </div>

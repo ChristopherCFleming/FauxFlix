@@ -151,6 +151,17 @@ p {
 .splashFooter {
     border-top: 8px solid #222;
     height: 7rem;
+    .contactLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .contactIcon {
+            width: 4rem;
+            height: auto;
+        }
+    
+    }
 }
 
 
