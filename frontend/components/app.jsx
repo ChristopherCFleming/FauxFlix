@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
 //Components
-import GreetingContainer from './greeting/greeting_container';
+import SplashContainer from './splash/splash_container';
 import Root from './root';
 import configureStore from '../store/store';
 import LoginContainer from './session_form/login_container';
@@ -15,7 +15,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
     <main className="entireApp">
         <Switch>
-            <AuthRoute exact path="/" component={GreetingContainer} />
+            <AuthRoute exact path="/" component={SplashContainer} />
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer} />
             <protectedRoute path="/videos" component={VideosContainer} />
