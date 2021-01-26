@@ -166,8 +166,18 @@ p {
         font-size: 1.7rem;
         line-height: 2rem;
         margin: .75em 0 .25em;
+
+        .svg-closed {
+            transform: rotate(45deg);
+        }
+
+        .accordion__content {
+            overflow: hidden;
+            max-height: 0;
+        }
     }
 }
+
 
 .splashFooter {
     border-top: 8px solid #222;
