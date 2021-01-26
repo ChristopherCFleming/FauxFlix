@@ -125,11 +125,11 @@ p {
      }
 
      p {
-         color: #fff;
-         font-weight: 400;
-         font-size: 1.7rem;
-         line-height: 2rem;
-         margin: .75em 0 .25em;
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.7rem;
+        line-height: 2rem;
+        margin: .75em 0 .25em;
         display: block;
         margin-block-start: 0.83em;
         margin-block-end: 0.83em;
@@ -148,16 +148,25 @@ p {
     color: red;
 }
 
-.faqButton {
-    background-color: #303030;
+.accordion {
     color: #fff;
-    cursor: pointer;
     padding: 18px;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
     font-size: 15px;
+
+    .accordion__button {
+        background-color:#303030;
+        cursor: pointer;
+        text-align: left;
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.7rem;
+        line-height: 2rem;
+        margin: .75em 0 .25em;
+    }
 }
 
 .splashFooter {
@@ -171,15 +180,11 @@ p {
         align-items: center;
 
         .contactIcon {
-            width: 4rem;
+            font-size: 3.5rem;
             height: auto;
             margin: 1rem 1rem 1rem 1rem;
+            color: rgb(128, 119, 119);
         }
-
-        i {
-            font-size: 2rem;
-        }
-    
     }
 }
 
