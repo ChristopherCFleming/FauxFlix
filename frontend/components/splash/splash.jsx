@@ -34,7 +34,6 @@ class SplashPage extends React.Component {
             <div className="splashPage">
                 <header className="splashPageHeader">
                     <img src={window.logoURL} alt="FauxFlix Logo" className="logo"/>
-                    {/* <a href="#" className="btn btn-rounded">sign in</a> */}
                     <Link  id="login" className="btn" to="/login">Sign In</Link>
                 </header>
                 <div className="splashPageContent">
