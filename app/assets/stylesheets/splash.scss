@@ -148,9 +148,10 @@ p {
     color: red;
 }
 
+
+
 .accordion {
     color: #fff;
-    padding: 18px;
     width: 100%;
     border: none;
     text-align: left;
@@ -164,8 +165,15 @@ p {
         color: #fff;
         font-weight: 400;
         font-size: 1.7rem;
-        line-height: 2rem;
-        margin: .75em 0 .25em;
+        line-height: 4rem;
+        width: 100%;
+        margin: .2rem;
+    
+
+        .svg-icon {
+            float: right;
+
+        }
 
         .svg-closed {
             transform: rotate(45deg);
@@ -174,6 +182,7 @@ p {
         .accordion__content {
             overflow: hidden;
             max-height: 0;
+            transition: max-height 0.3s;
         }
     }
 }
