@@ -29,13 +29,6 @@ class SplashPage extends React.Component {
                     <h1>Unlimited movies, TV <br/> shows, and more.</h1>
                     <p>Watch anywhere. Cancel anytime.</p>
                     <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
-
-
-                        <svg viewBox="0 0 26 26" class="svg-icon svg-icon-thin-x svg-open" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
-                        <svg viewBox="0 0 26 26" class="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
-
-
-                        
                     <div className="emailInput">
                         <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")} autocomplete="email"></input>
                         <Link to="/signup" id="createAccount" className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>

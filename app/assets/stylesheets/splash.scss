@@ -149,60 +149,68 @@ p {
 }
 
 
+.fourthSubsectionText {
+    h1 {
+        font-weight: 700;
+        font-size: 3.1rem;
+        line-height: 1.1;
+        margin: 0 0 2rem;
+    }
 
-.accordion {
-    color: #fff;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-
-    .accordion__button {
-        background-color:#303030;
-        cursor: pointer;
-        text-align: left;
+    .accordion {
         color: #fff;
-        font-weight: 400;
-        font-size: 1.7rem;
-        line-height: 4rem;
         width: 100%;
-        margin: .2rem;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 15px;
     
-
-        .svg-icon {
-            float: right;
-
-        }
-
-        .svg-closed {
-            transform: rotate(45deg);
-        }
-
-        .accordion__content {
-            overflow: hidden;
-            max-height: 0;
-            transition: max-height 0.3s;
+        .accordion__button {
+            background-color:#303030;
+            cursor: pointer;
+            text-align: left;
+            color: #fff;
+            font-weight: 400;
+            font-size: 1.7rem;
+            line-height: 4rem;
+            width: 100%;
+            margin: .2rem;
+        
+    
+            .svg-icon {
+                float: right;
+                position: relative;
+            }
+    
+            .svg-closed {
+                transform: rotate(45deg);
+            }
+    
+            .accordion__content {
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.3s;
+            }
         }
     }
-}
-
-
-.splashFooter {
-    border-top: 8px solid #222;
-    height: 7rem;
-
-    .contactLinks {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        .contactIcon {
-            font-size: 3.5rem;
-            height: auto;
-            margin: 1rem 1rem 1rem 1rem;
-            color: rgb(128, 119, 119);
+    
+    
+    .splashFooter {
+        border-top: 8px solid #222;
+        height: 7rem;
+    
+        .contactLinks {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+    
+            .contactIcon {
+                font-size: 3.5rem;
+                height: auto;
+                margin: 1rem 1rem 1rem 1rem;
+                color: rgb(128, 119, 119);
+            }
         }
     }
 }
