@@ -188,13 +188,13 @@ p {
                 float: right;
                 position: relative;
                 transform: rotate(45deg);
-                transition: .3s
+                transition: .2s
             }
             
             .accordion__content {
                 overflow: hidden;
                 max-height: 0;
-                transition: max-height 0.3s;
+                transition: max-height 0.2s;
             }
             
         }  
