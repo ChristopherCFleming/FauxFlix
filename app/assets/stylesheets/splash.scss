@@ -187,21 +187,35 @@ p {
             .svg-icon {
                 float: right;
                 position: relative;
-            }
-    
-            .svg-closed {
                 transform: rotate(45deg);
+                transition: .3s
             }
-    
+            
             .accordion__content {
                 overflow: hidden;
                 max-height: 0;
                 transition: max-height 0.3s;
             }
+            
+        }  
+        // code below is for CSS pseudoelement. Not going in line with text of button, so using the SVG above for now.
+        // .accordion__button::after {
+        //     content: '\FF0B';
+        //     float: right;
+        //     transform: scale(1.5);
+        // }
+        .status--active {
+
+            .accordion__content {
+                overflow: visible;
+                max-height: 300rem;
+            }
+
+            .svg-icon {
+                transform: rotate(0deg);
+            }
         }
     }
-    
-    
 }
 
 .splashFooter {
