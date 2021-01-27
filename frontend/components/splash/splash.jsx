@@ -8,6 +8,7 @@ class SplashPage extends React.Component {
         this.state = {
             email: ""
         }
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     update(field) {
@@ -15,6 +16,17 @@ class SplashPage extends React.Component {
             [field]: e.currentTarget.value
         });
     }
+
+    demoLogin() {
+        const sampleInfo = {
+            email: "testing1@gmail.com",
+            password: "testing1"
+        }
+
+        login(sampleInfo);
+    }
+
+
 
 
     render() {
@@ -33,9 +45,9 @@ class SplashPage extends React.Component {
                         <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")} autocomplete="email"></input>
                         <Link to="/signup" id="createAccount" className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
                     </div>
-                    <a href="#" id="demoLogin" className="btn">
+                    <Link to="#" id="demoLogin" className="btn" onClick={this.demoLogin}>
                         Demo Login
-                    </a>
+                    </Link>
                 </div>
                 <div className="firstSubsectionContainer subsection">
                     <div className="firstSubsectionText">
@@ -137,11 +149,11 @@ class SplashPage extends React.Component {
                     </div>
                 </footer>
                 {/* <script>
-                    document.querySelectorAll('status').forEach(button => {
+                    { document.querySelectorAll('status').forEach(button => {
                         button.addEventListener('click', () => {
                             this.classList.toggle("status--active");
                         });
-                    });
+                    }) }
                 </script> */}
             </div>
         )
