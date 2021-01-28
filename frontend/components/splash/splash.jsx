@@ -6,9 +6,11 @@ class SplashPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: ""
+            email: "",
+            activeAccordion: -1
         }
         this.demoLogin = this.demoLogin.bind(this);
+        this.handleAccordionClick = this.handleAccordionClick.bind(this);
     }
 
     update(field) {
@@ -22,8 +24,18 @@ class SplashPage extends React.Component {
             email: "testing1@gmail.com",
             password: "testing1"
         }
+        this.props.login(sampleInfo);
+    }
 
-        login(sampleInfo);
+    handleAccordionClick(accordionNumber) { 
+        return event => {
+            event.preventDefault()
+            if (this.state.activeAccordion === accordionNumber) {
+                this.setState({activeAccordion: -1})
+            } else {
+                this.setState({activeAccordion: accordionNumber})
+            }
+        }
     }
 
 
@@ -41,10 +53,10 @@ class SplashPage extends React.Component {
                     <p>Watch anywhere. Cancel anytime.</p>
                     <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
                     <div className="emailInput">
-                        <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")} autocomplete="email"></input>
+                        <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
                         <Link to="/signup" id="createAccount" className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
                     </div>
-                    <Link to="#" id="demoLogin" className="btn" onClick={this.demoLogin}>
+                    <Link to="/videos" id="demoLogin" className="btn" onClick={this.demoLogin}>
                         Demo Login
                     </Link>
                 </div>
@@ -75,7 +87,7 @@ class SplashPage extends React.Component {
                         <ul className="faqButtonContainer">
                             <li>
                                 <div className="accordion">
-                                    <button type="button" className="status accordion__button">What is Netflix?
+                                    <button type="button" className={`status${this.state.activeAccordion === 1 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(1)}>What is Netflix?
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
                                             <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. <br /> <br />You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</p>
@@ -85,7 +97,7 @@ class SplashPage extends React.Component {
                             </li>
                             <li>
                                 <div className="accordion">
-                                    <button type="button" className="status accordion__button">How much does Netflix cost?
+                                    <button type="button" className={`status${this.state.activeAccordion === 2 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(2)}>How much does Netflix cost?
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
                                             <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $8.99 to $17.99 a month. No extra costs, no contracts.</p>
@@ -95,7 +107,7 @@ class SplashPage extends React.Component {
                             </li>
                             <li>
                                 <div className="accordion">
-                                    <button type="button" className="status accordion__button">Where can I watch?
+                                    <button type="button" className={`status${this.state.activeAccordion === 3 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(3)}>Where can I watch?
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
                                             <p>Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles. <br /> <br />You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
@@ -105,7 +117,7 @@ class SplashPage extends React.Component {
                             </li>
                             <li>
                                 <div className="accordion">
-                                    <button type="button" className="status accordion__button">How do I cancel?
+                                    <button type="button" className={`status${this.state.activeAccordion === 4 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(4)}>How do I cancel?
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
                                             <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
@@ -115,7 +127,7 @@ class SplashPage extends React.Component {
                             </li>
                             <li>
                                 <div className="accordion">
-                                    <button type="button" className="status accordion__button">What can I watch on Netflix?
+                                    <button type="button" className={`status${this.state.activeAccordion === 5 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(5)}>What can I watch on Netflix?
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
                                             <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
@@ -126,7 +138,7 @@ class SplashPage extends React.Component {
                         </ul>
                         <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
                         <div className="emailInput">
-                            <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")} autocomplete="email"></input>
+                            <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
                             <Link to="/signup" id="createAccount" className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
                         </div>
                     </div>
@@ -147,13 +159,6 @@ class SplashPage extends React.Component {
                         </a>
                     </div>
                 </footer>
-                {/* <script>
-                    { document.querySelectorAll('status').forEach(button => {
-                        button.addEventListener('click', () => {
-                            this.classList.toggle("status--active");
-                        });
-                    }) }
-                </script> */}
             </div>
         )
     }

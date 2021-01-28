@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
+import { logout, login } from '../../actions/session_actions';
 import SplashPage from './splash';
 
 const mapStateToProps = ({ session, entities: { users } }) => {
