@@ -87,20 +87,20 @@ class SplashPage extends React.Component {
                         <ul className="faqButtonContainer">
                             <li>
                                 <div className="accordion">
-                                    <button type="button" className={`status${this.state.activeAccordion === 1 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(1)}>What is Netflix?
+                                    <button type="button" className={`status${this.state.activeAccordion === 1 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(1)}>About Me
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
-                                            <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. <br /> <br />You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</p>
+                                            <p>I'm a multifaceted software engineer with a marketing background and an expertise in JavaScript, React, Redux, Ruby On Rails. Please enjoy this pixel perfect streaming service clone. Find me in the links below and let me know what you think!</p>
                                         </div>
                                     </button>
                                 </div>
                             </li>
                             <li>
                                 <div className="accordion">
-                                    <button type="button" className={`status${this.state.activeAccordion === 2 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(2)}>How much does Netflix cost?
+                                    <button type="button" className={`status${this.state.activeAccordion === 2 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(2)}>Inspiration
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
-                                            <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $8.99 to $17.99 a month. No extra costs, no contracts.</p>
+                                            <p>I'm an avid traveller. I've found it's an excellent opportunity to welcome growth into your life, to see it from another perspective. Some highlights: searching for geishas in Kyoto, motorbiking in Hanoi, a semester in Berlin, eating goat spine in Shenyang, Charles Bridge at midnight in Prague, 3 years in Beijing, climbing Il Duomo in Florence, scuba diving in El Nido. There are so many adventures out there waiting to teach you something new, and I intend to learn as much as possible.<br/><br />In my spare time you might find me obsessing over tiny homes and lying to my mom about eating goat spine in Shenyang. She worries too much. Let's keep that bit between us.</p>
                                         </div>
                                     </button>
                                 </div>
