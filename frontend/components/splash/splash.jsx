@@ -120,7 +120,7 @@ class SplashPage extends React.Component {
                                     <button type="button" className={`status${this.state.activeAccordion === 4 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(4)}>Other Projects
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
-                                            <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                                            <p>Get Gov is a pure JavaScript website that can connect you with your representatives at all levels of government. Civic engagement is important to me.<br /><br />Pomegranate is a web app that helps reduce food waste by finding recipes for you to try based on the ingredients already in your kitchen. This was a MERN group project.<br/><br/>Feel free to check them out by navigating to my portfolio site in the footer below.</p>
                                         </div>
                                     </button>
                                 </div>
