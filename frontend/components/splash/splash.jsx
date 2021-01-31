@@ -87,17 +87,17 @@ class SplashPage extends React.Component {
                         <ul className="faqButtonContainer">
                             <li>
                                 <div className="accordion">
-                                    <button type="button" className={`status${this.state.activeAccordion === 1 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(1)}>About Me
+                                    <button type="button" className={`status${this.state.activeAccordion === 1 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(1)}>Who Made This Amazing Site?
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
-                                            <p>I'm Chris. Nice to meet you. I'm a multifaceted software engineer with a marketing background and an expertise in JavaScript, React, Redux, Ruby On Rails. Please enjoy this pixel perfect streaming service clone. Find me in the links below and let me know what you think!</p>
+                                            <p>I'm Chris. Nice to meet you. I'm a multifaceted software engineer with a marketing background and an expertise in JavaScript, React, Redux, Ruby On Rails. Please enjoy this pixel perfect streaming service clone. Find me in the footer links and let me know what you think!</p>
                                         </div>
                                     </button>
                                 </div>
                             </li>
                             <li>
                                 <div className="accordion">
-                                    <button type="button" className={`status${this.state.activeAccordion === 2 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(2)}>Inspiration
+                                    <button type="button" className={`status${this.state.activeAccordion === 2 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(2)}>Tell Me More!
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
                                             <p>I'm an avid traveller. I've found it's an excellent opportunity to welcome growth into your life, to see it from another perspective. Some highlights: searching for geishas in Kyoto, motorbiking in Hanoi, a semester in Berlin, eating goat spine in Shenyang, Charles Bridge at midnight in Prague, 3 years in Beijing, climbing Il Duomo in Florence, scuba diving in El Nido. There are so many adventures out there waiting to teach you something new, and I intend to learn as much as possible.<br/><br />In my spare time you might find me obsessing over tiny homes and lying to my mom about eating goat spine in Shenyang. She worries too much. Let's keep that bit between us.</p>
@@ -107,30 +107,20 @@ class SplashPage extends React.Component {
                             </li>
                             <li>
                                 <div className="accordion">
-                                    <button type="button" className={`status${this.state.activeAccordion === 3 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(3)}>Connect With Me
+                                    <button type="button" className={`status${this.state.activeAccordion === 3 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(3)}>Other Projects?
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
-                                            <p>I'm always up for meeting new people. Connect with me on LinkedIn or AngelList by clicking the icons in the footer.</p>
+                                            <p>Get Gov is a pure JavaScript website that can connect you with your representatives at all levels of government.<br /><br />Pomegranate is a MERN web app that helps reduce food waste by finding recipes for you to try based on the ingredients already in your kitchen.<br/><br/>Feel free to check them out by navigating to my portfolio site in the footer below.</p>
                                         </div>
                                     </button>
                                 </div>
                             </li>
                             <li>
                                 <div className="accordion">
-                                    <button type="button" className={`status${this.state.activeAccordion === 4 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(4)}>Other Projects
+                                    <button type="button" className={`status${this.state.activeAccordion === 4 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(4)}>How Can I Hire This Developer?
                                         <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                         <div className="accordion__content">
-                                            <p>Get Gov is a pure JavaScript website that can connect you with your representatives at all levels of government. Civic engagement is important to me.<br /><br />Pomegranate is a web app that helps reduce food waste by finding recipes for you to try based on the ingredients already in your kitchen. This was a MERN group project.<br/><br/>Feel free to check them out by navigating to my portfolio site in the footer below.</p>
-                                        </div>
-                                    </button>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="accordion">
-                                    <button type="button" className={`status${this.state.activeAccordion === 5 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(5)}>What can I watch on Netflix?
-                                        <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
-                                        <div className="accordion__content">
-                                            <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                                            <p>Thank you for asking! Click on the links in the footer for my LinkedIn, Angellist, and personal portfolio site.</p>
                                         </div>
                                     </button>
                                 </div>
