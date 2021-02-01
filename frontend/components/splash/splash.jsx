@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import MainHeader from '../reusable_components/header';
 
 
 class SplashPage extends React.Component {
@@ -44,17 +45,18 @@ class SplashPage extends React.Component {
     render() {
         return (
             <div className="splashPage">
-                <header className="splashPageHeader">
+                {/* <header className="splashPageHeader">
                     <img src={window.logoURL} alt="FauxFlix Logo" className="logo"/>
                     <Link  id="login" className="btn" to="/login">Sign In</Link>
-                </header>
+                </header> */}
+                <MainHeader />
                 <div className="splashPageContent">
                     <h1>Unlimited movies, TV <br/> shows, and more.</h1>
                     <p>Watch anywhere. Cancel anytime.</p>
                     <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
                     <div className="emailInput">
                         <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
-                        <Link to="/signup" id="createAccount" className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
+                        <Link to="/signup" id="createAccount" email={this.state.email} className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
                     </div>
                     <Link to="/videos" id="demoLogin" className="btn" onClick={this.demoLogin}>
                         Demo Login
