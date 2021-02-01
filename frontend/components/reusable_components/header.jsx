@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     return (
-        <header className="splashPageHeader">
+        <header className="pageHeader">
             <img src={window.logoURL} alt="FauxFlix Logo" className="logo"/>
             <Link  id="login" className="btn" to="/login">Sign In</Link>
         </header>

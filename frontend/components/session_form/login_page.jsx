@@ -8,7 +8,7 @@ class LoginPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: "",
+            email: this.props.email,
             password: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,7 +42,14 @@ class LoginPage extends React.Component {
         return (
             <div className="loginPage">
                 <Header />
-
+                    <div className="loginPageContent">
+                        <h1>Sign In</h1>
+                        <form onSubmit={this.handleSubmit} className="infoInputForm">
+                            <input type="email" name="email" className="emailBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
+                            <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" className="passwordBar"/>
+                            <Link to="/signup" id="createAccount" email={this.state.email} className="btn">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
+                        </form>
+                    </div>
                 <Footer />
             </div>
         )
