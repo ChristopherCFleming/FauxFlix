@@ -46,10 +46,6 @@ class SplashPage extends React.Component {
     render() {
         return (
             <div className="splashPage">
-                {/* <header className="splashPageHeader">
-                    <img src={window.logoURL} alt="FauxFlix Logo" className="logo"/>
-                    <Link  id="login" className="btn" to="/login">Sign In</Link>
-                </header> */}
                 <Header />
                 <div className="splashPageContent">
                     <h1>Unlimited movies, TV <br/> shows, and more.</h1>
