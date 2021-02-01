@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MainHeader from '../reusable_components/header';
+import Header from '../reusable_components/header';
+import Footer from '../reusable_components/footer';
 
 
 class SplashPage extends React.Component {
@@ -49,7 +50,7 @@ class SplashPage extends React.Component {
                     <img src={window.logoURL} alt="FauxFlix Logo" className="logo"/>
                     <Link  id="login" className="btn" to="/login">Sign In</Link>
                 </header> */}
-                <MainHeader />
+                <Header />
                 <div className="splashPageContent">
                     <h1>Unlimited movies, TV <br/> shows, and more.</h1>
                     <p>Watch anywhere. Cancel anytime.</p>
@@ -135,22 +136,7 @@ class SplashPage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <footer className="splashFooter">
-                    <div className="contactLinks">
-                        <a id="portfolio" href="https://christophercfleming.github.io/" target="_blank">
-                            <i className="fas fa-user contactIcon"></i>
-                        </a>
-                        <a id="linkedin" href="https://www.linkedin.com/in/christophercfleming/" target="_blank">
-                            <i className="fab fa-linkedin contactIcon"></i>
-                        </a>
-                        <a id="github" href="https://github.com/ChristopherCFleming" target="_blank">
-                            <i className="fab fa-github-square contactIcon"></i>
-                        </a>
-                        <a href="https://angel.co/u/christopher-c-fleming" target="_blank">
-                            <i className="fab fa-angellist contactIcon"></i>
-                        </a>
-                    </div>
-                </footer>
+                <Footer />
             </div>
         )
     }
