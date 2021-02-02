@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Header from '../reusable_components/header';
 import Footer from '../reusable_components/footer';
 
-
-class LoginPage extends React.Component {
+class SignupForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,18 +36,18 @@ class LoginPage extends React.Component {
         );
     }
 
+
     render() {
         return (
-            <div className="loginPage">
+            <div className="signupPage">
                 <Header />
-                    <div className="loginPageContent">
-                        <h1>Sign In</h1>
-                        <form onSubmit={this.handleSubmit} className="infoInputForm">
+                    <div className="signupContent">
+                        <h1>Create a password to start your membership.</h1>
+                        <h2>Just a few more steps and you're done! We hate paperwork, too.</h2>
+                        <form onSubmit={this.handleSubmit} className="signupInputForm">
                             <input type="email" name="email" className="emailBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
                             <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" className="passwordBar"/>
-                            <h5>New to FauxFlix? 
-                                <Link to="/signup" className="signUpLink">Sign up now</Link>.
-                            </h5>
+                            <button type="submit" className="btn">CONTINUE</button>
                         </form>
                     </div>
                 <Footer />
@@ -58,4 +56,5 @@ class LoginPage extends React.Component {
     }
 }
 
-export default LoginPage;
+
+export default SignupForm;
