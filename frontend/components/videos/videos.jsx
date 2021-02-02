@@ -7,7 +7,6 @@ class Videos extends React.Component {
 
     render() {
         return (
-            //is this where I can latch into the styling elements of each page
             <div>
                 <p>This Would display my videos!</p>
             </div>
