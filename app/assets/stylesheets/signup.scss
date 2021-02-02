@@ -1,0 +1,17 @@
+.signupPage {
+    background-color: white;
+    height: 100vh;
+
+    .signupContent {
+        border-top: 2px solid #333;
+        position: relative;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 9rem;
+        z-index: 2;
+    }
+}
