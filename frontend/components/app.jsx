@@ -18,7 +18,7 @@ const App = () => (
             <AuthRoute exact path="/" component={SplashContainer} />
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer} />
-            <protectedRoute path="/videos" component={VideosContainer} />
+            <ProtectedRoute path="/videos" component={VideosContainer} />
             {/* <protectedRoute path="/videos/:id" component={VideosContainer} />  How to do wildcard here? */}
         </Switch>
     </main>
