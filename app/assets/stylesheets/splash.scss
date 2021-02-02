@@ -40,30 +40,6 @@ p {
     position: relative;
     background: image-url('background.jpg') no-repeat center center/cover;
 
-    .pageHeader {
-        position: relative;
-        height: 90px;
-        z-index: 2;
-    
-        .logo {
-            width: 155px;
-            position: absolute;
-            top: 30%;
-            right: 85%;
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            transform: translate(-50%, -50%);
-        }
-    
-        #login {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translate(-50%, -50%);
-        }
-    }
-
     .splashPageContent {
         position: relative;
         margin: auto;
