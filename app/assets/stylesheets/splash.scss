@@ -1,168 +1,209 @@
-
 .splashPage {
-    width: 100%;
-    height: 85vh;
-    // viewport Height, the height of the window. Takes up 93 slices of whatever 100 slices of the viewport
-    position: relative;
-    background: image-url('background.jpg') no-repeat center center/cover;
+    background-color: #000;
+    height: 1000vh;
 
-    .splashPageContent {
+    .splashImage {
+        width: 100%;
+        height: 85vh;
+        // viewport Height, the height of the window. Takes up 93 slices of whatever 100 slices of the viewport
         position: relative;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-top: 9rem;
-        z-index: 2;
+        background: image-url('background.jpg') no-repeat center center/cover;
 
-        .emailInput {
+        .splashPageContent {
+            position: relative;
+            margin: auto;
             display: flex;
-        }
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 9rem;
+            z-index: 2;
 
-        h1 {
-            font-weight: 700;
-            font-size: 3.1rem;
-            line-height: 1.1;
-            margin: 0 0 2rem;
-        }
+            .emailInput {
+                display: flex;
+            }
 
-        p {
-            color: #fff;
-            font-weight: 400;
-            font-size: 1.6rem;
-            line-height: 1.25rem;
-            margin: 0 0 2rem;
-        }
-        h4 {
-            margin: 0 0 1rem;
-            font-size: 1.2rem;
-            font-weight: 400;
-        }
-    }
-    .subsection {
-        padding: 70px 45px 70px 45px;
-        border-top: 8px solid #222;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-align: left;
-        
-        h1 {
-            font-weight: 700;
-            font-size: 3.1rem;
-            line-height: 1.1;
-            margin: .75em 0 .25em;
-        }
-    
-        p {
-            color: #fff;
-            font-weight: 400;
-            font-size: 1.7rem;
-            line-height: 2rem;
-            margin: .75em 0 .25em;
-            display: block;
-            margin-block-start: 0.83em;
-            margin-block-end: 0.83em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            max-width: 530px;
-        }
-    
-    }
-        
-    .firstSubsectionContainer {
-        margin: 100px 0 0 0;
-    }
-    
-    .fourthSubsectionContainer {
-        padding: 70px 10px 70px 10px;
-    
-        .fourthSubsectionText {
             h1 {
                 font-weight: 700;
                 font-size: 3.1rem;
                 line-height: 1.1;
                 margin: 0 0 2rem;
-                text-align: center;
             }
-        
+
+            p {
+                color: #fff;
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 1.25rem;
+                margin: 0 0 2rem;
+            }
             h4 {
-                margin: 3rem 0 1rem;
+                margin: 0 0 1rem;
                 font-size: 1.2rem;
                 font-weight: 400;
-                text-align: center;
+            }
+        }
+
+        .subsection {
+            padding: 70px 45px 70px 45px;
+            border-top: 8px solid #222;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            
+            h1 {
+                font-weight: 700;
+                font-size: 3.1rem;
+                line-height: 1.1;
+                margin: .75em 0 .25em;
             }
         
-            .accordion {
+            p {
                 color: #fff;
-                width: 100%;
-                border: none;
-                text-align: center;
-                outline: none;
-                font-size: 15px;
+                font-weight: 400;
+                font-size: 1.7rem;
+                line-height: 2rem;
+                margin: .75em 0 .25em;
+                display: block;
+                margin-block-start: 0.83em;
+                margin-block-end: 0.83em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                max-width: 530px;
+            }
+        }
+
+        #firstSubsectionContainer {
+            margin: 100px 0 0 0;
+            // justify-content: center;
+            // align-items: center;
+        }
+
+        .fourthSubsectionContainer {
+            padding: 70px 10px 70px 10px;
+
+            .emailInput {
+                display: flex;
+            }
+
+            .fourthSubsectionText {
+                h1 {
+                    font-weight: 700;
+                    font-size: 3.1rem;
+                    line-height: 1.1;
+                    margin: 0 0 2rem;
+                    text-align: center;
+                }
             
-                .accordion__button {
-                    background-color:#303030;
-                    cursor: pointer;
-                    text-align: left;
-                    color: #fff;
+                h4 {
+                    margin: 3rem 0 1rem;
+                    font-size: 1.2rem;
                     font-weight: 400;
-                    font-size: 1.7rem;
-                    line-height: 4rem;
-                    width: 100%;
-                    margin: .2rem;
-                    border: 0rem;
-    
-        
-                
+                    text-align: center;
+                }
             
-                    .svg-icon {
-                        float: right;
-                        transform: rotate(45deg);
-                        transition: .2s
-                    }
-                    
-                    .accordion__content {
-                        overflow: hidden;
-                        max-height: 0;
-                        transition: max-height 0.2s;
-                    }
-                    
-                }  
-                // code below is for CSS pseudoelement. Not going in line with text of button, so using the SVG above for now.
-                // .accordion__button::after {
-                //     content: '\FF0B';
-                //     float: right;
-                //     transform: scale(1.5);
-                // }
-                .status--active {
-        
-                    .accordion__content {
-                        overflow: visible;
-                        max-height: 300rem;
-                    }
-        
-                    .svg-icon {
-                        transform: rotate(0deg);
+                .accordion {
+                    color: #fff;
+                    width: 100%;
+                    border: none;
+                    text-align: center;
+                    outline: none;
+                    font-size: 15px;
+                
+                    .accordion__button {
+                        background-color:#303030;
+                        cursor: pointer;
+                        text-align: left;
+                        color: #fff;
+                        font-weight: 400;
+                        font-size: 1.7rem;
+                        line-height: 4rem;
+                        width: 100%;
+                        margin: .2rem;
+                        border: 0rem;
+
+                        .svg-icon {
+                            float: right;
+                            transform: rotate(45deg);
+                            transition: .2s
+                        }
+                        
+                        .accordion__content {
+                            overflow: hidden;
+                            max-height: 0;
+                            transition: max-height 0.2s;
+                        }
+                    }  
+                    // code below is for CSS pseudoelement. Not going in line with text of button, so using the SVG above for now.
+                    // .accordion__button::after {
+                    //     content: '\FF0B';
+                    //     float: right;
+                    //     transform: scale(1.5);
+                    // }
+                    .status--active {
+            
+                        .accordion__content {
+                            overflow: visible;
+                            max-height: 300rem;
+                        }
+            
+                        .svg-icon {
+                            transform: rotate(0deg);
+                        }
                     }
                 }
             }
         }
+
+        .inputBar {
+            font-size: 1.5rem;
+            width: 24.5rem;
+            height: 3.6rem;
+        }
+
+        .inputBar::placeholder {
+            font-size: 1rem;
+        }
+
+
+        #login {
+            border-radius: 5px;
+        }
+
+
+        .createAccount {
+            font-size: 1.7rem;
+            padding: 0.9rem 2.6rem;
+            text-transform: uppercase;
+        }
+
+        .createAccount:hover {
+            background: rgb(238, 38, 38)
+        }
+
+        .demoLogin {
+            border-radius: 50px;
+            margin: 1rem;
+        }
+
+        .demoLogin:hover {
+            background: rgb(65, 64, 64);
+        }
     }
-}
 
 
-.splashPage::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.6);
-    box-shadow: inset -1rem -3rem 10rem black;
+    .splashImage::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.6);
+        box-shadow: inset -1rem -3rem 10rem black;
+    }
 }
 
