@@ -5,7 +5,6 @@
     .splashImage {
         width: 100%;
         height: 85vh;
-        // viewport Height, the height of the window. Takes up 93 slices of whatever 100 slices of the viewport
         position: relative;
         background: image-url('background.jpg') no-repeat center center/cover;
 
@@ -78,8 +77,6 @@
 
         #firstSubsectionContainer {
             margin: 100px 0 0 0;
-            // justify-content: center;
-            // align-items: center;
         }
 
         .fourthSubsectionContainer {
@@ -94,6 +91,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                width: 755px;
 
                 h1 {
                     font-weight: 700;
@@ -141,14 +139,13 @@
                             overflow: hidden;
                             max-height: 0;
                             transition: max-height 0.2s;
+
+                            p {
+                                font-size: 1.4rem;
+                            }
                         }
                     }  
-                    // code below is for CSS pseudoelement. Not going in line with text of button, so using the SVG above for now.
-                    // .accordion__button::after {
-                    //     content: '\FF0B';
-                    //     float: right;
-                    //     transform: scale(1.5);
-                    // }
+                    
                     .status--active {
             
                         .accordion__content {
