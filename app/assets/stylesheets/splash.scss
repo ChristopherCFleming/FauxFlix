@@ -41,133 +41,128 @@
             font-weight: 400;
         }
     }
+    .subsection {
+        padding: 70px 45px 70px 45px;
+        border-top: 8px solid #222;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        
+        h1 {
+            font-weight: 700;
+            font-size: 3.1rem;
+            line-height: 1.1;
+            margin: .75em 0 .25em;
+        }
+    
+        p {
+            color: #fff;
+            font-weight: 400;
+            font-size: 1.7rem;
+            line-height: 2rem;
+            margin: .75em 0 .25em;
+            display: block;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            max-width: 530px;
+        }
+    
+    }
+        
+    .firstSubsectionContainer {
+        margin: 100px 0 0 0;
+    }
+    
+    .fourthSubsectionContainer {
+        padding: 70px 10px 70px 10px;
+    
+        .fourthSubsectionText {
+            h1 {
+                font-weight: 700;
+                font-size: 3.1rem;
+                line-height: 1.1;
+                margin: 0 0 2rem;
+                text-align: center;
+            }
+        
+            h4 {
+                margin: 3rem 0 1rem;
+                font-size: 1.2rem;
+                font-weight: 400;
+                text-align: center;
+            }
+        
+            .accordion {
+                color: #fff;
+                width: 100%;
+                border: none;
+                text-align: center;
+                outline: none;
+                font-size: 15px;
+            
+                .accordion__button {
+                    background-color:#303030;
+                    cursor: pointer;
+                    text-align: left;
+                    color: #fff;
+                    font-weight: 400;
+                    font-size: 1.7rem;
+                    line-height: 4rem;
+                    width: 100%;
+                    margin: .2rem;
+                    border: 0rem;
+    
+        
+                
+            
+                    .svg-icon {
+                        float: right;
+                        transform: rotate(45deg);
+                        transition: .2s
+                    }
+                    
+                    .accordion__content {
+                        overflow: hidden;
+                        max-height: 0;
+                        transition: max-height 0.2s;
+                    }
+                    
+                }  
+                // code below is for CSS pseudoelement. Not going in line with text of button, so using the SVG above for now.
+                // .accordion__button::after {
+                //     content: '\FF0B';
+                //     float: right;
+                //     transform: scale(1.5);
+                // }
+                .status--active {
+        
+                    .accordion__content {
+                        overflow: visible;
+                        max-height: 300rem;
+                    }
+        
+                    .svg-icon {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
 }
 
-.splashPage::after{
+
+.splashPage::after {
     content: '';
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgba(0,0,0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     box-shadow: inset -1rem -3rem 10rem black;
-}
-
-.subsection {
-    padding: 70px 45px 70px 45px;
-    border-top: 8px solid #222;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    
-     h1 {
-         font-weight: 700;
-         font-size: 3.1rem;
-         line-height: 1.1;
-         margin: .75em 0 .25em;
-     }
-
-     p {
-        color: #fff;
-        font-weight: 400;
-        font-size: 1.7rem;
-        line-height: 2rem;
-        margin: .75em 0 .25em;
-        display: block;
-        margin-block-start: 0.83em;
-        margin-block-end: 0.83em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        max-width: 530px;
-     }
-
-    }
-    
-.firstSubsectionContainer {
-    margin: 100px 0 0 0;
-
-}
-
-.description {
-    color: red;
-}
-
-.fourthSubsectionContainer {
-    padding: 70px 10px 70px 10px;
-
-    .fourthSubsectionText {
-        h1 {
-            font-weight: 700;
-            font-size: 3.1rem;
-            line-height: 1.1;
-            margin: 0 0 2rem;
-            text-align: center;
-        }
-    
-        h4 {
-            margin: 3rem 0 1rem;
-            font-size: 1.2rem;
-            font-weight: 400;
-            text-align: center;
-        }
-    
-        .accordion {
-            color: #fff;
-            width: 100%;
-            border: none;
-            text-align: center;
-            outline: none;
-            font-size: 15px;
-        
-            .accordion__button {
-                background-color:#303030;
-                cursor: pointer;
-                text-align: left;
-                color: #fff;
-                font-weight: 400;
-                font-size: 1.7rem;
-                line-height: 4rem;
-                width: 100%;
-                margin: .2rem;
-                border: 0rem;
-
-    
-            
-        
-                .svg-icon {
-                    float: right;
-                    transform: rotate(45deg);
-                    transition: .2s
-                }
-                
-                .accordion__content {
-                    overflow: hidden;
-                    max-height: 0;
-                    transition: max-height 0.2s;
-                }
-                
-            }  
-            // code below is for CSS pseudoelement. Not going in line with text of button, so using the SVG above for now.
-            // .accordion__button::after {
-            //     content: '\FF0B';
-            //     float: right;
-            //     transform: scale(1.5);
-            // }
-            .status--active {
-    
-                .accordion__content {
-                    overflow: visible;
-                    max-height: 300rem;
-                }
-    
-                .svg-icon {
-                    transform: rotate(0deg);
-                }
-            }
-        }
-    }
 }
 
