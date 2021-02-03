@@ -126,6 +126,7 @@
                         line-height: 5rem;
                         width: 100%;
                         margin: .3rem;
+                        margin-bottom: 1px;
                         border: 0rem;
 
                         .svg-icon {
@@ -134,18 +135,18 @@
                             transition: .2s;
                             margin: 1.7rem 1.7rem 0 0;
                         }
-                        
                         .accordion__content {
                             overflow: hidden;
                             max-height: 0;
                             transition: max-height 0.2s;
-
+    
                             p {
                                 font-size: 1.4rem;
                             }
-                        }
-                    }  
-                    
+                        
+                        }  
+                    }
+
                     .status--active {
             
                         .accordion__content {
