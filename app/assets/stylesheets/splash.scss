@@ -90,6 +90,11 @@
             }
 
             .fourthSubsectionText {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
                 h1 {
                     font-weight: 700;
                     font-size: 3.1rem;
@@ -107,7 +112,7 @@
             
                 .accordion {
                     color: #fff;
-                    width: 100%;
+                    width: 47rem;
                     border: none;
                     text-align: center;
                     outline: none;
@@ -119,16 +124,17 @@
                         text-align: left;
                         color: #fff;
                         font-weight: 400;
-                        font-size: 1.7rem;
-                        line-height: 4rem;
+                        font-size: 1.5rem;
+                        line-height: 5rem;
                         width: 100%;
-                        margin: .2rem;
+                        margin: .3rem;
                         border: 0rem;
 
                         .svg-icon {
                             float: right;
                             transform: rotate(45deg);
-                            transition: .2s
+                            transition: .2s;
+                            margin: 1.7rem 1.7rem 0 0;
                         }
                         
                         .accordion__content {
@@ -193,7 +199,6 @@
             background: rgb(65, 64, 64);
         }
     }
-
 
     .splashImage::after {
         content: '';
