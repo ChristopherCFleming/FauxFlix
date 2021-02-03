@@ -4,6 +4,13 @@
 
     .pageHeader {
         border-bottom:1px solid rgb(209, 207, 207);
+
+        #login {
+            background: white;
+            color: rgb(63, 63, 63);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
     }
 
     .signupContent {
@@ -16,5 +23,6 @@
         text-align: center;
         margin-top: 9rem;
         z-index: 2;
+        color: black;
     }
 }

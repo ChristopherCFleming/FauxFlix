@@ -43,10 +43,13 @@ class SignupForm extends React.Component {
                 <Header />
                     <div className="signupContent">
                         <h1>Create a password to start your membership.</h1>
+                        <br/>
                         <h2>Just a few more steps and you're done! We hate paperwork, too.</h2>
                         <form onSubmit={this.handleSubmit} className="signupInputForm">
                             <input type="email" name="email" className="emailBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
+                            <br />
                             <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" className="passwordBar"/>
+                            <br/>
                             <button type="submit" className="btn">CONTINUE</button>
                         </form>
                     </div>

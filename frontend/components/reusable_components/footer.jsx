@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer className="splashFooter">
+        <footer className="footer">
             <div className="contactLinks">
                 <a id="portfolio" href="https://christophercfleming.github.io/" target="_blank">
                     <i className="fas fa-user contactIcon"></i>
