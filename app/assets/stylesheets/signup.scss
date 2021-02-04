@@ -21,6 +21,9 @@
             font-size: 1.2rem;
             font-weight: bold;
         }
+        #login:hover {
+            text-decoration: underline;
+        }
     }
 
     form {
@@ -28,17 +31,20 @@
         input {
             height: 60px;
             width: 440px;
-            margin: 20px 0 0 0;
+            margin: 15px 0 0 0;
         }
 
         button {
-            margin: 20px 0 0 0;
+            margin: 30px 0 0 0;
+            height: 60px;
+            width: 440px;
+            border-radius: 5px;
         }
     }
 
     .signupContent {
         text-align: left;
-        margin: 9rem 0 0 37%;
+        margin: 5rem 0 9rem 33%;
         z-index: 2;
     }
 }
