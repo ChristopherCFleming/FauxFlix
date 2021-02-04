@@ -1,17 +1,17 @@
-import { connect } from 'react_redux';
+import { connect } from 'react-redux';
 import { allVideos } from '../../actions/video_actions';
 import Videos from './videos';
 
 
 const mSTP = (state, ownProps) => {
     return {
-        videos: state.videos
+        videos: state.entities.videos
     }
 }
 
 const mDTP = (dispatch) => {
     return {
-        allVideos: (videos) => dispatch(allVideos(videos))
+        allVideos: () => dispatch(allVideos())
     }
 };
 

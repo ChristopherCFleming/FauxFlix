@@ -1,11 +1,14 @@
-class API::VideosController < ApplicationController
+class Api::VideosController < ApplicationController
 
     def index 
         if params[:genre_id]
             @videos = Video.find_all_by_genre(params[:genre_id])
             render :index
         else
-            render json: {}
+            # should delete the two lines below, but comment in back line 11
+            @videos = Video.all
+            render :index
+            # render json: {}
         end
     end
 

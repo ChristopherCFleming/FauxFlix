@@ -5,12 +5,28 @@ class Videos extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        this.props.allVideos();
+    }
+
     render() {
-        return (
-            <div>
-                <p>This Would display my videos!</p>
-            </div>
-        )
+
+        if (!this.props.videos) {
+            return null;
+        } else {
+            const VideoParagraphs = Object.values(this.props.videos);
+    
+            return (
+                <div>
+                    <p>This Would display my videos!</p>
+                    {VideoParagraphs.map(
+                        (video, idx) => (
+                            <p key={idx}>{video.title}</p>
+                        )
+                    )}
+                </div>
+            )
+        }
     }
 }
 

@@ -12,3 +12,9 @@ export const fetchVideosByGenre = (genreId, type)=>{
         `api/genres/${genreId}/videos`
     })
 };
+
+export const fetchAllVideos = () =>{
+    return $.ajax({
+        url: `api/videos`
+    })
+};
