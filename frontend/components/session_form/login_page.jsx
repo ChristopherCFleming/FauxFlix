@@ -49,8 +49,10 @@ class LoginPage extends React.Component {
                                 <input type="email" name="email" className="emailBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
                                 <br/>
                                 <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" className="passwordBar"/>
+                                <br/>
+                                <button type="submit" className="btn">Sign In</button>
                                 <h5>New to FauxFlix? 
-                                    <Link to="/signup" className="signUpLink">Sign up now</Link>.
+                                    <Link to="/signup" className="signUpLink"> Sign up now</Link>.
                                 </h5>
                             </form>
                         </div>
