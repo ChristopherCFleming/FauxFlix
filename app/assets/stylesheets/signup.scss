@@ -2,6 +2,16 @@
     background-color: white;
     height: 100vh;
 
+    h1, h2 {
+        color: black;
+        font-size: 23px;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-weight: 400;
+    }
+
     .pageHeader {
         border-bottom:1px solid rgb(209, 207, 207);
 
@@ -13,16 +23,22 @@
         }
     }
 
+    form {
+
+        input {
+            height: 60px;
+            width: 440px;
+            margin: 20px 0 0 0;
+        }
+
+        button {
+            margin: 20px 0 0 0;
+        }
+    }
+
     .signupContent {
-        position: relative;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-top: 9rem;
+        text-align: left;
+        margin: 9rem 0 0 37%;
         z-index: 2;
-        color: black;
     }
 }
