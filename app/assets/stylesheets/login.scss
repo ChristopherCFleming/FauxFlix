@@ -1,6 +1,5 @@
 .loginPage {
-    width: 100%;
-    height: 85vh;
+    height: 120vh;
     // viewport Height, the height of the window. Takes up 93 slices of whatever 100 slices of the viewport
     position: relative;
     background: image-url('background.jpg') no-repeat center center/cover;
@@ -22,10 +21,7 @@
         }
 
         #login {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translate(-50%, -50%);
+            display: none;
         }
     }
 
@@ -37,14 +33,15 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: 9rem;
+        margin: 9rem 30rem 0 30rem;
         z-index: 2;
+        background-color:rgba(0, 0, 0, 0.7);
 
         h1 {
             font-weight: 700;
             font-size: 2.5rem;
             line-height: 1.1;
-            margin: 0 0 2rem;
+            margin: 50px 0 30px;
         }
 
         p {
@@ -60,5 +57,30 @@
             font-size: 1.2rem;
             font-weight: 400;
         }
+        
+        input {
+            width: 315px;
+            height: 50px;
+            background: #333;
+            color: #fff;
+            margin: 0 0 40px;
+        }
     }
+
+    .footer {
+        margin: 20rem 0 0 0;
+        border-top: none;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.loginPage::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset -1rem -3rem 10rem black;
 }
