@@ -41,19 +41,21 @@ class LoginPage extends React.Component {
     render() {
         return (
             <div className="loginPage">
-                <Header />
-                    <div className="loginPageContent">
-                        <h1>Sign In</h1>
-                        <form onSubmit={this.handleSubmit} className="infoInputForm">
-                            <input type="email" name="email" className="emailBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
-                            <br/>
-                            <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" className="passwordBar"/>
-                            <h5>New to FauxFlix? 
-                                <Link to="/signup" className="signUpLink">Sign up now</Link>.
-                            </h5>
-                        </form>
-                    </div>
-                <Footer />
+                <div className="shadowDiv">
+                    <Header />
+                        <div className="loginPageContent">
+                            <h1>Sign In</h1>
+                            <form onSubmit={this.handleSubmit} className="infoInputForm">
+                                <input type="email" name="email" className="emailBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
+                                <br/>
+                                <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" className="passwordBar"/>
+                                <h5>New to FauxFlix? 
+                                    <Link to="/signup" className="signUpLink">Sign up now</Link>.
+                                </h5>
+                            </form>
+                        </div>
+                    <Footer />
+                </div>
             </div>
         )
     }
