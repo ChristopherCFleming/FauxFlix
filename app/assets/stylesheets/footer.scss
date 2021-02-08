@@ -13,6 +13,11 @@
             height: auto;
             margin: 1rem 1rem 1rem 1rem;
             color: rgb(128, 119, 119);
+            transition: all .2 ease;
+        }
+
+        .contactIcon:hover {
+            transform: scale(1.2);
         }
     }
 }
