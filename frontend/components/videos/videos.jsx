@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../reusable_components/header';
 
 class Videos extends React.Component {
     constructor(props) {
@@ -18,6 +19,7 @@ class Videos extends React.Component {
     
             return (
                 <div>
+                    <Header />
                     <p>This Would display my videos!</p>
                     {VideoParagraphs.map(
                         (video, idx) => (

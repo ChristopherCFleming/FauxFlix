@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { allVideos } from '../../actions/video_actions';
 import Videos from './videos';
+import { logout } from '../../actions/session_actions';
 
 
 const mSTP = (state, ownProps) => {
@@ -11,7 +12,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch) => {
     return {
-        allVideos: () => dispatch(allVideos())
+        allVideos: () => dispatch(allVideos()),
+        logout: () => dispatch(logout(currentUser))  //not sure if this is correct
     }
 };
 
