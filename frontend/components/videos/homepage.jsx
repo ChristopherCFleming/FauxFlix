@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../reusable_components/header';
 
-class Videos extends React.Component {
+class Homepage extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -20,7 +20,7 @@ class Videos extends React.Component {
             return (
                 <div>
                     <Header />
-                    <p>This Would display my videos!</p>
+                    
                     {VideoParagraphs.map(
                         (video, idx) => (
                             <p key={idx}>{video.title}</p>
@@ -32,4 +32,4 @@ class Videos extends React.Component {
     }
 }
 
-export default Videos;
+export default Homepage;

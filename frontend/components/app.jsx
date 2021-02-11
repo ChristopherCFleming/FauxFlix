@@ -8,7 +8,7 @@ import Root from './root';
 import configureStore from '../store/store';
 import LoginContainer from './session_form/login_container';
 import SignupContainer from './session_form/signup_form_container';
-import VideosContainer from './videos/all_videos_container';
+import HomepageContainer from './videos/homepage_container';
 // import stylesheet from '../../app/assets/stylesheets/main_stylesheet.css'    //Do I even need this?
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -18,7 +18,7 @@ const App = () => (
             <AuthRoute exact path="/" component={SplashContainer} />
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer} />
-            <ProtectedRoute path="/videos" component={VideosContainer} />
+            <ProtectedRoute path="/browse" component={HomepageContainer} />
             {/* <protectedRoute path="/videos/:id" component={VideosContainer} />  How to do wildcard here? */}
         </Switch>
     </main>

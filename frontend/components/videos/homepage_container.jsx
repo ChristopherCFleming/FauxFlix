@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { allVideos } from '../../actions/video_actions';
-import Videos from './videos';
+import Homepage from './homepage';
 import { logout } from '../../actions/session_actions';
 
 
@@ -17,5 +17,5 @@ const mDTP = (dispatch) => {
     }
 };
 
-export default connect(mSTP, mDTP)(Videos)
+export default connect(mSTP, mDTP)(Homepage)
 

@@ -56,7 +56,7 @@ class SplashPage extends React.Component {
                             <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
                             <Link to="/signup" id="createAccount" email={this.state.email} className="btn createAccount">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
                         </div>
-                        <Link to="/videos" className="btn demoLogin" onClick={this.demoLogin}>
+                        <Link to="/browse" className="btn demoLogin" onClick={this.demoLogin}>
                             Demo Login
                         </Link>
                     </div>
@@ -131,7 +131,7 @@ class SplashPage extends React.Component {
                                 <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
                                 <Link to="/signup" id="createAccount" className="btn createAccount">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
                             </div>
-                            <Link to="/videos" className="btn demoLogin" onClick={this.demoLogin}>
+                            <Link to="/browse" className="btn demoLogin" onClick={this.demoLogin}>
                                 Demo Login
                             </Link>
                         </div>
