@@ -28,8 +28,11 @@ class Header extends React.Component {
             return (
                 <header className="pageHeader">
                     <Link to="/browse"><img src={window.logoURL} alt="FauxFlix Logo" className="logo"/></Link>
-                    <Link to="/" onClick={this.endSession} className="btn">Log Out</Link>
-                    <Link to="/browse">Home</Link>
+                    <div classname="subNavi">
+                        <Link to="/browse">Home</Link>
+                        <Link to="/myList">My List</Link>
+                    </div>
+                    <Link to="/" onClick={this.endSession}><img className="profilePic" src={window.profile_pic} alt="Profile Pic" /></Link>
                     {/* <Link to="/URL FOR LIST HERE!!!!">My List</Link> */}
                 </header>
             )

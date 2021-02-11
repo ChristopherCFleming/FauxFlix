@@ -6,9 +6,6 @@
     .logo {
         width: 155px;
         position: absolute;
-        top: 30%;
-        right: 85%;
-        position: absolute;
         top: 50%;
         left: 10%;
         transform: translate(-50%, -50%);
@@ -19,5 +16,20 @@
         top: 50%;
         right: 0;
         transform: translate(-50%, -50%);
+    }
+
+    //The following only pertains to header when logged in:
+
+    .subNavi {
+        margin: 0 0 0 2rem;
+    }
+
+    .profilePic {
+        height: 35px;
+         position: absolute;
+         top: 50%;
+         right: 0;
+         transform: translate(-50%, -50%);
+         border-radius: 5px;
     }
 }

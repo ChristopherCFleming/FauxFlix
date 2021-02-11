@@ -13,7 +13,6 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
     return {
         allVideos: () => dispatch(allVideos()),
-        logout: () => dispatch(logout(currentUser))  //not sure if this is correct
     }
 };
 
