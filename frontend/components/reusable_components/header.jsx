@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import { receiveCurrentUser } from '../../actions/session_actions';
-import { logout } from '../../actions/session_actions';
+// import { logout } from '../../actions/session_actions';
 
 class Header extends React.Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class Header extends React.Component {
 
     endSession(e) {
         e.preventDefault();
-        this.logout();
+        this.props.logout();
     }
 
     render() {
