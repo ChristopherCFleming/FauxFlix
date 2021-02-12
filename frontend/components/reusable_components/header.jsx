@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 // import { receiveCurrentUser } from '../../actions/session_actions';
 // import { logout } from '../../actions/session_actions';
 
+
 class Header extends React.Component {
     constructor(props) {
         super(props)
@@ -28,7 +29,7 @@ class Header extends React.Component {
             return (
                 <header className="pageHeader">
                     <Link to="/browse"><img src={window.logoURL} alt="FauxFlix Logo" className="logo"/></Link>
-                    <div classname="subNavi">
+                    <div className="subNavi">
                         <Link to="/browse">Home</Link>
                         <Link to="/myList">My List</Link>
                     </div>
