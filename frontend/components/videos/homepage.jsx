@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../reusable_components/header';
+import Header from '../reusable_components/header_container';
 import LargeVideo from './large_video_container';
 import GenreCarousel from './genre_carousel_container';
 import Footer from '../reusable_components/footer';
@@ -30,7 +30,7 @@ class Homepage extends React.Component {
                     <h1 className="genreCarousel">Sci-Fi</h1>
                     <h1 className="genreCarousel">Drama</h1>
                     <h1 className="genreCarousel">Fantasy</h1> */}
-                    {["Trending", "Dark", "Comedy", "Sci-Fi", "Drama", "Fantasy"].map(genre => <GenreCarousel genreTitle={genre} />)}
+                    {["Trending", "Dark", "Comedy", "Sci-Fi", "Drama", "Fantasy"].map((genre, idx) => <GenreCarousel genreTitle={genre} key={idx} />)}
 
                     {/* {VideoParagraphs.map(
                         (video, idx) => (

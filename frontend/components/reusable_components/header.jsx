@@ -18,14 +18,14 @@ class Header extends React.Component {
     }
 
     render() {
-        // if (!window.currentUser) { //what I want to say here is if not logged in, do this, else do the other thing.
-            // return (
-            //     <header className="pageHeader">
-            //         <Link to="/"><img src={window.logoURL} alt="FauxFlix Logo" className="logo"/></Link>
-            //         <Link  id="login" className="btn" to="/login">Sign In</Link>
-            //     </header>
-            // )
-        // } else {
+        if (!this.props.currentUser) {
+            return (
+                <header className="pageHeader">
+                    <Link to="/"><img src={window.logoURL} alt="FauxFlix Logo" className="logo"/></Link>
+                    <Link  id="login" className="btn" to="/login">Sign In</Link>
+                </header>
+            )
+        } else {
             return (
                 <header className="pageHeader">
                     <Link to="/browse"><img src={window.logoURL} alt="FauxFlix Logo" className="logo"/></Link>
@@ -37,7 +37,7 @@ class Header extends React.Component {
                     {/* <Link to="/URL FOR LIST HERE!!!!">My List</Link> */}
                 </header>
             )
-        // }
+        }
 
     }
 }

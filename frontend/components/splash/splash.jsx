@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../reusable_components/header';
+import Header from '../reusable_components/header_container';
 import Footer from '../reusable_components/footer';
 
 
