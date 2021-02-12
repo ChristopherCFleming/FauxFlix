@@ -6,7 +6,8 @@ class SignupForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: this.props.email,
+            // email: this.props.email,
+            email: window.location.href.split("email=")[1],
             password: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -47,6 +48,7 @@ class SignupForm extends React.Component {
                         <h2>Just a few more steps and you're done! <br />We hate paperwork, too.</h2>
                         <form onSubmit={this.handleSubmit} className="signupInputForm">
                             <input type="email" name="email" className="emailBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
+                            {this.renderErrors()}
                             <br />
                             <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" className="passwordBar"/>
                             {this.renderErrors()}
