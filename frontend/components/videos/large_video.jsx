@@ -10,7 +10,7 @@ class LargeVideo extends React.Component {
     }
 
     render() {
-         if (!this.props.videos) {
+        if (!this.props.videos) {
             return null;
         } else { 
             return (
@@ -22,9 +22,3 @@ class LargeVideo extends React.Component {
 }
 
 export default LargeVideo;
-
-
- if (!this.props.videos) {
-            return null;
-        } else { 
-        }
