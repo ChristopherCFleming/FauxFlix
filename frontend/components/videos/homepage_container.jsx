@@ -13,6 +13,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
     return {
         allVideos: () => dispatch(allVideos()),
+        showVideo: (video_id) => dispatch(showVideo(video_id))
     }
 };
 

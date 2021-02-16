@@ -5,11 +5,26 @@ class LargeVideo extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.allVideos();
+    }
+
     render() {
-        return (
-            <h1>This is the Large Video Component</h1>
-        )
+         if (!this.props.videos) {
+            return null;
+        } else { 
+            return (
+                <h1>This is the Large Video Component</h1>
+    
+            )
+        }
     }
 }
 
 export default LargeVideo;
+
+
+ if (!this.props.videos) {
+            return null;
+        } else { 
+        }
