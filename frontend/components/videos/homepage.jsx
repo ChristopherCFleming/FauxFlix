@@ -10,20 +10,27 @@ class Homepage extends React.Component {
     }
 
     componentDidMount() {
-        this.props.allVideos();
+        this.props.allVideos()
+        // .then(() => console.log("hi"));
     }
 
     render() {
-
-        if (!this.props.videos) {
+        // console.log(this.props.videos)
+        if (this.props.allVideosArray.length === 0) {
             return null;
         } else {
-            const VideoParagraphs = Object.values(this.props.videos);
+
+            const randNum = Math.floor(Math.random() * Math.floor(this.props.allVideosArray.length + 1))
+            const randVideo = this.props.allVideosArray[randNum]
+            console.log(randVideo)
+            // const allMyVideos = Object.values(this.props.videos);
+            // const allVideoIds = Object.keys(this.props.videos);
+            // console.log(this.props.allVideosArray)
     
             return (
                 <div>
                     <Header />
-                    <LargeVideo />
+                    <LargeVideo randVideo={randVideo}/>
                     {/* <h1 className="genreCarousel">Trending</h1>
                     <h1 className="genreCarousel">Dark</h1>
                     <h1 className="genreCarousel">Comedy</h1>
@@ -32,11 +39,13 @@ class Homepage extends React.Component {
                     <h1 className="genreCarousel">Fantasy</h1> */}
                     {["Trending", "Dark", "Comedy", "Sci-Fi", "Drama", "Fantasy"].map((genre, idx) => <GenreCarousel genreTitle={genre} key={idx} />)}
 
-                    {/* {VideoParagraphs.map(
+                    {/* {allMyVideos.map(
                         (video, idx) => (
-                            <p key={idx}>{video.title}</p>
+                            // <p key={idx}>{video.title}</p>
+                            console.log(typeof video)
                         )
                     )} */}
+                    {/* {allMyVideos[1].title}  */}
                     <Footer />
                 </div>
             )

@@ -6,7 +6,8 @@ import { logout } from '../../actions/session_actions';
 
 const mSTP = (state, ownProps) => {
     return {
-        videos: state.entities.videos
+        // videos: state.entities.videos,
+        allVideosArray: Object.values(state.entities.videos)
     }
 }
 
