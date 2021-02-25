@@ -19,7 +19,7 @@ class Header extends React.Component {
         this.props.logout();
     }
 
-    //Jwuery way to do it
+    //Jquery way to do it
     // $(window).scroll(function() {
     // //After scrolling 100px from the top...
     //     if ( $(window).scrollTop() >= 100 ) {

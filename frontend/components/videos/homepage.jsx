@@ -3,6 +3,7 @@ import Header from '../reusable_components/header_container';
 import LargeVideo from './large_video_container';
 import GenreCarousel from './genre_carousel_container';
 import Footer from '../reusable_components/footer';
+import Navi from '../reusable_components/navi';
 
 class Homepage extends React.Component {
     constructor(props) {
@@ -29,7 +30,8 @@ class Homepage extends React.Component {
     
             return (
                 <div>
-                    <Header />
+                    {/* <Header /> */}
+                    <Navi logout={this.props.logout} currentUser={this.props.currentUser}/>
                     <LargeVideo randVideo={randVideo}/>
                     {/* <h1 className="genreCarousel">Trending</h1>
                     <h1 className="genreCarousel">Dark</h1>
