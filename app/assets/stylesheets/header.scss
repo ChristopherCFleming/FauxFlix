@@ -33,4 +33,24 @@
 .loggedIn {
     position: fixed;
     top: 0;
+    height: 70px;
+    padding: 20px;
+    transition: 0.5s;
+
+    .firstSection {
+        display: flex;
+        flex-direction: row;
+
+        .headerLink {
+            margin: 0 10px 0 0;
+        }
+    }
+
+    .logo {
+        width: 140px;
+    }
+}
+
+.loggedIn.active {
+    background: #000;
 }
