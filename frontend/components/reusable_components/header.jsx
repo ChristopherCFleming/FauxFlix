@@ -27,12 +27,13 @@ class Header extends React.Component {
             )
         } else {
             return (
-                <header className="pageHeader">
+                <header className="pageHeader loggedIn">
                     <Link to="/browse"><img src={window.logoURL} alt="FauxFlix Logo" className="logo"/></Link>
                     <div className="subNavi">
                         <Link to="/browse">Home</Link>
                         <Link to="/myList">My List</Link>
                     </div>
+                    
                     <Link to="/" onClick={this.endSession}><img className="profilePic" src={window.profile_pic} alt="Profile Pic" /></Link>
                     {/* <Link to="/URL FOR LIST HERE!!!!">My List</Link> */}
                 </header>

@@ -1,21 +1,21 @@
+
+
 .pageHeader {
     position: relative;
+    top: 0;
     height: 90px;
+    width: 100%;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
 
     .logo {
         width: 155px;
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        transform: translate(-50%, -50%);
     }
 
     #login {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(-50%, -50%);
+        height: 30px;
     }
 
     //The following only pertains to header when logged in:
@@ -26,10 +26,11 @@
 
     .profilePic {
         height: 35px;
-         position: absolute;
-         top: 50%;
-         right: 0;
-         transform: translate(-50%, -50%);
-         border-radius: 5px;
+        border-radius: 5px;
     }
+}
+
+.loggedIn {
+    position: fixed;
+    top: 0;
 }

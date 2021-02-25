@@ -11,16 +11,13 @@ class LargeVideo extends React.Component {
     // }
 
     render() {
-        // const michelle = this.props.videos[35];
-        //   const videoParagraphs = Object.values(this.props.videos);
-
         if (!this.props.randVideo) {
             return null;
         } else { 
             return (
                 <div>
                     <h1>This is the Large Video Component</h1>
-                    <video muted width="100%" autoplay="autoplay" loop="loop" height="50%" controls="controls" className="banner">
+                    <video muted width="100%" autoPlay="autoPlay" loop="loop" height="50%" controls="controls" className="banner">
                         <source src={this.props.randVideo.video} type="video/mp4"/>
                     </video>
                     {/* <p>{videoParagraphs[0].title}</p> */}
