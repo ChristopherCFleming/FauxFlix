@@ -23,8 +23,8 @@ class SplashPage extends React.Component {
 
     demoLogin() {
         const sampleInfo = {
-            email: "testing1@gmail.com",
-            password: "testing1"
+            email: "testing0@gmail.com",
+            password: "testing0"
         }
         this.props.login(sampleInfo);
     }
