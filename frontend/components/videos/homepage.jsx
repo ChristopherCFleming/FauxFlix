@@ -4,6 +4,7 @@ import LargeVideo from './large_video_container';
 import GenreCarousel from './genre_carousel_container';
 import Footer from '../reusable_components/footer';
 import Navi from '../reusable_components/navi';
+import BannerVideo from './banner_video';
 
 class Homepage extends React.Component {
     constructor(props) {
@@ -21,7 +22,7 @@ class Homepage extends React.Component {
             return null;
         } else {
 
-            const randNum = Math.floor(Math.random() * Math.floor(this.props.allVideosArray.length + 1))
+            const randNum = Math.floor(Math.random() * Math.floor(this.props.allVideosArray.length))
             const randVideo = this.props.allVideosArray[randNum]
             console.log(randVideo)
             // const allMyVideos = Object.values(this.props.videos);
@@ -32,7 +33,8 @@ class Homepage extends React.Component {
                 <div>
                     {/* <Header /> */}
                     <Navi logout={this.props.logout} currentUser={this.props.currentUser}/>
-                    <LargeVideo randVideo={randVideo}/>
+                    {/* <LargeVideo randVideo={randVideo}/> */}
+                    <BannerVideo randVideo={randVideo} />
                     {/* <h1 className="genreCarousel">Trending</h1>
                     <h1 className="genreCarousel">Dark</h1>
                     <h1 className="genreCarousel">Comedy</h1>
