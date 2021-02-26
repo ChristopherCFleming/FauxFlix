@@ -6,8 +6,8 @@
 //     })
 // }
 
-export const fetchGenres = ()=>{
+export const fetchGenres = () => {
     return $.ajax({
-        url: 'api/genres'
+        url: `api/genres`
     })
 }

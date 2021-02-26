@@ -36,7 +36,7 @@
     height: 70px;
     padding: 18px;
     transition: 0.5s;
-    background: rgba(0, 0, 0, 0.05);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0));
 
     .firstSection {
         display: flex;
@@ -45,7 +45,12 @@
 
         .headerLink {
             margin: 0 10px 0 0;
+            transition: 0.2s
         }
+
+        .headerLink:hover {
+            color: rgb(172, 169, 169);
+        } 
     }
 
     .logo {
