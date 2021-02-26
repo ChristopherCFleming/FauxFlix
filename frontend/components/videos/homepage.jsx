@@ -41,7 +41,7 @@ class Homepage extends React.Component {
                     <h1 className="genreCarousel">Sci-Fi</h1>
                     <h1 className="genreCarousel">Drama</h1>
                     <h1 className="genreCarousel">Fantasy</h1> */}
-                    {["Trending", "Dark", "Comedy", "Sci-Fi", "Drama", "Fantasy"].map((genre, idx) => <GenreCarousel genreTitle={genre} key={idx} />)}
+                    {/* {["Trending", "Dark", "Comedy", "Sci-Fi", "Drama", "Fantasy"].map((genre, idx) => <GenreCarousel genreTitle={genre} key={idx} />)} */}
 
                     {/* {allMyVideos.map(
                         (video, idx) => (

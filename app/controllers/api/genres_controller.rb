@@ -1,6 +1,6 @@
 class Api::GenresController < ApplicationController
-    
-    # def index   #Maybe for later when you have videos up and running
+
+    # def index   
     #     @genres = Genre.all 
     #     render :index
     # end
