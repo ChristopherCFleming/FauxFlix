@@ -2,7 +2,7 @@
 
 
 # json.id genre.id
-# json.name genre.name
+# json.name genre.genre
 # json.videoIds genre.videos.ids 
 
 

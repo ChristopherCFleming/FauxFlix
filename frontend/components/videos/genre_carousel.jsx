@@ -7,7 +7,10 @@ class GenreCarousel extends React.Component {
 
     render() {
         return (
-            <h2>{`This is the ${this.props.genreTitle} Genre Carousel`}</h2>
+            <div className="carousel">
+                <h1>Hey!</h1>
+                <h2>{`This is the ${this.props.genre.genre} Genre Carousel`}</h2>
+            </div>
         )
     }
 }

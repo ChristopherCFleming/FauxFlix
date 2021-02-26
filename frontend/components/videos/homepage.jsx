@@ -24,10 +24,11 @@ class Homepage extends React.Component {
 
             const randNum = Math.floor(Math.random() * Math.floor(this.props.allVideosArray.length))
             const randVideo = this.props.allVideosArray[randNum]
-            console.log(randVideo)
             // const allMyVideos = Object.values(this.props.videos);
             // const allVideoIds = Object.keys(this.props.videos);
             // console.log(this.props.allVideosArray)
+            console.log("Below this should be the genres array")
+            console.log(this.props.allGenresArray);
     
             return (
                 <div>
@@ -41,7 +42,7 @@ class Homepage extends React.Component {
                     <h1 className="genreCarousel">Sci-Fi</h1>
                     <h1 className="genreCarousel">Drama</h1>
                     <h1 className="genreCarousel">Fantasy</h1> */}
-                    {allGenresArray.map((genre, idx) => <GenreCarousel genreTitle={genre.genre} key={idx} />)}
+                    {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} />)}
                     {/* {allMyVideos.map(
                         (video, idx) => (
                             // <p key={idx}>{video.title}</p>
