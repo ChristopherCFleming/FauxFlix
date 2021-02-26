@@ -16,7 +16,7 @@ class LargeVideo extends React.Component {
         } else { 
             return (
                 <div>
-                    <video muted width="100%" autoPlay="autoPlay" loop="loop" height="50%" controls="controls" className="banner">
+                    <video width="100%" autoPlay={true} loop={true} height="50%" controls={true} className="banner">
                         <source src={this.props.randVideo.video} type="video/mp4"/>
                     </video>
                     {/* <p>{videoParagraphs[0].title}</p> */}

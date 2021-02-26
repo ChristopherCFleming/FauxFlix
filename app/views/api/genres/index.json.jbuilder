@@ -1,4 +1,5 @@
-# 
-json.id genre.id
-json.name genre.name
-json.videoIds genre.videos.ids 
+@genres.each do |genre|
+json.set! genre.id do
+json.extract! genre, :id, :genre, :video_ids
+end
+end

@@ -34,12 +34,13 @@
     position: fixed;
     top: 0;
     height: 70px;
-    padding: 20px;
+    padding: 18px;
     transition: 0.5s;
 
     .firstSection {
         display: flex;
         flex-direction: row;
+        align-items: center;
 
         .headerLink {
             margin: 0 10px 0 0;
