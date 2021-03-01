@@ -1,6 +1,9 @@
 import React from 'react';
 import Header from '../reusable_components/header_container';
-import GenreCarousel from './genre_carousel';
+// below this is the functional version:
+// import GenreCarousel from './genre_carousel';
+// below this is the classical version: 
+import GenreCarousel from './genre_carousel_container';
 import Footer from '../reusable_components/footer';
 import Navi from '../reusable_components/navi';
 import BannerVideo from './banner_video';
@@ -30,8 +33,12 @@ class Homepage extends React.Component {
             return (
                 <div>
                     <Navi logout={this.props.logout} currentUser={this.props.currentUser}/>
-                    {/* <BannerVideo randVideo={randVideo} /> */}
-                    {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} videos={this.props.videos}/>)}
+                    <BannerVideo randVideo={randVideo} />
+                    {/* below this is the functional version I hoped would work */}
+                    {/* {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} allVideoObjects={this.props.videos}/>)} */}
+                    {/* below this is the classical component I'm toying with */}
+                    {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} allVideosProps={this.props.videos}/>)}
+
                     <Footer />
                 </div>
             )
