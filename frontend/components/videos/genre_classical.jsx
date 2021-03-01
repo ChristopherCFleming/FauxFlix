@@ -11,12 +11,10 @@ class GenreCarousel extends React.Component {
         } else {
             return (
                 <div className="carousel">
-                    {/* {props.genre.video_ids.map( (video_id_in_genre, idx) =>  */}
-                        {/* // <video muted={true} controls={false} autoPlay={false} loop={true} src={props.videos[video_id_in_genre].video} width="10%" className="carouselVideo" type="video/mp4"></video>)} */}
-                        {this.props.genre.video_ids.map( (each_id, index) => {
-        
-                            console.log(this.props.videos[each_id].video)
-                        })
+                    <h2>{this.props.genre.genre}</h2>
+                    {this.props.genre.video_ids.map( (each_id, index) => (
+                        <video muted={true} controls={false} autoPlay={false} thumbnail={this.props.videos[each_id].thumbnail} loop={true} key={index} src={this.props.videos[each_id].video} width="10%" className="carouselVideo" type="video/mp4"></video>
+                        ))
                     }
                 </div>
 
