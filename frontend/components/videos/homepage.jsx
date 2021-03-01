@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../reusable_components/header_container';
-import LargeVideo from './large_video_container';
 import GenreCarousel from './genre_carousel';
 import Footer from '../reusable_components/footer';
 import Navi from '../reusable_components/navi';
