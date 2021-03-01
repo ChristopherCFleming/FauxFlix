@@ -13,7 +13,7 @@ class GenreCarousel extends React.Component {
                 <div className="carousel">
                     <h2>{this.props.genre.genre}</h2>
                     {this.props.genre.video_ids.map( (each_id, index) => (
-                        <video muted={true} controls={false} autoPlay={false} thumbnail={this.props.videos[each_id].thumbnail} loop={true} key={index} src={this.props.videos[each_id].video} width="10%" className="carouselVideo" type="video/mp4"></video>
+                        <video thumbnail={this.props.videos[each_id].thumbnail} loop={true} key={index} src={this.props.videos[each_id].video} width="10%" className="carouselVideo" type="video/mp4"></video>
                         ))
                     }
                 </div>
