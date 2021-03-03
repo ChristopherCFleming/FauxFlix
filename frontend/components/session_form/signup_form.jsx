@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../reusable_components/header';
 import Footer from '../reusable_components/footer';
+import { Link } from 'react-router-dom';
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -10,6 +11,7 @@ class SignupForm extends React.Component {
             password: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     update(field) {
@@ -36,6 +38,14 @@ class SignupForm extends React.Component {
         );
     }
 
+    demoLogin() {
+        const sampleInfo = {
+            email: "testing0@gmail.com",
+            password: "testing0"
+        }
+        this.props.login(sampleInfo);
+    }
+
 
     render() {
         return (
@@ -55,6 +65,8 @@ class SignupForm extends React.Component {
                             {this.renderErrors()}
                             <br/>
                             <button type="submit" className="btn signupButton">CONTINUE</button>
+                            <br/>
+                            <Link to="/browse" className="btn demoLogin" onClick={this.demoLogin}>Demo Login</Link>
                         </form>
                     </div>
                 <Footer />

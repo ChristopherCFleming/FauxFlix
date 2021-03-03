@@ -12,6 +12,7 @@ class LoginPage extends React.Component {
             password: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     update(field) {
@@ -38,6 +39,14 @@ class LoginPage extends React.Component {
         );
     }
 
+    demoLogin() {
+        const sampleInfo = {
+            email: "testing0@gmail.com",
+            password: "testing0"
+        }
+        this.props.processForm(sampleInfo);
+    }
+
     render() {
         return (
             <div className="loginPage">
@@ -53,8 +62,10 @@ class LoginPage extends React.Component {
                                 <br/>
                                 <button type="submit" className="btn">Sign In</button>
                                 <h5>New to FauxFlix? 
-                                    <Link to="/signup" className="signUpLink"> Sign up now</Link>.
+                                    <Link to="/signup1?email=" className="signUpLink"> Sign up now</Link>.
                                 </h5>
+                                <br/>
+                                <Link to="/browse" className="btn demoLogin" onClick={this.demoLogin}>Demo Login</Link>
                             </form>
                         </div>
                     <Footer />

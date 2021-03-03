@@ -75,6 +75,7 @@
 
         #firstSubsectionContainer {
             margin: 100px 0 0 0;
+            border-top: none;
         }
 
         .fourthSubsectionContainer {
@@ -173,15 +174,6 @@
 
         .createAccount:hover {
             background: rgb(238, 38, 38)
-        }
-
-        .demoLogin {
-            border-radius: 50px;
-            margin: 1rem;
-        }
-
-        .demoLogin:hover {
-            background: rgb(65, 64, 64);
         }
     }
 

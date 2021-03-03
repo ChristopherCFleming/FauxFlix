@@ -6,7 +6,7 @@ function BannerVideo(props) {
     } else { 
         return (
             <div>
-                <video muted={true} controls={true} autoPlay={true} loop={true} src={props.randVideo.video} width="100%" height="50%" className="banner" type="video/mp4"></video>
+                <video muted={true} controls={false} autoPlay={true} loop={true} src={props.randVideo.video} width="100%" height="50%" className="banner" type="video/mp4"></video>
                 <p>{props.randVideo.title}</p>
             </div>
         )

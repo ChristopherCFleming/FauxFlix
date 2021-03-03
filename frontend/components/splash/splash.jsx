@@ -11,7 +11,6 @@ class SplashPage extends React.Component {
             email: "",
             activeAccordion: -1
         }
-        this.demoLogin = this.demoLogin.bind(this);
         this.handleAccordionClick = this.handleAccordionClick.bind(this);
     }
 
@@ -19,14 +18,6 @@ class SplashPage extends React.Component {
         return e => this.setState({
             [field]: e.currentTarget.value
         });
-    }
-
-    demoLogin() {
-        const sampleInfo = {
-            email: "testing0@gmail.com",
-            password: "testing0"
-        }
-        this.props.login(sampleInfo);
     }
 
     handleAccordionClick(accordionNumber) { 
@@ -53,9 +44,6 @@ class SplashPage extends React.Component {
                             <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
                             <Link to={`/signup1?email=${this.state.email}`} id="createAccount" className="btn createAccount">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
                         </div>
-                        <Link to="/browse" className="btn demoLogin" onClick={this.demoLogin}>
-                            Demo Login
-                        </Link>
                     </div>
                     <div className="subsection" id="firstSubsectionContainer">
                         <div className="firstSubsectionText">
@@ -128,9 +116,6 @@ class SplashPage extends React.Component {
                                 <input type="email" name="email" className="inputBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
                                 <Link to={`/signup1?email=${this.state.email}`} id="createAccount" className="btn createAccount">Get Started<i className="fas fa-chevron-right btn-icon"></i></Link>
                             </div>
-                            <Link to="/browse" className="btn demoLogin" onClick={this.demoLogin}>
-                                Demo Login
-                            </Link>
                         </div>
                     </div>
                     <Footer />
