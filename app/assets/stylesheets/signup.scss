@@ -1,6 +1,6 @@
 .signupPage {
     background-color: white;
-    height: 100vh;
+    height: 100%;
 
     p {
         color: black;
@@ -38,13 +38,13 @@
             width: 440px;
             margin: 15px 0 0 0;
         }
+    }
 
-        .signupButton {
-            margin: 30px 0 0 0;
-            height: 50px;
-            width: 440px;
-            border-radius: 5px;
-        }
+    .signupButton {
+        margin: 30px 0 0 0;
+        height: 50px;
+        width: 440px;
+        border-radius: 5px;
     }
 
     .signupContent {
@@ -59,6 +59,7 @@
     }
 }
 
-.partOne {
-    content: center;
+.signupDevices {
+    width: 440px;
+    margin: 0 0 3rem 0;
 }

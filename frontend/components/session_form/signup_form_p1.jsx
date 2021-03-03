@@ -21,11 +21,12 @@ class SignupFormP1 extends React.Component {
                         <br/>
                         <p>STEP <strong>1</strong> of <strong>2</strong></p>
                         <br/>
-                        <h1>Create a password to start your<br /> membership.</h1>
+                        <h1>Finish setting up your account.</h1>
                         <br/>
-                        <h2>Just a few more steps and you're done! <br />We hate paperwork, too.</h2>
+                        <h2>Netflix is personalized for you. <br/>Create a password to watch Netflix on any <br/>device at any time.</h2>
                         <br/>
-                        <Link to={`/signup?email=${this.state.email}`} className="btn signupButton">CONTINUE</Link>
+                        <Link to={`/signup?email=${this.state.email}`} type="submit" className="btn signupButton">CONTINUE</Link>
+                        <br/>
                     </div>
                 <Footer />
             </div>
