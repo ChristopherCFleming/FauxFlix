@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../reusable_components/header';
 import Footer from '../reusable_components/footer';
 
-class SignupForm extends React.Component {
+class SignupFormP1 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -42,6 +42,7 @@ class SignupForm extends React.Component {
             <div className="signupPage">
                 <Header />
                     <div className="signupContent">
+                        <img src={window.signup_devices} alt="signup_devices" className="signupDevices"/>
                         <h1>Create a password to start your<br /> membership.</h1>
                         <br/>
                         <h2>Just a few more steps and you're done! <br />We hate paperwork, too.</h2>
@@ -62,4 +63,4 @@ class SignupForm extends React.Component {
 }
 
 
-export default SignupForm;
+export default SignupFormP1;

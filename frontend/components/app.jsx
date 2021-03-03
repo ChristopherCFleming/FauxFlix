@@ -7,6 +7,7 @@ import SplashContainer from './splash/splash_container';
 import Root from './root';
 import configureStore from '../store/store';
 import LoginContainer from './session_form/login_container';
+import SignupContainerP1 from './session_form/signup_form_p1_container';
 import SignupContainer from './session_form/signup_form_container';
 import HomepageContainer from './videos/homepage_container';
 // import stylesheet from '../../app/assets/stylesheets/main_stylesheet.css'    //Do I even need this?
@@ -17,6 +18,7 @@ const App = () => (
         <Switch>
             <AuthRoute exact path="/" component={SplashContainer} />
             <AuthRoute path="/login" component={LoginContainer} />
+            <AuthRoute path="/signup1" component={SignupContainerP1} />
             <AuthRoute path="/signup" component={SignupContainer} />
             <ProtectedRoute path="/browse" component={HomepageContainer} />
             {/* <protectedRoute path="/videos/:id" component={VideosContainer} />  How to do wildcard here? */}

@@ -11,9 +11,7 @@ import * as APIVideoUtil from './util/video_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
-    //must remove below before production (Bootstrapping)
-    window.APIVideoUtil = APIVideoUtil;
-    //end of temporary testing
+
     if (window.currentUser) {
         const preloadedState = {
             session: { id: window.currentUser.id },
