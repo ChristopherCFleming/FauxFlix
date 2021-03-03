@@ -42,6 +42,8 @@ class SignupForm extends React.Component {
             <div className="signupPage">
                 <Header />
                     <div className="signupContent">
+                        <p>STEP <strong>2</strong> of <strong>2</strong></p>
+                        <br/>
                         <h1>Create a password to start your<br /> membership.</h1>
                         <br/>
                         <h2>Just a few more steps and you're done! <br />We hate paperwork, too.</h2>

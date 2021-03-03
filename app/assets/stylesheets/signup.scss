@@ -2,6 +2,11 @@
     background-color: white;
     height: 100vh;
 
+    p {
+        color: black;
+        font-size: 15px;
+    }
+
     h1, h2 {
         color: black;
         font-size: 23px;
@@ -52,4 +57,8 @@
         background: rgb(235, 233, 233);
         border-top: 1px solid rgb(228, 227, 227);
     }
+}
+
+.partOne {
+    content: center;
 }
