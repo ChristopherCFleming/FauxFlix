@@ -7,7 +7,6 @@ import LoginPage from './login_page';
 const mapStateToProps = ({ errors }) => {
     return {
         errors: errors.session,
-        formType: 'login',
     };
 };
 

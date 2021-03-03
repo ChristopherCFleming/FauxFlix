@@ -6,13 +6,11 @@ import SignupFormP1 from './signup_form_p1';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        errors: state.errors.session,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        processForm: (user) => dispatch(signup(user)),
     };
 };
 
