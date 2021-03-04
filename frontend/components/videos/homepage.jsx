@@ -37,7 +37,7 @@ class Homepage extends React.Component {
                     {/* below this is the functional version I hoped would work */}
                     {/* {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} allVideoObjects={this.props.videos}/>)} */}
                     {/* below this is the classical component */}
-                    {/* {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} allVideosProps={this.props.videos}/>)} */}
+                    {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} allVideosProps={this.props.videos}/>)}
 
                     <Footer />
                 </div>

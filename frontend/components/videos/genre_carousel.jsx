@@ -2,7 +2,7 @@ import React from 'react';
 
 function GenreCarousel(props) {
 
-        if(!props.allVideoObjects) {
+        if(!Object.values(props.allVideoObjects).length) {
             return (null);
         } else {
             return (
