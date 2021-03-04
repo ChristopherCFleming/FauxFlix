@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { allVideos } from '../../actions/video_actions';
-import Genre from './genre_classical';
+import Genre from './genre_class_component';
 import { logout } from '../../actions/session_actions';
 import { allGenres } from '../../actions/genre_actions';
 
