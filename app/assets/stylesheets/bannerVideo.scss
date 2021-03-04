@@ -11,9 +11,10 @@
 
     .bannerVideoTitle {
         z-index: 0;
-        font-size: 40px;
+        font-size: 45px;
         max-width: 350px;
         color: white;
+        -webkit-text-stroke: 1px black;
         position: absolute;
         top: 24rem;
         left: 6rem;

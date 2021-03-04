@@ -36,11 +36,11 @@
             margin: auto;
             display: inline-block;
             width: 450px;
-            height: 430px;
+            // height: 430px;
             justify-content: center;
             align-items: center;
             text-align: center;
-            margin: 7rem 0 0 30%;
+            margin: 4rem 0 0 30%;
             z-index: 2;
             background-color:rgba(0, 0, 0, 0.7);
     
@@ -60,7 +60,7 @@
             }
     
             h5 {
-                margin: 1rem 0 3rem;
+                margin: 1rem 0 1rem;
                 font-size: 1.2rem;
                 font-weight: 400;
             }

@@ -64,7 +64,7 @@ class LoginPage extends React.Component {
                                 <h5>New to FauxFlix? 
                                     <Link to="/signup1?email=" className="signUpLink"> Sign up now</Link>.
                                 </h5>
-                                <br/>
+                                {/* <br/> */}
                                 <Link to="/browse" className="btn demoLogin" onClick={this.demoLogin}>Demo Login</Link>
                             </form>
                         </div>
