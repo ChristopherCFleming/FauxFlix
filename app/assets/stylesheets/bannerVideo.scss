@@ -1,0 +1,23 @@
+// Place all the styles related to the Videos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bannerVideoWrapper {
+
+    video {
+        z-index: -1;
+        position: relative;
+    }
+
+    .bannerVideoTitle {
+        z-index: 0;
+        font-size: 40px;
+        max-width: 350px;
+        color: white;
+        position: absolute;
+        top: 24rem;
+        left: 6rem;
+    }
+
+}
+
