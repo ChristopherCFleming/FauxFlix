@@ -9,16 +9,35 @@
         position: relative;
     }
 
-    .bannerVideoTitle {
-        z-index: 0;
-        font-size: 45px;
-        max-width: 350px;
-        color: white;
-        -webkit-text-stroke: 1px black;
+    .videoDetailsContainer{
+        color: #fff;
+        font-weight: 400;
+        line-height: normal;
+        width: 100%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
         position: absolute;
-        top: 24rem;
-        left: 6rem;
+        top: 15rem;
+        left: 3rem;
+
+        p {
+            margin: 1rem 0 1rem;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .bannerVideoTitle {
+            font-size: 50px;
+            max-width: 450px;
+        }
+
+        .bannerVideoDescription {
+            font-size: 18px;
+            font-weight: 350;
+            max-width: 500px;
+        }
     }
+
+
 
 }
 
