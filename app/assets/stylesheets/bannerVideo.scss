@@ -16,31 +16,43 @@
         width: 100%;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
         position: absolute;
+        top: 18vw;
+        left: 3.5vw;
         // top: 15rem;
         // left: 3rem;
-        top: 28vh;
-        left: 6vh;
 
         p {
-            margin: 1rem 0 1rem;
+            margin: 1vw 0 1vw;
             // font-size: 20px;
-            font-size: 2.5vh;
+            font-size: 1.4vw;
             font-weight: 600;
         }
 
         .bannerVideoTitle {
             // font-size: 50px;
             // max-width: 450px;
-            font-size: 6.2vh;
-            max-width: 57vh;
+            font-size: 3.5vw;
+            max-width: 31.5vw;
         }
 
         .bannerVideoDescription {
             // font-size: 18px;
             // max-width: 500px;
-            font-size: 2.3vh;
-            max-width: 63vh;
+            font-size: 1.3vw;
+            max-width: 35vw;
             font-weight: 350;
+        }
+
+        .buttonsWrapper {
+            display: flex;
+            flex-direction: row;
+
+            .playButton {
+                height: 3vw;
+                width: 9vw;
+                font-size: 1.5vw;
+                border-radius: 6px;
+            }
         }
     }
 
