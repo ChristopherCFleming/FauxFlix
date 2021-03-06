@@ -14,6 +14,11 @@ VideoGenre.destroy_all
 
 demoUser = User.create(email:"testing0@gmail.com", password: "testing0");
 
+sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from cities around the globe begin having experiences that defy explanation.")
+sense8v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8_final.mp4')
+sense8.video.attach(io: sense8v, filename: 'sense8_final.mp4')
+sense8_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8.jpg')
+sense8.thumbnail.attach(io: sense8_t, filename: "sense8.jpg")
 
 becoming = Video.create!(title: "Becoming", description: "Joyful. Honest. Inspiring. Michelle Obama brings us up clsoe and behind the scenes of her history-making book tour.")
 becomingv = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/becoming_final.mp4')
@@ -70,12 +75,6 @@ sabrinav = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina_final
 sabrina.video.attach(io: sabrinav, filename: 'sabrina_final.mp4')
 sabrina_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sabrina.jpg')
 sabrina.thumbnail.attach(io: sabrina_t, filename: "sabrina.jpg")
-
-sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from cities around the globe begin having experiences that defy explanation.")
-sense8v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8_final.mp4')
-sense8.video.attach(io: sense8v, filename: 'sense8_final.mp4')
-sense8_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8.jpg')
-sense8.thumbnail.attach(io: sense8_t, filename: "sense8.jpg")
 
 politician = Video.create!(title: "The Politician", description: "Wealthy high school student Payton Hobart has known since he was 7 years old that he is going to be the president of the United States.")
 politician_v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/the_politician_final.mp4')
@@ -138,6 +137,7 @@ VideoGenre.create!(video_id: sense8.id, genre_id: trending.id)
 
 VideoGenre.create!(video_id: great_british.id, genre_id: reality_tv.id)
 VideoGenre.create!(video_id: great_british.id, genre_id: trending.id)
+VideoGenre.create!(video_id: great_british.id, genre_id: comedy.id)
 
 VideoGenre.create!(video_id: becoming.id, genre_id: politics.id)
 VideoGenre.create!(video_id: becoming.id, genre_id: reality_tv.id)
@@ -173,6 +173,8 @@ VideoGenre.create!(video_id: russian_doll.id, genre_id: psychological.id)
 VideoGenre.create!(video_id: space_force.id, genre_id: comedy.id)
 VideoGenre.create!(video_id: space_force.id, genre_id: sci_fi.id)
 VideoGenre.create!(video_id: space_force.id, genre_id: drama.id)
+VideoGenre.create!(video_id: space_force.id, genre_id: politics.id)
+
 
 VideoGenre.create!(video_id: stranger_things.id, genre_id: sci_fi.id)
 VideoGenre.create!(video_id: stranger_things.id, genre_id: drama.id)
@@ -184,6 +186,7 @@ VideoGenre.create!(video_id: politician.id, genre_id: drama.id)
 
 VideoGenre.create!(video_id: tidying_up.id, genre_id: reality_tv.id)
 VideoGenre.create!(video_id: tidying_up.id, genre_id: trending.id)
+VideoGenre.create!(video_id: tidying_up.id, genre_id: comedy.id)
 
 VideoGenre.create!(video_id: unbreakable.id, genre_id: comedy.id)
 VideoGenre.create!(video_id: unbreakable.id, genre_id: trending.id)

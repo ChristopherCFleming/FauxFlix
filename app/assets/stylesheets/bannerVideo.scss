@@ -16,28 +16,21 @@
         width: 100%;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
         position: absolute;
-        top: 18vw;
+        top: 14vw;
         left: 3.5vw;
-        // top: 15rem;
-        // left: 3rem;
 
         p {
             margin: 1vw 0 1vw;
-            // font-size: 20px;
             font-size: 1.4vw;
             font-weight: 600;
         }
 
         .bannerVideoTitle {
-            // font-size: 50px;
-            // max-width: 450px;
             font-size: 3.5vw;
             max-width: 31.5vw;
         }
 
         .bannerVideoDescription {
-            // font-size: 18px;
-            // max-width: 500px;
             font-size: 1.3vw;
             max-width: 35vw;
             font-weight: 350;
@@ -46,12 +39,42 @@
         .buttonsWrapper {
             display: flex;
             flex-direction: row;
+            margin-top: 2vw;
 
             .playButton {
-                height: 3vw;
-                width: 9vw;
-                font-size: 1.5vw;
-                border-radius: 6px;
+                background-color: white;
+                color: black;
+                height: 42px;
+                width: 127px;
+                font-size: 21px;
+                border-radius: 4px;
+            }
+
+            .playButton:hover {
+                background-color: rgba(255, 255, 255, .7);
+            }
+
+            .addToListButton {
+                background: rgba(109, 109, 110, 0.7);
+                border-radius: 4px;
+                height: 42px;
+                width: 155px;
+                font-size: 17px;
+               
+           
+                .svg-icon {
+                    transform: rotate(45deg);
+                    width: 1.5vw;
+                }
+
+                span {        
+                    float: right;
+                    margin: .3vw 0 0 0;
+                }
+            }
+
+            .addToListButton:hover {
+                background: rgba(80, 80, 80, 0.7);
             }
         }
     }
