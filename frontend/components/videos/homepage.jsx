@@ -25,11 +25,8 @@ class Homepage extends React.Component {
         if (!this.props.videos) {
             return null;
         } else {
+            const randVideo = this.props.allVideosArray[0];
 
-            const randNum = Math.floor(Math.random() * Math.floor(this.props.allVideosArray.length))
-            const randVideo = this.props.allVideosArray[randNum]
-  
-    
             return (
                 <div>
                     <Navi logout={this.props.logout} currentUser={this.props.currentUser}/>

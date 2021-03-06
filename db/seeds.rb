@@ -14,7 +14,7 @@ VideoGenre.destroy_all
 
 demoUser = User.create(email:"testing0@gmail.com", password: "testing0");
 
-sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from cities around the globe begin having experiences that defy explanation.")
+sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from cities around the globe begin having experiences that defy explanation. The next step in human evolution.")
 sense8v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8_final.mp4')
 sense8.video.attach(io: sense8v, filename: 'sense8_final.mp4')
 sense8_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8.jpg')
