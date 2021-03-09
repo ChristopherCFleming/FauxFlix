@@ -79,9 +79,9 @@
             cursor: pointer;
             font-size: 1rem;
             visibility: hidden;
-            background: black;
+            background: rgba(0, 0, 0, .8);
             padding: 0 1rem 1rem 1rem;
-            outline:rgb(172, 169, 169);
+            border: 1px solid rgb(77, 75, 75);
             transition: .2s;
 
             .dropdownItem {

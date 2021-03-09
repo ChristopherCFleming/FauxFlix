@@ -44,15 +44,21 @@ function Navi(props) {
                     </div>
                 </div>
                 <div className="secondSection">
-                    {/* <Link to="/" onClick={endSession}> */}
-                        <img className="profilePic" src={window.profile_pic} alt="Profile Pic" />
-                    {/* </Link> */}
+                    <img className="profilePic" src={window.profile_pic} alt="Profile Pic" />
                     <i class="fas fa-caret-down" id="downCaret"></i>
                     <ul className="profileDropdown">
-                        <li className="dropdownItem">Github</li>
-                        <li className="dropdownItem">Linkedin</li>
-                        <li className="dropdownItem">AngelList</li>
-                        <li className="dropdownItem" style={{borderBottom: '1px solid grey', paddingBottom: '10px'}}>Portfolio</li>
+                        <li className="dropdownItem">
+                            <a href="https://christophercfleming.github.io/" target="_blank">Portfolio</a>
+                        </li>
+                        <li className="dropdownItem">
+                            <a id="linkedin" href="https://www.linkedin.com/in/christophercfleming/" target="_blank">LinkedIn</a>
+                        </li>
+                        <li className="dropdownItem">
+                            <a id="github" href="https://github.com/ChristopherCFleming" target="_blank">Github</a>
+                        </li>
+                        <li className="dropdownItem">
+                            <a href="https://angel.co/u/christopher-c-fleming" style={{borderBottom: '1px solid grey', paddingBottom: '10px'}} target="_blank">AngelList</a>
+                        </li>
                         <li className="dropdownItem" onClick={endSession}>Logout</li>
                     </ul>
 
