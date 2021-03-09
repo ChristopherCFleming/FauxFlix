@@ -61,20 +61,52 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin: 0 2rem;
+        z-index: 3;
 
         #downCaret {
             font-size: 1.5rem;
             margin: 0 0 10px 5px;
             transition: .3s;
+            color: white;
+        }
+
+        .profileDropdown {
+            position: absolute;
+            top: 3.5rem;
+            right: 2.5rem;
+            z-index: 3;
+            cursor: pointer;
+            font-size: 1rem;
+            visibility: hidden;
+            background: black;
+            padding: 0 1rem 1rem 1rem;
+            outline:rgb(172, 169, 169);
+            transition: .2s;
+
+            .dropdownItem {
+                color: white;
+                font-weight: 500;
+                padding: .3rem;
+            }
         }
     }
 
     .secondSection:hover {
+
         #downCaret {
             transform: rotate(180deg);
         }
+        .profileDropdown {
+            visibility: visible;
+
+        }
+    }
+    .dropdownItem:hover {
+        text-decoration: underline;
     }
 }
+
 
 .loggedIn.active {
     background: #000;

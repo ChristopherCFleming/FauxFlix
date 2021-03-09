@@ -44,8 +44,32 @@ function Navi(props) {
                     </div>
                 </div>
                 <div className="secondSection">
-                    <Link to="/" onClick={endSession}><img className="profilePic" src={window.profile_pic} alt="Profile Pic" /></Link>
+                    {/* <Link to="/" onClick={endSession}> */}
+                        <img className="profilePic" src={window.profile_pic} alt="Profile Pic" />
+                    {/* </Link> */}
                     <i class="fas fa-caret-down" id="downCaret"></i>
+                    <ul className="profileDropdown">
+                        <li className="dropdownItem">Github</li>
+                        <li className="dropdownItem">Linkedin</li>
+                        <li className="dropdownItem">AngelList</li>
+                        <li className="dropdownItem" style={{borderBottom: '1px solid grey', paddingBottom: '10px'}}>Portfolio</li>
+                        <li className="dropdownItem" onClick={endSession}>Logout</li>
+                    </ul>
+
+                    {/* trial dropdown below */}
+                    {/* <div className="profile-drop-down">
+                        <div className="profile-drop-down-sub-container">
+                            <ul className="profile-drop-down-list">
+                                <li className="profile-drop-down-item"><a href="https://github.com/khaliqzohaib92">Github</a></li>
+                                <li className="profile-drop-down-item"><a href="https://www.linkedin.com/in/zohaibkhaliq/">Linkedin</a></li>
+                                <li className="profile-drop-down-item"><a href="https://angel.co/u/zohaib-khaliq-2">AngelList</a></li>
+                                <li className="profile-drop-down-item" style={{borderBottom: '1px solid grey', paddingBottom: '10px'}}><a href="http://khaliqzohaib92.github.io/">Portfolio</a></li>
+                                <li onClick={endSession} className="profile-drop-down-item">Sign Out</li>
+                            </ul>
+                        </div>
+                    </div> */}
+
+
                 </div>
             </header>
         )
