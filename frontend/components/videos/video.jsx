@@ -15,9 +15,8 @@ class VideoShow extends React.Component {
         if (this.props.video) {
             return (
                 <div className="videoShowWrapper">
-                    <Navi logout={this.props.logout} currentUser={this.props.currentUser}/>
+                    <Navi videoShow={true}/>
                     <video muted={false} controls={true} autoPlay={true} loop={true} src={this.props.video.video} width="100%" height="50%" className="videoShow" type="video/mp4"></video>
-                    <Footer />
                 </div>
             )
         } else { 

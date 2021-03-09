@@ -7,7 +7,7 @@ const videosReducer = (state = {}, action) => {
         case RECEIVE_VIDEOS:
             return action.videos;
         case RECEIVE_VIDEO:
-            nextState[video.id] = action.video
+            nextState[action.video.id] = action.video
             return nextState
         default:
             return state;

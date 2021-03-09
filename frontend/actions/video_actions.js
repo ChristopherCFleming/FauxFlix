@@ -24,5 +24,5 @@ export const allVideos = () => dispatch => {
 
 export const showVideo = video_id => dispatch => {
     return APIVideoUtil.fetchVideo(video_id)
-        .then(payload_video => dispatch(receiveVideo(payload_video)))
+        .then(video => dispatch(receiveVideo(video)))
 }

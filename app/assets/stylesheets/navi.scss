@@ -61,3 +61,37 @@
 .loggedIn.active {
     background: #000;
 }
+
+.videoShowNaviContainer {
+
+    .naviElements {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        i {
+            font-size: 2.5rem;
+            margin: 1rem;
+            transition: .4s;
+        }
+
+        p {
+            display: none;
+            font-size: 1.2rem;
+            transition: .4s;
+        }
+    }
+
+    .naviElements:hover {
+
+        i {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.8rem;
+            display: contents;
+        }
+    }
+}
+

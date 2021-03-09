@@ -22,15 +22,18 @@ function Navi(props) {
         props.logout();
     }
 
-
-    if (!props.currentUser) {
+    if (props.videoShow) {
         return (
-                <header className="pageHeader">
-                    <Link to="/"><img src={window.logoURL} alt="FauxFlix Logo" className="logo"/></Link>
-                    <Link  id="login" className="btn" to="/login">Sign In</Link>
-                </header>
-            )
-    } else {
+            <div className="videoShowNaviContainer">
+                <Link to="/browse">
+                    <div className="naviElements">
+                        <i className="fas fa-arrow-left"></i>
+                        <p>Back to Browse</p>
+                    </div>
+                </Link>
+            </div>
+        )
+    } else if (props.currentUser) {
         return (
             <header className={`pageHeader loggedIn ${background ? "active" : ""}`}>
                 <div className="firstSection">
@@ -41,6 +44,14 @@ function Navi(props) {
                     </div>
                 </div>
                 <Link to="/" onClick={endSession}><img className="profilePic" src={window.profile_pic} alt="Profile Pic" /></Link>
+            </header>
+        )
+
+    } else {
+        return (
+            <header className="pageHeader">
+                <Link to="/"><img src={window.logoURL} alt="FauxFlix Logo" className="logo"/></Link>
+                <Link  id="login" className="btn" to="/login">Sign In</Link>
             </header>
         )
     }
