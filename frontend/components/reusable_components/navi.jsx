@@ -43,7 +43,10 @@ function Navi(props) {
                         <Link to="/myList" className="headerLink">My List </Link>
                     </div>
                 </div>
-                <Link to="/" onClick={endSession}><img className="profilePic" src={window.profile_pic} alt="Profile Pic" /></Link>
+                <div className="secondSection">
+                    <Link to="/" onClick={endSession}><img className="profilePic" src={window.profile_pic} alt="Profile Pic" /></Link>
+                    <i class="fas fa-caret-down" id="downCaret"></i>
+                </div>
             </header>
         )
 
