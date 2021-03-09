@@ -56,26 +56,11 @@ function Navi(props) {
                         <li className="dropdownItem">
                             <a id="github" href="https://github.com/ChristopherCFleming" target="_blank">Github</a>
                         </li>
-                        <li className="dropdownItem">
-                            <a href="https://angel.co/u/christopher-c-fleming" style={{borderBottom: '1px solid grey', paddingBottom: '10px'}} target="_blank">AngelList</a>
+                        <li className="dropdownItem secondToLast">
+                            <a href="https://angel.co/u/christopher-c-fleming" target="_blank">AngelList</a>
                         </li>
-                        <li className="dropdownItem" onClick={endSession}>Logout</li>
+                        <li className="dropdownItem Last" onClick={endSession}>Logout</li>
                     </ul>
-
-                    {/* trial dropdown below */}
-                    {/* <div className="profile-drop-down">
-                        <div className="profile-drop-down-sub-container">
-                            <ul className="profile-drop-down-list">
-                                <li className="profile-drop-down-item"><a href="https://github.com/khaliqzohaib92">Github</a></li>
-                                <li className="profile-drop-down-item"><a href="https://www.linkedin.com/in/zohaibkhaliq/">Linkedin</a></li>
-                                <li className="profile-drop-down-item"><a href="https://angel.co/u/zohaib-khaliq-2">AngelList</a></li>
-                                <li className="profile-drop-down-item" style={{borderBottom: '1px solid grey', paddingBottom: '10px'}}><a href="http://khaliqzohaib92.github.io/">Portfolio</a></li>
-                                <li onClick={endSession} className="profile-drop-down-item">Sign Out</li>
-                            </ul>
-                        </div>
-                    </div> */}
-
-
                 </div>
             </header>
         )
