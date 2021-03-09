@@ -74,6 +74,16 @@
                 border: none;
             }
 
+            .demoLogin {
+                background-color: rgba(0, 0, 0, 0);
+                border: 2px solid #e50914;
+                margin: 0px 0 60px;
+            }
+
+            .demoLogin:hover {
+                background-color: #e50914;
+            }
+
         }
     
         .footer {
