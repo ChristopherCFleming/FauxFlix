@@ -45,7 +45,7 @@ function Navi(props) {
                 </div>
                 <div className="secondSection">
                     <img className="profilePic" src={window.profile_pic} alt="Profile Pic" />
-                    <i class="fas fa-caret-down" id="downCaret"></i>
+                    <i className="fas fa-caret-down" id="downCaret"></i>
                     <ul className="profileDropdown">
                         <li className="dropdownItem">
                             <a href="https://christophercfleming.github.io/" target="_blank">Portfolio</a>
