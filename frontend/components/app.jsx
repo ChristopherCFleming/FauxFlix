@@ -10,9 +10,6 @@ import LoginContainer from './session_form/login_container';
 import SignupContainerP1 from './session_form/signup_form_p1_container';
 import SignupContainer from './session_form/signup_form_container';
 import HomepageContainer from './videos/homepage_container';
-//below is the functional component:
-// import VideoShowPage from './videos/video_show_page';
-//below is the class component:
 import VideoContainer from './videos/video_container';
 // import stylesheet from '../../app/assets/stylesheets/main_stylesheet.css'    //Do I even need this?
 import { AuthRoute, ProtectedRoute } from '../util/route_util';

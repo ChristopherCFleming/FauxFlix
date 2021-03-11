@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 function BannerVideo(props) {
 
     if (!props.randVideo) {
+        console.log(props);
         return null;
     } else { 
         return (

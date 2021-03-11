@@ -22,18 +22,7 @@ function Navi(props) {
         props.logout();
     }
 
-    if (props.videoShow) {
-        return (
-            <div className="videoShowNaviContainer">
-                <Link to="/browse">
-                    <div className="naviElements">
-                        <i className="fas fa-arrow-left"></i>
-                        <p>Back to Browse</p>
-                    </div>
-                </Link>
-            </div>
-        )
-    } else if (props.currentUser) {
+    if (props.currentUser) {
         return (
             <header className={`pageHeader loggedIn ${background ? "active" : ""}`}>
                 <div className="firstSection">
