@@ -21,29 +21,21 @@ function GenreCarousel(props) {
         if (Object.values(props.allVideoObjects).length) {
             return (
                 <div className="carousel">
-                    {/* Begin Swiper Test */}
-                   
-                    <Swiper
-                        spaceBetween={50}
-                        slidesPerView={4}
-                        navigation
-                        onSwiper={(swiper) => console.log(swiper)}
-                        onSlideChange={() => console.log('slide change')}
-                        >
-                        <SwiperSlide>Slide 1</SwiperSlide>
-                        <SwiperSlide>Slide 2</SwiperSlide>
-                        <SwiperSlide>Slide 3</SwiperSlide>
-                        <SwiperSlide>Slide 4</SwiperSlide>
-                        ...
+                    <p>{props.genre.genre}</p>
+                    
+                    <Swiper loop={true} slidesPerView={4} onSwiper={(swiper) => console.log(swiper)} onSlideChange={() => console.log('slide change')}>
+                        {shuffleVideos(props.genre.video_ids).map( (each_id, index) => (
+                            <SwiperSlide>
+                                <video poster={props.allVideoObjects[each_id].thumbnail} loop={true} key={index} src={props.allVideoObjects[each_id].video} className="carouselVideo" type="video/mp4"></video>
+                            </SwiperSlide>
+                            ))
+                        }
+        
                     </Swiper>
 
 
 
 
-                    {/* {shuffleVideos(props.genre.video_ids).map( (each_id, index) => (
-                        <video poster={props.allVideoObjects[each_id].thumbnail} loop={true} key={index} src={props.allVideoObjects[each_id].video} width="10%" className="carouselVideo" type="video/mp4"></video>
-                        ))
-                    } */}
                 </div>
             )
         } else {
