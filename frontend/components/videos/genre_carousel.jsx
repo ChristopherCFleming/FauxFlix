@@ -1,9 +1,9 @@
 import React from 'react';
+import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
+import 'swiper/components/navigation/navigation.scss';
 import 'swiper/swiper.scss';
-
-
 
 
 function GenreCarousel(props) {
@@ -18,28 +18,30 @@ function GenreCarousel(props) {
         return input;
     }
 
+    SwiperCore.use([Navigation]);
+
  
         if (Object.values(props.allVideoObjects).length) {
+            
             return (
                 <div className="carousel">
                     <p>{props.genre.genre}</p>
                     
-                    <Swiper loop={true} slidesPerView={4} onSwiper={(swiper) => console.log(swiper)} onSlideChange={() => console.log('slide change')}>
+                    <Swiper loop={true} navigation slidesPerView={4}>
                         {shuffleVideos(props.genre.video_ids).map( (each_id, index) => (
-                            <SwiperSlide>
+                            <SwiperSlide className="slide" key={index} >
                                 <Link to={`/videos/${each_id}`}>
                                     <video poster={props.allVideoObjects[each_id].thumbnail} 
                                         loop={true} 
-                                        key={index} 
                                         src={props.allVideoObjects[each_id].video} 
                                         className="carouselVideo" 
                                         type="video/mp4">
+                                        alt={props.allVideoObjects[each_id].title}
                                     </video>
                                 </Link>
                             </SwiperSlide>
                             ))
                         }
-        
                     </Swiper>
 
 
