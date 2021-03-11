@@ -19,7 +19,6 @@
     "style-loader": "^2.0.0",
     "swiper": "^6.5.0",
     "swup": "^2.0.14",
-    "webpack": "^4.44.2",
     "webpack-cli": "^4.2.0"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
@@ -48,5 +47,10 @@
   "bugs": {
     "url": "https://github.com/ChristopherCFleming/FauxFlix/issues"
   },
-  "homepage": "https://github.com/ChristopherCFleming/FauxFlix#readme"
+  "homepage": "https://github.com/ChristopherCFleming/FauxFlix#readme",
+  "devDependencies": {
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.24.4"
+  }
 }

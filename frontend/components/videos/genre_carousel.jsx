@@ -1,6 +1,6 @@
 import React from 'react';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/swiper.scss';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.scss';
 
 
 
@@ -23,7 +23,7 @@ function GenreCarousel(props) {
                 <div className="carousel">
                     {/* Begin Swiper Test */}
                    
-                    {/* <Swiper
+                    <Swiper
                         spaceBetween={50}
                         slidesPerView={4}
                         navigation
@@ -35,7 +35,7 @@ function GenreCarousel(props) {
                         <SwiperSlide>Slide 3</SwiperSlide>
                         <SwiperSlide>Slide 4</SwiperSlide>
                         ...
-                    </Swiper> */}
+                    </Swiper>
 
 
 
