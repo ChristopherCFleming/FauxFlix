@@ -10,7 +10,14 @@ function BannerVideo(props) {
         return (
             <div className="bannerVideoWrapper">
                 <div className="gradientWrapper">
-                    <video muted={true} controls={false} autoPlay={true} loop={true} src={props.randVideo.video} width="100%" height="50%" className="banner" type="video/mp4"></video>
+                    <video 
+                        muted
+                        autoPlay 
+                        loop 
+                        src={props.randVideo.video} 
+                        width="100%" 
+                        height="50%" 
+                        className="banner" />
                 </div>
                 <div className="videoDetailsContainer">
                     <h1 className="bannerVideoTitle">{props.randVideo.title}</h1>

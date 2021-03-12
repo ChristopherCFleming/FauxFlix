@@ -2,7 +2,7 @@
 
     p {
         color: #e5e5e5;
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 500;
         padding: 2rem 0 .5rem .5rem;
     }
@@ -33,16 +33,43 @@
             .videoSlideContainer {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: left;
 
                 .videoDropDown {
-                    background:gray;
+                    background:rgb(19, 19, 19);
                     width: 19vw;
+                    height: 9vw;
                     visibility: hidden;
                     transition: .1s;
                     z-index: -1;
-    
+                    overflow: hidden;
+                    margin: 0;
 
+                    .buttonWrapper {
+                        display: flex;
+                        flex-direction: row;
+                        // justify-content: center;
+                        
+                        i {
+                            margin: .5vw 0 0 .5vw;
+                            font-size: 2.5vw;
+                            color: rgb(196, 195, 195);
+                            
+                            &:hover {
+                                color: rgb(255, 255, 255);
+                            }
+                        }
+                        
+                        h4 {
+                            margin: 1vw 0 0 .5vw;
+                            font-size: 1.3vw;
+                        }
+                    }
+                    p {
+                        font-size: 1vw;
+                        font-weight: 400;
+                        color: rgb(229, 226, 226);
+                    }
                 }
                 .carouselVideo {
                     width: 16vw;
