@@ -30,13 +30,38 @@
             -webkit-align-items: center;
             align-items: center;
 
-            .carouselVideo {
-                width: 16vw;
-                transition: .1s;
+            .videoSlideContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .videoDropDown {
+                    background:gray;
+                    width: 19vw;
+                    visibility: hidden;
+                    transition: .1s;
+                    z-index: -1;
+    
+
+                }
+                .carouselVideo {
+                    width: 16vw;
+                    transition: .1s;
+                    z-index: 1;
+
+                }
 
                 &:hover {
-                    width: 19vw;
-                    z-index: 3;
+
+                    .carouselVideo {
+                        width: 19vw;
+                        z-index: 3;
+                    }
+
+                    .videoDropDown {
+                        visibility: visible;
+                        z-index: 3;
+                    }
                 }
             }
         }
