@@ -28,7 +28,7 @@ function GenreCarousel(props) {
                 <div className="carousel">
                     <p>{props.genre.genre}</p>
                     
-                    <Swiper loop={true} navigation slidesPerView={4}>
+                    <Swiper loop={true} navigation slidesPerView={6}>
                         {shuffleVideos(props.genre.video_ids).map( (each_id, index) => (
                             <SwiperSlide className="slide" key={index} >
                                 <Link to={`/videos/${each_id}`}>
