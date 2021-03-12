@@ -38,6 +38,7 @@
                 .videoDropDown {
                     background:rgb(19, 19, 19);
                     width: 19vw;
+                    max-height: 0;
                     height: 9vw;
                     visibility: hidden;
                     transition: .1s;
@@ -78,17 +79,20 @@
 
                 }
 
-                &:hover {
+            }
+            .videoSlideContainer:hover {
+                z-index: 19;
 
-                    .carouselVideo {
-                        width: 19vw;
-                        z-index: 20;
-                    }
+                .carouselVideo {
+                    width: 19vw;
+                    z-index: 20;
+                }
 
-                    .videoDropDown {
-                        visibility: visible;
-                        z-index: 20;
-                    }
+                .videoDropDown {
+                    visibility: visible;
+                    z-index: 20;
+                    height: 9vw;
+                    max-height: 9vw;
                 }
             }
         }

@@ -1,23 +1,19 @@
 import React from 'react';
-import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
+import SwiperCore, { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/swiper.scss';
 
 
 class GenreCarousel extends React.Component {
     constructor(props) {
         super(props);
-        const swiper = new Swiper('.swiper-container', {
-            // Optional parameters
-            slidesPerView: 4,
-            loop: true,
-            spaceBetween: 30,
-            clickable: true,
+    }
 
-            // Navigation arrows
-            navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-            },
-        });
+    componentDidMount() {
+        this.props.allVideos()
+        this.props.allGenres()
     }
 
     shuffleVideos(input) {
@@ -30,42 +26,55 @@ class GenreCarousel extends React.Component {
         return input;
     }
 
+    mouseover() {
+        console.log("working!");
+    }
+
+    shortenDescription(description) {
+        return description.slice(0, 35) + "...";
+    }
+
+
     render() {
-        if (this.props.allVideosArray.length === 0) {
-            return null;
-        } else {
+        SwiperCore.use([Navigation]);
+        if (Object.values(this.props.allVideoObjects).length) {
+
             return (
-                <div className="carousel">
-                    <h2>{this.props.genre.genre}</h2>
-
-                        {/* Begin Swiper Test */}
-
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">Slide 1</div>
-                                <div class="swiper-slide">Slide 2</div>
-                                <div class="swiper-slide">Slide 3</div>
-                                <div class="swiper-slide">Slide 4</div>
-                                <div class="swiper-slide">Slide 5</div>
-                                <div class="swiper-slide">Slide 6</div>
-                                <div class="swiper-slide">Slide 7</div>
-                                <div class="swiper-slide">Slide 8</div>
-                                <div class="swiper-slide">Slide 9</div>
-                                <div class="swiper-slide">Slide 10</div>
-                            </div>
-                        </div>
-
-
-
-
-
-                    {/* {this.shuffleVideos(this.props.genre.video_ids).map( (each_id, index) => (
-                        <video poster={this.props.videos[each_id].thumbnail} loop={true} key={index} src={this.props.videos[each_id].video} width="10%" className="carouselVideo" type="video/mp4"></video>
-                        ))
-                    } */}
+                <div className="carousel" >
+                    <p>{this.props.genre.genre}</p>
+                    
+                    <Swiper loop={true} navigation slidesPerView={6}>
+                        {this.shuffleVideos(this.props.genre.video_ids).map( (each_id, index) => (
+                            <SwiperSlide className="slide" key={index} >
+                                <div className="videoSlideContainer" onMouseOver={this.mouseover}>
+                                    <Link to={`/videos/${each_id}`}>
+                                        <video 
+                                            poster={this.props.allVideoObjects[each_id].thumbnail}
+                                            // poster={this.props.entities.videos[each_id].thumbnail} 
+                                            src={this.props.allVideoObjects[each_id].video} 
+                                            // src={this.props.entities.videos[each_id].video} 
+                                            className="carouselVideo" />
+                                    </Link>
+                                    <div className="videoDropDown">
+                                        <div className="buttonWrapper">
+                                            <span><Link to={`/videos/${each_id}`}><i className="far fa-play-circle"></i></Link></span>
+                                            <span><i className="fas fa-plus-circle"></i></span>
+                                            <h4>{this.props.allVideoObjects[each_id].title}</h4>
+                                            {/* <h4>{this.props.entities.videos[each_id].title}</h4> */}
+                                        </div>
+                                        <p>{this.shortenDescription(this.props.allVideoObjects[each_id].description)}</p>
+                                        {/* <p>{this.shortenDescription(this.props.entities.videos[each_id].description)}</p> */}
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
                 </div>
 
             )
+        } else {
+            return null;
         }
     }
 }

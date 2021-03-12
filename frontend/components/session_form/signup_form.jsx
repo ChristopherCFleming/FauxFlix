@@ -59,7 +59,7 @@ class SignupForm extends React.Component {
                         <h2>Just a few more steps and you're done! <br />We hate paperwork, too.</h2>
                         <form onSubmit={this.handleSubmit} className="signupInputForm">
                             <input type="email" name="email" className="emailBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
-                            {this.renderErrors()}
+                            {/* {this.renderErrors()} */}
                             <br />
                             <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" className="passwordBar"/>
                             {this.renderErrors()}
