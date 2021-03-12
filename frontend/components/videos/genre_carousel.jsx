@@ -20,9 +20,10 @@ function GenreCarousel(props) {
 
     SwiperCore.use([Navigation]);
 
- 
-        if (Object.values(props.allVideoObjects).length) {
-            
+
+    
+    
+    if (Object.values(props.allVideoObjects).length) {
             return (
                 <div className="carousel">
                     <p>{props.genre.genre}</p>

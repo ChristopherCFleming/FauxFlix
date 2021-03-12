@@ -4,9 +4,14 @@
 
 .bannerVideoWrapper {
 
-    video {
-        z-index: -1;
-        position: relative;
+    .gradientWrapper {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        z-index: 0;
+
+        video {
+            z-index: -1;
+            position: relative;
+        }
     }
 
     .videoDetailsContainer{
