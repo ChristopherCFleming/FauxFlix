@@ -33,7 +33,7 @@ class Homepage extends React.Component {
                     <BannerVideo randVideo={randVideo} />
                     {/* below this is the functional version I hoped would work */}
                     <div className="carouselWrapper">
-                        {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} allVideoObjects={this.props.videos}/>)}
+                        {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} zIndex={idx} allVideoObjects={this.props.videos}/>)}
                     </div>
                     {/* below this is the class component */}
                     {/* {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx}/>)} */}

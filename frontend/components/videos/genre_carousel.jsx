@@ -33,7 +33,7 @@ function GenreCarousel(props) {
     
     if (Object.values(props.allVideoObjects).length) {
             return (
-                <div className="carousel">
+                <div className="carousel" style={{zIndex: props.zIndex}} >
                     <p>{props.genre.genre}</p>
                     
                     <Swiper loop={true} navigation slidesPerView={6}>
