@@ -1,5 +1,9 @@
 .carousel {
 
+    // .swiperWrapper {
+
+    // }
+
     p {
         color: #e5e5e5;
         font-size: 24px;
@@ -15,6 +19,7 @@
             text-align: center;
             font-size: 18px;
             background: rgba(0, 0, 0, 0);
+            z-index: 1;
 
             /* Center slide text vertically */
             display: -webkit-box;
@@ -80,20 +85,21 @@
                 }
 
             }
-            .videoSlideContainer:hover {
-                z-index: 19;
+        }
 
-                .carouselVideo {
-                    width: 19vw;
-                    z-index: 20;
-                }
-
-                .videoDropDown {
-                    visibility: visible;
-                    z-index: 20;
-                    height: 9vw;
-                    max-height: 9vw;
-                }
+        .swiper-slide:hover {
+            z-index: 3;
+        
+            .carouselVideo {
+                width: 19vw;
+                z-index: 3;
+            }
+        
+            .videoDropDown {
+                visibility: visible;
+                height: 9vw;
+                max-height: 9vw;
+                z-index: 3;
             }
         }
     }
