@@ -40,9 +40,11 @@ class GenreCarousel extends React.Component {
         if (Object.values(this.props.allVideoObjects).length) {
 
             return (
+                // begin experimentation:
+
+
                 <div className="carousel" >
                     <p>{this.props.genre.genre}</p>
-                    
                     <Swiper loop={true} navigation slidesPerView={6} className="swiperWrapper">
                         {this.shuffleVideos(this.props.genre.video_ids).map( (each_id, index) => (
                             <SwiperSlide className="slide" key={index} >
@@ -67,6 +69,46 @@ class GenreCarousel extends React.Component {
                         }
                     </Swiper>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                // <div className="carousel" >
+                //     <p>{this.props.genre.genre}</p>
+                //     <Swiper loop={true} navigation slidesPerView={6} className="swiperWrapper">
+                //         {this.shuffleVideos(this.props.genre.video_ids).map( (each_id, index) => (
+                //             <SwiperSlide className="slide" key={index} >
+                //                 <div className="videoSlideContainer" onMouseOver={this.mouseover}>
+                //                     <Link to={`/videos/${each_id}`}>
+                //                         <video 
+                //                             poster={this.props.allVideoObjects[each_id].thumbnail}
+                //                             src={this.props.allVideoObjects[each_id].video} 
+                //                             className="carouselVideo" />
+                //                     </Link>
+                //                     <div className="videoDropDown">
+                //                         <div className="buttonWrapper">
+                //                             <span><Link to={`/videos/${each_id}`}><i className="far fa-play-circle"></i></Link></span>
+                //                             <span><i className="fas fa-plus-circle"></i></span>
+                //                             <h4>{this.props.allVideoObjects[each_id].title}</h4>
+                //                         </div>
+                //                         <p>{this.shortenDescription(this.props.allVideoObjects[each_id].description)}</p>
+                //                     </div>
+                //                 </div>
+                //             </SwiperSlide>
+                //             ))
+                //         }
+                //     </Swiper>
+                // </div>
 
             )
         } else {
