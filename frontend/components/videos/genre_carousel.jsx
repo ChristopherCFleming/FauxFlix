@@ -230,8 +230,6 @@ function GenreCarousel(props) {
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            {/* <div class="swiper-button-prev">Prev</div>
-                            <div class="swiper-button-next">Next</div> */}
                     </Swiper>
                 </div>
         

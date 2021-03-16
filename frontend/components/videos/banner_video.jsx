@@ -7,9 +7,13 @@ function BannerVideo(props) {
 
 
     function toggleMute() {
+        const bannerVideo = document.getElementById("bannerVideo");
+
         if (muted) {
+            bannerVideo.muted = false;
             setMuted(false);
         } else {
+            bannerVideo.muted = true;
             setMuted(true);
         }
     }
@@ -23,14 +27,15 @@ function BannerVideo(props) {
                 <div className="gradientWrapper">
                     <video 
                         muted
-                        autoPlay 
+                        autoPlay
                         loop 
                         src={props.randVideo.video} 
                         width="100%" 
                         height="50%" 
-                        className="banner" />
+                        className="banner"
+                        id="bannerVideo" />
                 </div>
-                <div onClick={toggleMute} className="muteButton">{(muted) ? <i class="fas fa-volume-up"></i> : <i class="fas fa-volume-mute"></i>}</div>
+                <div onClick={toggleMute} className="muteButton">{(muted) ? <i className="fas fa-volume-mute"></i> : <i className="fas fa-volume-up"></i>}</div>
                 <div className="videoDetailsContainer">
                     <h1 className="bannerVideoTitle">{props.randVideo.title}</h1>
                     <p>Watch Now</p>

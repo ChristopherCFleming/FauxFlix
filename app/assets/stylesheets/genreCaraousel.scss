@@ -19,7 +19,7 @@
             font-family: swiper-icons;
             color: white;
             height: 9vw;
-            width: 80px;
+            width: 60px;
             position: absolute;
             text-decoration: none;
             text-align: center;
@@ -39,7 +39,8 @@
             }
 
             &:hover {
-                background: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(0, 0, 0, .7));
+                background: linear-gradient rgba(0, 0, 0, .5);
+                font-size: 40px;
             }
         }
         
@@ -52,7 +53,8 @@
             }
 
             &:hover {
-                background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(0, 0, 0, .7));
+                background: rgba(0, 0, 0, .5);
+                font-size: 40px;
             }
         }
 
