@@ -15,13 +15,13 @@ class VideoShow extends React.Component {
 
         let justHidden = false;
         
-        let hide = function hide() {
+        function hide() {
             $('.naviElements').addClass('hidden');
         }
 
-        $(document).ready(function() {
+        $(document).ready(() => {
             let j;
-            $(document).mousemove(function() {
+            $(document).mousemove(() => {
                 if (!justHidden) {
                     justHidden = false;
                     clearTimeout(j);
@@ -36,7 +36,7 @@ class VideoShow extends React.Component {
                 <div className="videoShowWrapper">
                     <div className="videoShowNaviContainer">
                         <Link to="/browse">
-                            <div className="naviElements hidden">
+                            <div className="naviElements">
                                 <i className="fas fa-arrow-left"></i>
                                 <p>Back to Browse</p>
                             </div>

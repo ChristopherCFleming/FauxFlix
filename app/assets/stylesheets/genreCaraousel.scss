@@ -1,143 +1,159 @@
 .carousel {
         
-        p {
-            color: #e5e5e5;
-            font-size: 24px;
-            font-weight: 500;
-            padding: 2rem 0 .5rem .5rem;
+    p {
+        color: #e5e5e5;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 2rem 0 .5rem .5rem;
+    }
+        
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 0;
+        padding: 0 3vw 0 3vw;
+
+        .swiper-button-prev, 
+        .swiper-button-next {
+            font-family: swiper-icons;
+            color: white;
+            height: 9vw;
+            width: 80px;
+            position: absolute;
+            text-decoration: none;
+            text-align: center;
+            padding: 3.6vw 0 0 0;
+            bottom: 0;
+            z-index: 4;
+            opacity: 0;
+            transition: .2s;
         }
         
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            z-index: 0;
-            padding: 0 3vw 0 3vw;
-
-            .swiper-button-prev, 
-            .swiper-button-next {
-                font-family: swiper-icons;
-                height: 9vw;
-                width: 80px;
-                position: absolute;
-                text-decoration: none;
-                text-align: center;
-                padding: 3.6vw 0 0 0;
-                bottom: 0;
-                z-index: 4;
+        .swiper-button-prev {
+            left: 0;
+        
+            &:after {
+                content: 'prev';
+                font-size: 30px;
             }
-            
-            .swiper-button-prev {
+
+            &:hover {
                 background: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(0, 0, 0, .7));
-                left: 0;
-
-            
-            
-                &:after {
-                    content: 'prev';
-                    font-size: 30px;
-                }
             }
-            
-            .swiper-button-next {
+        }
+        
+        .swiper-button-next {
+            right: 0;
+        
+            &:after {
+                content: 'next';
+                font-size: 30px;
+            }
+
+            &:hover {
                 background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(0, 0, 0, .7));
-                right: 0;
-          
-                &:after {
-                    content: 'next';
-                    font-size: 30px;
-                }
-            }
-
-            .swiper-slide {
-                text-align: center;
-                font-size: 18px;
-                background: rgba(0, 0, 0, 0);
-                z-index: 1;
-                
-                /* Center slide text vertically */
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-            
-            .videoSlideContainer {
-                display: flex;
-                flex-direction: column;
-                justify-content: left;
-                
-                .carouselVideo {
-                    width: 16vw;
-                    transition: .1s;
-                    z-index: 1;
-                    padding: 0 .5vw 0 .5vw;
-                }
-
-                .videoDropDown {
-                    background: rgb(19, 19, 19);
-                    width: 19vw;
-                    max-height: 0;
-                    height: 9vw;
-                    visibility: hidden;
-                    transition: .1s;
-                    z-index: -1;
-                    overflow: hidden;
-                    margin: 0;
-
-                    .buttonWrapper {
-                        display: flex;
-                        flex-direction: row;
-                        // justify-content: center;
-
-                        i {
-                            margin: .5vw 0 0 .5vw;
-                            font-size: 2.5vw;
-                            color: rgb(196, 195, 195);
-
-                            &:hover {
-                                color: rgb(255, 255, 255);
-                            }
-                        }
-
-                        h4 {
-                            margin: 1vw 0 0 .5vw;
-                            font-size: 1.3vw;
-                        }
-                    }
-
-                    p {
-                        font-size: 1vw;
-                        font-weight: 400;
-                        color: rgb(229, 226, 226);
-                    }
-                }
-
-            }
-            .videoSlideContainer:hover {
-    
-                .carouselVideo {
-                    width: 19vw;
-                    z-index: 3;
-                }
-    
-                .videoDropDown {
-                    visibility: visible;
-                    height: 9vw;
-                    max-height: 9vw;
-                    z-index: 3;
-                }
             }
         }
 
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0);
+            z-index: 1;
+            
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        
+        .videoSlideContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            
+            .carouselVideo {
+                width: 16vw;
+                transition: .1s;
+                z-index: 1;
+                padding: 0 .5vw 0 .5vw;
+                border-radius: 10px;
+            }
+
+            .videoDropDown {
+                background: rgb(19, 19, 19);
+                width: 19vw;
+                max-height: 0;
+                height: 9vw;
+                visibility: hidden;
+                transition: .5s;
+                z-index: -1;
+                overflow: hidden;
+                margin: 0;
+
+                .buttonWrapper {
+                    display: flex;
+                    flex-direction: row;
+                    // justify-content: center;
+
+                    i {
+                        margin: .5vw 0 0 .5vw;
+                        font-size: 2.5vw;
+                        color: rgb(196, 195, 195);
+
+                        &:hover {
+                            color: rgb(255, 255, 255);
+                        }
+                    }
+
+                    h4 {
+                        margin: 1vw 0 0 .5vw;
+                        font-size: 1.3vw;
+                    }
+                }
+
+                p {
+                    font-size: 1vw;
+                    font-weight: 400;
+                    color: rgb(229, 226, 226);
+                }
+            }
+
+        }
+        .videoSlideContainer:hover {
+
+            .carouselVideo {
+                width: 19vw;
+                z-index: 3;
+            }
+
+            .videoDropDown {
+                visibility: visible;
+                height: 9vw;
+                max-height: 9vw;
+                z-index: 3;
+            }
+        }
     }
+}
+    
+}
+
+.carousel:hover {
+    .swiper-button-prev,
+    .swiper-button-next {
+        opacity: 1;
+    }
+
 }
 
 
