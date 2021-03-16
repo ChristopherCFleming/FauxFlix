@@ -13,9 +13,12 @@
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
+    "react-slick": "^0.28.1",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "scss-loader": "^0.0.1",
+    "slick-carousel": "^1.8.1",
     "style-loader": "^2.0.0",
     "swiper": "^6.5.0",
     "swup": "^2.0.14",
@@ -51,6 +54,6 @@
   "devDependencies": {
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
-    "webpack": "^5.24.4"
+    "webpack": "^5.26.0"
   }
 }
