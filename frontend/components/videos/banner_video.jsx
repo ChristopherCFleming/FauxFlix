@@ -1,7 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 function BannerVideo(props) {
+
+    const [muted, setMuted] = useState(true);
+
+
+    function toggleMute() {
+        if (muted) {
+            setMuted(false);
+        } else {
+            setMuted(true);
+        }
+    }
 
     if (!props.randVideo) {
         console.log(props);
@@ -19,6 +30,7 @@ function BannerVideo(props) {
                         height="50%" 
                         className="banner" />
                 </div>
+                <div onClick={toggleMute} className="muteButton">{(muted) ? <i class="fas fa-volume-up"></i> : <i class="fas fa-volume-mute"></i>}</div>
                 <div className="videoDetailsContainer">
                     <h1 className="bannerVideoTitle">{props.randVideo.title}</h1>
                     <p>Watch Now</p>
