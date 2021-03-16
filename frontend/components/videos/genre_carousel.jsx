@@ -1,5 +1,5 @@
 import React from 'react';
-import SwiperCore, { Navigation, Autoplay } from 'swiper';
+import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
 import 'swiper/swiper.scss';
@@ -69,7 +69,7 @@ function GenreCarousel(props) {
 
                 <div className="carousel" >
                     <p>{props.genre.genre}</p>
-                    <Swiper id="main" loop={true} navigation slidesPerView={6} className="swiperWrapper">
+                    <Swiper id="main" loop={true} navigation slidesPerView={5} className="swiperWrapper" >
                             <SwiperSlide key={1} className="slide" >
                                 <div className="videoSlideContainer" >
                                     <Link to={`/videos/86`}>
