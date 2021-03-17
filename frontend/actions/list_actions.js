@@ -1,43 +1,43 @@
-import * as MyListUtils from '../util/list_api_util';
+import * as ListUtils from '../util/list_api_util';
 
-export const RECEIVE_MY_LISTS = "RECEIVE_MY_LISTS";
-export const RECEIVE_MY_LIST = "RECEIVE_MY_LIST";
-export const REMOVE_MY_LIST_ITEM = "REMOVE_MY_LIST_ITEM";
+export const RECEIVE_LISTS = "RECEIVE_LISTS";
+export const RECEIVE_LIST = "RECEIVE_LIST";
+export const REMOVE_LIST_ITEM = "REMOVE_LIST_ITEM";
 
 
-const receiveMyLists = (mylists) => {
+const receiveLists = (lists) => {
     return {
-        type: RECEIVE_MY_LISTS,
-        mylists
+        type: RECEIVE_LISTS,
+        lists
     }
 }
 
-const receiveMyList = (mylist) => {
+const receiveList = (list) => {
     return {
-        type: RECEIVE_MY_LIST,
-        mylist
+        type: RECEIVE_LIST,
+        list
     }
 }
 
-const removeMyListItem = (videoId) => {
+const removeListItem = (videoId) => {
     return {
-        type: REMOVE_MY_LIST_ITEM,
+        type: REMOVE_LIST_ITEM,
         videoId
     }
 }
 
-export const fetchMyLists = (profileId) => dispatch => {
-    return MyListUtils.fetchMyLists(profileId)
-    .then(mylists => dispatch(receiveMyLists(mylists)));
+export const fetchLists = (userId) => dispatch => {
+    return ListUtils.fetchLists(userId)
+    .then(lists => dispatch(receiveLists(lists)));
 }
 
-export const addToMyList = (mylist) => dispatch => {
-    return MyListUtils.addToMyList(mylist)
-    .then(mylist => dispatch(receiveMyList(mylist)));
+export const addToList = (list) => dispatch => {
+    return ListUtils.addToList(list)
+    .then(list => dispatch(receiveList(list)));
 }
 
-export const deleteMyListItem = (mylist) => dispatch => {
-    return MyListUtils.removeMyListItem(mylist)
-    .then(() => dispatch(removeMyListItem(mylist.video_id)));
+export const deleteListItem = (list) => dispatch => {
+    return ListUtils.removeListItem(list)
+    .then(() => dispatch(removeListItem(list.video_id)));
 }
 

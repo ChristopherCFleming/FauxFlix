@@ -1,37 +1,39 @@
-class Api::MylistsController < ApplicationController
+class Api::ListsController < ApplicationController
     before_action :ensure_signed_in, only: [:index, :create, :destroy]
 
     def index
        if params[:user_id]
-            @mylists = Mylist.where(user_id: params[:user_id])
+            @lists = List.where(user_id: params[:user_id])
             render :index
        else
         my_render(422, "Nothing to process!")
+        # render json: ["Nothing to process!"], status: 422
        end
     end
 
     def create 
-        @mylist = Mylist.new(mylist_params)
-        if @mylist.save!
+        @list = list.new(list_params)
+        if @list.save!
             render :show
         else
-            my_render(422, @mylist.errors.full_messages)
+            my_render(422, @list.errors.full_messages)
+            # render json: @list.errors.full_messages, status: 422
         end
     end
 
     def destroy
         
-        @mylist = Mylist.find_by(video_id: mylist_params[:video_id], user_id: mylist_params[:user_id])
-        if Mylist.destroy(@mylist.id)
+        @list = List.find_by(video_id: list_params[:video_id], user_id: list_params[:user_id])
+        if List.destroy(@list.id)
             my_render(200)
         else
-            my_render(404, @mylist.errors.full_messages)
+            my_render(404, @list.errors.full_messages)
         end
     end
 
     private
-    def mylist_params
-        params.require(:mylist).permit(:video_id, :user_id)
+    def list_params
+        params.require(:list).permit(:video_id, :user_id)
     end
     
 end

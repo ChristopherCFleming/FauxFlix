@@ -1,22 +1,22 @@
 
-export const addToMyList = (mylist)=>{
+export const addToList = (list)=>{
     return $.ajax({
-        url: `api/mylists`,
+        url: `api/lists`,
         method:'POST',
-        data: {mylist}
+        data: {list}
     })
 };
 
-export const fetchMyLists = (profileId)=>{
+export const fetchLists = (userId)=>{
     return $.ajax({
-        url: `api/profiles/${profileId}/mylists`
+        url: `api/users/${userId}/lists`
     })
 };
 
-export const removeMyListItem = (mylist) =>{
+export const removeListItem = (list) =>{
     return $.ajax({
-        url: `api/mylists/${mylist.video_id}`,
-        data: {mylist},
+        url: `api/lists/${list.video_id}`,
+        data: {list},
         method: 'DELETE'
     })
 }
