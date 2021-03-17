@@ -73,7 +73,7 @@ class Header extends React.Component {
                         <Link to="/browse"><img src={window.logoURL} alt="FauxFlix Logo" className="logo"/></Link>
                         <div className="subNavi">
                             <Link to="/browse" className="headerLink">Home </Link>
-                            <Link to="/myList" className="headerLink">My List </Link>
+                            <Link to="/browse/list" className="headerLink">My List </Link>
                         </div>
                     </div>
                     

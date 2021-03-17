@@ -1,1 +1,1 @@
-json.extract! @mylist, :video_id
+json.extract! @list, :video_id

@@ -18,13 +18,12 @@
         .swiper-button-next {
             font-family: swiper-icons;
             color: white;
-            height: 9vw;
+            height: 11vw;
             width: 60px;
             position: absolute;
             text-decoration: none;
             text-align: center;
-            padding: 3.6vw 0 0 0;
-            bottom: 0;
+            top: .5vw;
             z-index: 4;
             opacity: 0;
             transition: .2s;
@@ -39,7 +38,7 @@
             }
 
             &:hover {
-                background: linear-gradient rgba(0, 0, 0, .5);
+                background: rgba(0, 0, 0, .5);
                 font-size: 40px;
             }
         }

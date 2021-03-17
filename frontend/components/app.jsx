@@ -23,6 +23,9 @@ const App = () => (
             <AuthRoute path="/signup" component={SignupContainer} />
             <ProtectedRoute path="/browse" component={HomepageContainer} />
             <ProtectedRoute path="/videos/:id" component={VideoContainer} />
+                {/* Have not yet made ListContainer */}
+             {/* <ProtectedRoute path="/browse/list" component={ListContainer} /> */}
+
         </Switch>
     </main>
 

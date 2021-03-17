@@ -1,7 +1,7 @@
 arr = [];
 
-@mylists.each do |mylist|
-    arr.push(mylist.video_id);
+@lists.each do |list|
+    arr.push(list.video_id);
 end
 
 json.video_ids arr
