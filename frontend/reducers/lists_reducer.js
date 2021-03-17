@@ -3,7 +3,7 @@ import { RECEIVE_LISTS, RECEIVE_LIST, REMOVE_LIST_ITEM } from '../actions/list_a
 
 const _nullState = []
 
-const MyListReducer = (state = _nullState, action) => {
+const ListReducer = (state = _nullState, action) => {
     Object.freeze(state);
     let nextState = Object.assign([], state);
 
@@ -22,4 +22,4 @@ const MyListReducer = (state = _nullState, action) => {
     }
 }
 
-export default MyListReducer;
+export default ListReducer;
