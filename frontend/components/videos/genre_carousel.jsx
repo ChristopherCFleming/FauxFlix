@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
+import IndividualVideo from './individual_video';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 
@@ -19,12 +20,10 @@ function GenreCarousel(props) {
     }
 
     function playVideo(e) {
-        e.currentTarget.muted = false;
         e.currentTarget.play();
     }
 
     function stopVideo(e) {
-        e.currentTarget.muted = true;
         e.currentTarget.load(); 
     }
 
@@ -32,39 +31,13 @@ function GenreCarousel(props) {
         return description.slice(0, 35) + "...";
     }
 
-
       
     SwiperCore.use([Navigation]);
-
-    // below is only to make multiple slides:
-
-
-    // const slides = [];
-    // for (let i = 0; i < 5; i += 1) {
-    //     slides.push(
-    //         <SwiperSlide key={`slide-${i}`} tag="li">
-    //             <img
-    //             src={`https://picsum.photos/id/${i + 1}/500/300`}
-    //             style={{ listStyle: 'none' }}
-    //             alt={`Slide ${i}`}
-    //             />
-    //         </SwiperSlide>
-    //     );
-    // }
-
 
     
     
     if (Object.values(props.allVideoObjects).length) {
             return (
-
-                // <Swiper id="main" tag="section" spaceBetween={50} slidesPerView={3} loop={true} navigation>
-                //     {slides}
-                // </Swiper>
-
-
-
-
 
 
                 <div className="carousel" >
@@ -236,7 +209,24 @@ function GenreCarousel(props) {
 
 
                 
-                // Working Version Below:
+                // Mostly Working Version Below with individualVideo component (VideoPlay not automatic on Mouseover):
+
+                // <div className="carousel" >
+                //     <p>{props.genre.genre}</p>
+                //     <Swiper loop={true} navigation slidesPerView={6}>
+                //         {shuffleVideos(props.genre.video_ids).map( (each_id, index) => (
+                //             <SwiperSlide className="slide" key={index} >
+                //                 <IndividualVideo video={props.allVideoObjects[each_id]} />
+                //             </SwiperSlide>
+                //             ))}
+                //     </Swiper>
+                // </div>
+
+
+
+
+                //Fully working, but not extracted:
+                        
 
                 // <div className="carousel" >
                 //     <p>{props.genre.genre}</p>
@@ -246,6 +236,7 @@ function GenreCarousel(props) {
                 //                 <div className="videoSlideContainer" >
                 //                     <Link to={`/videos/${each_id}`}>
                 //                         <video 
+                //                             muted={true}
                 //                             onMouseOver={playVideo} 
                 //                             onMouseOut={stopVideo}
                 //                             loop
