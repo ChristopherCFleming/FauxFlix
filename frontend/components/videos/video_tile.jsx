@@ -16,8 +16,6 @@ class VideoTile extends React.Component {
     }
 
     toggleMute() {
-        // const bannerVideo = document.getElementById("bannerVideo");
-
         if (this.state.muteStatus) {
             this.videoElement.current.muted = false;
             this.setState({
@@ -42,6 +40,7 @@ class VideoTile extends React.Component {
     shortenDescription(description) {
         return description.slice(0, 35) + "...";
     }
+    
     render() {
         if (this.props.video) {
             return (
@@ -55,8 +54,7 @@ class VideoTile extends React.Component {
                             muted={true}
                             poster={this.props.video.thumbnail} 
                             src={this.props.video.video} 
-                            className="carouselVideo"
-                            id="1" />
+                            className="carouselVideo" />
                     </Link>
                     <div onClick={this.toggleMute} className="muteButton">{(this.state.muteStatus) ? <i className="fas fa-volume-mute"></i> : <i className="fas fa-volume-up"></i>}</div>
                     <div className="videoDropDown">
