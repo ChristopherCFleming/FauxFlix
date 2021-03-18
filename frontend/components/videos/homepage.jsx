@@ -16,6 +16,7 @@ class Homepage extends React.Component {
     componentDidMount() {
         this.props.allVideos()
         this.props.allGenres()
+        this.props.fetchLists(40)
     }
 
 
