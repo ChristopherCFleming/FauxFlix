@@ -2,16 +2,34 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 
-class IndividualVideo extends React.Component {
+class VideoTile extends React.Component {
     constructor(props) {
         super(props)
         this.videoElement = React.createRef();
+        this.state = {
+            muteStatus : true
+        };
         this.playVideo = this.playVideo.bind(this);
         this.stopVideo = this.stopVideo.bind(this);
         this.shortenDescription = this.shortenDescription.bind(this);
+        this.toggleMute = this.toggleMute.bind(this);
     }
 
-    
+    toggleMute() {
+        // const bannerVideo = document.getElementById("bannerVideo");
+
+        if (this.state.muteStatus) {
+            this.videoElement.current.muted = false;
+            this.setState({
+                muteStatus: false
+            });
+        } else {
+            this.videoElement.current.muted = true;
+            this.setState({
+                muteStatus: true
+            });
+        }
+    }
 
     playVideo(e) {
         this.videoElement.current.play();
@@ -40,6 +58,7 @@ class IndividualVideo extends React.Component {
                             className="carouselVideo"
                             id="1" />
                     </Link>
+                    <div onClick={this.toggleMute} className="muteButton">{(this.state.muteStatus) ? <i className="fas fa-volume-mute"></i> : <i className="fas fa-volume-up"></i>}</div>
                     <div className="videoDropDown">
                         <div className="buttonWrapper">
                             <span><Link to={`/videos/${this.props.video.id}`}><i className="far fa-play-circle"></i></Link></span>
@@ -56,4 +75,4 @@ class IndividualVideo extends React.Component {
     }
 }
 
-export default IndividualVideo;
+export default VideoTile;

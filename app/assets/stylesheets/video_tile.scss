@@ -1,0 +1,92 @@
+.videoSlideContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    // added below for testing
+    // height: fit-content;
+
+
+    .carouselVideo {
+        width: 16vw;
+        transition: .1s;
+        z-index: 1;
+        padding: 0 .5vw 0 .5vw;
+        border-radius: 10px;
+    }
+
+    .muteButton {
+        position: absolute;
+        top: 4vw;
+        right: 2vw;
+        z-index: 3;
+        visibility: hidden;
+
+        i {
+            text-shadow: 2px 2px 4px rgb(0, 0, 0);
+        }
+    }
+
+    .videoDropDown {
+        background: rgb(19, 19, 19);
+        width: 19vw;
+        max-height: 0;
+        height: 9vw;
+        visibility: hidden;
+        transition: .5s;
+        z-index: -1;
+        overflow: hidden;
+        margin: 0;
+        //added below for testing:
+        // position: absolute;
+        // top: 100%;
+
+
+        .buttonWrapper {
+            display: flex;
+            flex-direction: row;
+            // justify-content: center;
+
+            i {
+                margin: .5vw 0 0 .5vw;
+                font-size: 2.5vw;
+                color: rgb(196, 195, 195);
+
+                &:hover {
+                    color: rgb(255, 255, 255);
+                }
+            }
+
+            h4 {
+                margin: 1vw 0 0 .5vw;
+                font-size: 1.3vw;
+            }
+        }
+
+        p {
+            font-size: 1vw;
+            font-weight: 400;
+            color: rgb(229, 226, 226);
+        }
+    }
+
+}
+
+.videoSlideContainer:hover {
+    z-index: 3;
+
+    .carouselVideo {
+        width: 19vw;
+        z-index: 3;
+    }
+
+    .muteButton {
+        visibility: visible;
+    }
+
+    .videoDropDown {
+        visibility: visible;
+        height: 9vw;
+        max-height: 9vw;
+        z-index: 3;
+    }
+}
