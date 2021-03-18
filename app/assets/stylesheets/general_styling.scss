@@ -74,3 +74,18 @@ p {
     background: #e50914;
 }
 
+.svg-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+    fill: white;
+}
+
+.svg-icon circle {
+    stroke: white;
+    stroke-width: 1;
+}
