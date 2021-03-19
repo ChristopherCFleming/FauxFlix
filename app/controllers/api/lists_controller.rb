@@ -20,7 +20,6 @@ class Api::ListsController < ApplicationController
     end
 
     def destroy
-        
         @list = List.find_by(video_id: list_params[:video_id], user_id: list_params[:user_id])
         if List.destroy(@list.id)
             # Not sure about also adding the status below. Necessary?
