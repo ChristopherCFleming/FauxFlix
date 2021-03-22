@@ -102,7 +102,7 @@ function GenreCarousel(props) {
                 //     <Swiper loop={true} navigation slidesPerView={6}>
                 //         {shuffleVideos(props.genre.video_ids).map( (each_id, index) => (
                 //             <SwiperSlide className="slide" key={index} >
-                //                 <VideoTile video={props.allVideoObjects[each_id]} />
+                //                 <VideoTile video={props.allVideoObjects[each_id]} className="videoTile" />
                 //             </SwiperSlide>
                 //             ))}
                 //     </Swiper>

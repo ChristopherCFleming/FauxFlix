@@ -105,7 +105,7 @@ class SplashPage extends React.Component {
                                             <button type="button" className={`status${this.state.activeAccordion === 4 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(4)}>How Can I Hire This Developer?
                                                 <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                                 <div className="accordion__content">
-                                                    <p>Thank you for asking! I would very much so like to hear from you. Please click on the links in the footer for my LinkedIn, Angellist, and personal portfolio site.</p>
+                                                    <p>Thank you for asking! I would very much so like to hear from you. Feel free to connect with me on <a id="linkedin" href="https://www.linkedin.com/in/christophercfleming/" target="_blank">LinkedIn,</a> <a href="https://angel.co/u/christopher-c-fleming" target="_blank">Angellist,</a> or check out my <a id="portfolio" href="https://christophercfleming.github.io/" target="_blank">personal portfolio</a> site.</p>
                                                 </div>
                                             </button>
                                         </div>
