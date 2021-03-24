@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
 
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :require_logged_in
 
   
 

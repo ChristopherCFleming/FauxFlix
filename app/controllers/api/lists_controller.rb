@@ -1,5 +1,5 @@
 class Api::ListsController < ApplicationController
-    before_action :ensure_signed_in, only: [:index, :create, :destroy]
+    before_action :require_logged_in, only: [:index, :create, :destroy]
 
     def index
        if params[:user_id]
