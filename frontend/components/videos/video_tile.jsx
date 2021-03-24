@@ -18,6 +18,10 @@ class VideoTile extends React.Component {
         this.deleteListItem = this.deleteListItem.bind(this);
     }
 
+    componentDidMount() {
+        this.props.fetchLists(this.props.id)
+    }
+
     addToList(e){
         this.props.addToList({
            video_id: this.props.video.id,
@@ -28,7 +32,7 @@ class VideoTile extends React.Component {
     deleteListItem(e){
         this.props.deleteListItem({
             video_id: this.props.video.id,
-            user_id: this.props.entities.users.id,
+            user_id: this.props.id,
         })
     }
 

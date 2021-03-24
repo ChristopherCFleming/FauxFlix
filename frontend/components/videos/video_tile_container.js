@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addToList, deleteListItem } from '../../actions/list_actions';
+import { addToList, deleteListItem, fetchLists } from '../../actions/list_actions';
 import VideoTile from './video_tile';
 
     const mSTP = (state, ownProps) => {
@@ -14,6 +14,7 @@ const mDTP = (dispatch) => {
     return {
         addToList: (list) => dispatch(addToList(list)),
         deleteListItem: (videoId) => dispatch(deleteListItem(videoId)),
+        fetchLists: (userId) => dispatch(fetchLists(userId)),
     }
 };
 
