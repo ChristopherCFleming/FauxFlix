@@ -22,7 +22,7 @@ class List extends React.Component {
         } else {
             return (
                 <div className="listComponent">
-                    <Navi currentUser={true} listPage={true} logout={this.props.logout}/>
+                    <Navi currentUser={true} logout={this.props.logout}/>
                     <p>We gonna render the videos HERE!</p>
                     <Footer />
                 </div>

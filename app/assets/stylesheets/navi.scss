@@ -121,8 +121,10 @@
     background: #000;
 }
 
-.listPage {
-    position: relative;
+.listComponent {
+    .pageHeader {
+        position: relative;
+    }
 }
 
 

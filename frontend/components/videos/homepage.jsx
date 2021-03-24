@@ -15,7 +15,6 @@ class Homepage extends React.Component {
     componentDidMount() {
         this.props.allVideos()
         this.props.allGenres()
-        this.props.fetchLists(40)
     }
 
 
@@ -28,7 +27,7 @@ class Homepage extends React.Component {
 
             return (
                 <div>
-                    <Navi logout={this.props.logout} currentUser={true}/>
+                    <Navi logout={this.props.logout} currentUser={true} homepage={true} />
                     {/* <BannerVideo randVideo={randVideo} /> */}
                     {/* below this is the functional version I hoped would work */}
                     <div className="carouselWrapper">

@@ -5,18 +5,20 @@ function Navi(props) {
 
     const [background, setBackground] = useState(false);
 
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 50) {
-                setBackground(true);
-            } else {
-                setBackground(false);
-            }
-        });
-        return () => {
-            window.removeEventListener("scroll");
-        };
-    }, []);
+    if (props.homepage) {
+        useEffect(() => {
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    setBackground(true);
+                } else {
+                    setBackground(false);
+                }
+            });
+            return () => {
+                window.removeEventListener("scroll");
+            };
+        }, []);
+    }
 
     function endSession() {
         props.logout();
@@ -24,7 +26,7 @@ function Navi(props) {
 
     if (props.currentUser) {
         return (
-            <header className={`pageHeader loggedIn ${props.listPage ? "listPage" : ""} ${background ? "active" : ""}`}>
+            <header className={`pageHeader loggedIn ${background ? "active" : ""}`}>
                 <div className="firstSection">
                     <Link to="/browse"><img src={window.logoURL} alt="FauxFlix Logo" className="logo"/></Link>
                     <div className="subNavi">
