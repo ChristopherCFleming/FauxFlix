@@ -11,6 +11,7 @@ import SignupContainerP1 from './session_form/signup_form_p1_container';
 import SignupContainer from './session_form/signup_form_container';
 import HomepageContainer from './videos/homepage_container';
 import VideoContainer from './videos/video_container';
+import ListContainer from './list/list_container';
 // import stylesheet from '../../app/assets/stylesheets/main_stylesheet.css'    //Do I even need this?
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -23,8 +24,7 @@ const App = () => (
             <AuthRoute path="/signup" component={SignupContainer} />
             <ProtectedRoute path="/browse" component={HomepageContainer} />
             <ProtectedRoute path="/videos/:id" component={VideoContainer} />
-                {/* Have not yet made ListContainer */}
-             {/* <ProtectedRoute path="/browse/list" component={ListContainer} /> */}
+            <ProtectedRoute path="/browse/list" component={ListContainer} />
 
         </Switch>
     </main>
