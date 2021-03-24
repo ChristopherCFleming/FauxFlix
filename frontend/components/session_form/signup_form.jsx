@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../reusable_components/header';
+import Navi from '../reusable_components/navi';
 import Footer from '../reusable_components/footer';
 import { Link } from 'react-router-dom';
 
@@ -50,7 +50,7 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div className="signupPage">
-                <Header />
+                <Navi />
                     <div className="signupContent">
                         <p>STEP <strong>2</strong> of <strong>2</strong></p>
                         <br/>

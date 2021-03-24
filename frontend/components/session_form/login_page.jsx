@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../reusable_components/header';
+import Navi from '../reusable_components/navi';
 import Footer from '../reusable_components/footer';
 
 
@@ -51,7 +51,7 @@ class LoginPage extends React.Component {
         return (
             <div className="loginPage">
                 <div className="shadowDiv">
-                    <Header />
+                    <Navi />
                         <div className="loginPageContent">
                             <h1>Sign In</h1>
                             <form onSubmit={this.handleSubmit} className="infoInputForm">

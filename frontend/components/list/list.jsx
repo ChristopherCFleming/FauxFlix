@@ -14,7 +14,7 @@ class List extends React.Component {
         if (false) {
             return (
                 <div className="listComponent">
-                    <Header />
+                    <Navi />
                     <p>Nothing in your list</p>
                     <Footer />
                 </div>

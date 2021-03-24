@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../reusable_components/header_container';
+import Navi from '../reusable_components/navi';
 import Footer from '../reusable_components/footer';
 
 
@@ -35,7 +35,7 @@ class SplashPage extends React.Component {
         return (
             <div className="splashPage">
                 <div className="splashImage">
-                    <Header />
+                    <Navi />
                     <div className="splashPageContent">
                         <h1>Unlimited movies, TV <br/> shows, and more.</h1>
                         <p>Watch anywhere. Cancel anytime.</p>

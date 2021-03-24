@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../reusable_components/header_container';
 // below this is the functional version:
 import GenreCarousel from './genre_carousel';
 // below this is the class version: 

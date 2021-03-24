@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../reusable_components/header';
+import Navi from '../reusable_components/Navi';
 import Footer from '../reusable_components/footer';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ class SignupFormP1 extends React.Component {
     render() {
         return (
             <div className="signupPage">
-                <Header />
+                <Navi />
                     <div className="signupContent partOne">
                         <img src={window.signup_devices} alt="signup_devices" className="signupDevices"/>
                         <br/>
