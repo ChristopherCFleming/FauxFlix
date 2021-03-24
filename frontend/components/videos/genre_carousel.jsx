@@ -3,6 +3,7 @@ import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
 import VideoTile from './video_tile';
+import VideoTileContainer from './video_tile_container';
 
 
 function GenreCarousel(props) {
