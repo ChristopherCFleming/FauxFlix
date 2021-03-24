@@ -41,3 +41,10 @@ export const deleteListItem = (list) => dispatch => {
     .then(() => dispatch(removeListItem(list.video_id)));
 }
 
+// Suspect this is causing problems below...
+
+export const fetchListVideos = (videoIds, videos)=>{
+    return videoIds.map((videoId) => {
+        return videos[videoId];
+    })
+}
