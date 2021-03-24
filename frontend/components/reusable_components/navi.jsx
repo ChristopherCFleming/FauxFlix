@@ -24,12 +24,12 @@ function Navi(props) {
 
     if (props.currentUser) {
         return (
-            <header className={`pageHeader loggedIn ${background ? "active" : ""}`}>
+            <header className={`pageHeader loggedIn ${props.listPage ? "listPage" : ""} ${background ? "active" : ""}`}>
                 <div className="firstSection">
                     <Link to="/browse"><img src={window.logoURL} alt="FauxFlix Logo" className="logo"/></Link>
                     <div className="subNavi">
                         <Link to="/browse" className="headerLink">Home </Link>
-                        <Link to="/browse/list" className="headerLink">My List </Link>
+                        <Link to="/list" className="headerLink">My List </Link>
                     </div>
                 </div>
                 <div className="secondSection">
