@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import List from './list';
-import { fetchListVideos } from '../actions/list_actions';
+// import { fetchListVideos } from '../actions/list_actions';
 
 const mapStateToProps = ({ errors }) => {
     return {

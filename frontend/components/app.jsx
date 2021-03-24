@@ -23,9 +23,8 @@ const App = () => (
             <AuthRoute path="/signup1" component={SignupContainerP1} />
             <AuthRoute path="/signup" component={SignupContainer} />
             <ProtectedRoute path="/browse" component={HomepageContainer} />
-            <ProtectedRoute path="/videos/:id" component={VideoContainer} />
             <ProtectedRoute path="/browse/list" component={ListContainer} />
-
+            <ProtectedRoute path="/videos/:id" component={VideoContainer} />
         </Switch>
     </main>
 

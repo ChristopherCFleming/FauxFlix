@@ -5,6 +5,8 @@ import VideoTile from './video_tile';
     const mSTP = (state, ownProps) => {
         return {
             video: ownProps.video,
+            id: state.session.id,
+            inList: state.entities.lists.includes(ownProps.video.id),
         }
     }
 

@@ -7,7 +7,7 @@ class VideoTile extends React.Component {
         super(props)
         this.videoElement = React.createRef();
         this.state = {
-            muteStatus : true
+            muteStatus : true,
         };
         this.playVideo = this.playVideo.bind(this);
         this.stopVideo = this.stopVideo.bind(this);
@@ -21,14 +21,14 @@ class VideoTile extends React.Component {
     addToList(e){
         this.props.addToList({
            video_id: this.props.video.id,
-           user_id: this.props.entities.user.id,
+           user_id: this.props.id,
         })
     }
 
     deleteListItem(e){
         this.props.deleteListItem({
             video_id: this.props.video.id,
-            user_id: this.props.entities.user.id,
+            user_id: this.props.entities.users.id,
         })
     }
 
@@ -77,8 +77,16 @@ class VideoTile extends React.Component {
                     <div onClick={this.toggleMute} className="muteButton">{(this.state.muteStatus) ? <i className="fas fa-volume-mute"></i> : <i className="fas fa-volume-up"></i>}</div>
                     <div className="videoDropDown">
                         <div className="buttonWrapper">
-                            <span><Link to={`/videos/${this.props.video.id}`}><i className="far fa-play-circle"></i></Link></span>
-                            <span><i className="fas fa-plus-circle"></i></span>
+                            <span>
+                                <Link to={`/videos/${this.props.video.id}`}><i className="far fa-play-circle"></i></Link>
+                            </span>
+                            <span>
+                                {
+                                    this.props.inList ?
+                                    <i onClick={this.deleteListItem} className="fas fa-minus-circle"></i> :
+                                    <i onClick={this.addToList} className="fas fa-plus-circle"></i>
+                                }
+                            </span>
                             <h4>{this.props.video.title}</h4>
                         </div>
                         <p>{this.shortenDescription(this.props.video.description)}</p>
