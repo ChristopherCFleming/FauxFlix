@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
 import VideoTile from './video_tile';
 import VideoTileContainer from './video_tile_container';
-import video_tile_container from './video_tile_container';
 
 
 function GenreCarousel(props) {
@@ -89,7 +88,7 @@ function GenreCarousel(props) {
                 <div className="carousel" >
                     <p>{props.genre.genre}</p>
                     <Swiper loop={true} navigation slidesPerView={6}>
-
+                        {/* the shuffle function below keeps rerendering all the videos when I add them to my list */}
                         {/* {shuffleVideos(props.genre.video_ids).map( (each_id, index) => ( */}
                         {props.genre.video_ids.map( (each_id, index) => (
                             <SwiperSlide className="slide" key={index} >

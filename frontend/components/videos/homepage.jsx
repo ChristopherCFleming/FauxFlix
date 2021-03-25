@@ -29,7 +29,7 @@ class Homepage extends React.Component {
 
             return (
                 <div>
-                    <Navi logout={this.props.logout} currentUser={true} homepage={true} />
+                    <Navi logout={this.props.logout} loggedIn={true} homepage={true} />
                     <BannerVideo randVideo={randVideo} />
                     {/* below this is the functional version I hoped would work */}
                     <div className="carouselWrapper">

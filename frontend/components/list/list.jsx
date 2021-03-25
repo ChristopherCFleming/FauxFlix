@@ -21,7 +21,7 @@ class List extends React.Component {
         if (this.props.lists.length === 0) {
             return (
                 <div className="listComponent">
-                    <Navi currentUser={true} logout={this.props.logout}/>
+                    <Navi loggedIn={true} logout={this.props.logout}/>
                     <p>Nothing in your list</p>
                     <Footer />
                 </div>
@@ -29,7 +29,7 @@ class List extends React.Component {
         } else {
             return (
                 <div className="listComponent">
-                    <Navi currentUser={true} logout={this.props.logout}/>
+                    <Navi loggedIn={true} logout={this.props.logout}/>
                     <p>We gonna render the videos HERE!</p>
                     <Footer />
                 </div>

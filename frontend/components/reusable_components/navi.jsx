@@ -5,7 +5,7 @@ function Navi(props) {
 
     const [background, setBackground] = useState(false);
 
-    if (props.homepage) {
+    if (props.loggedIn) {
         useEffect(() => {
             window.addEventListener("scroll", () => {
                 if (window.scrollY > 50) {
@@ -24,7 +24,7 @@ function Navi(props) {
         props.logout();
     }
 
-    if (props.currentUser) {
+    if (props.loggedIn) {
         return (
             <header className={`pageHeader loggedIn ${background ? "active" : ""}`}>
                 <div className="firstSection">
