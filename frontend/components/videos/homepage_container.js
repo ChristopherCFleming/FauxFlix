@@ -14,6 +14,7 @@ const mSTP = (state, ownProps) => {
         allGenresArray: Object.values(state.entities.genres),
         //only adding lists to pass to banner and individual video components
         lists: state.entities.lists,
+        id: state.session.id,
     }
 }
 
@@ -24,9 +25,7 @@ const mDTP = (dispatch) => {
         //again, only adding logout so I can pass it to navi trial component
         logout: () => dispatch(logout()),
         allGenres: () => dispatch(allGenres()),
-        addToList: (list) => dispatch(addtoList(list)),
-        deleteListItem: (list) => dispatch(deleteListItem(list)),
-
+        fetchLists: () => dispatch(fetchLists()),
     }
 };
 

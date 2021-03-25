@@ -13,16 +13,13 @@ class VideoTile extends React.Component {
         this.stopVideo = this.stopVideo.bind(this);
         this.shortenDescription = this.shortenDescription.bind(this);
         this.toggleMute = this.toggleMute.bind(this);
-        //these two are new: 
         this.addToList = this.addToList.bind(this);
         this.deleteListItem = this.deleteListItem.bind(this);
     }
 
-    componentDidMount() {
-        this.props.fetchLists(this.props.id)
-    }
 
     addToList(e){
+        e.preventDefault()
         this.props.addToList({
            video_id: this.props.video.id,
            user_id: this.props.id,
@@ -30,6 +27,7 @@ class VideoTile extends React.Component {
     }
 
     deleteListItem(e){
+        e.preventDefault()
         this.props.deleteListItem({
             video_id: this.props.video.id,
             user_id: this.props.id,

@@ -15,7 +15,6 @@ class User < ApplicationRecord
     validates :email, uniqueness: true
     validates :password, length: { minimum: 6 }, allow_nil: true
 
-    # has_one?
     has_many :lists,
       class_name: :List,
       foreign_key: :user_id

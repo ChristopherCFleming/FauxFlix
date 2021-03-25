@@ -9,8 +9,7 @@ export const addToList = (list)=>{
 
 export const fetchLists = (userId)=>{
     return $.ajax({
-        // url: `api/users/${userId}/lists`
-        url: `api/lists/${userId}`
+        url: `api/lists`
     })
 };
 

@@ -6,7 +6,6 @@ const _nullState = []
 const ListReducer = (state = _nullState, action) => {
     Object.freeze(state);
     let nextState = Object.assign([], state);
-
     switch(action.type){
         case RECEIVE_LISTS:
             nextState = action.lists.video_ids

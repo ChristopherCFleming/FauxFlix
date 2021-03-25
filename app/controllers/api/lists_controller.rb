@@ -2,8 +2,9 @@ class Api::ListsController < ApplicationController
     before_action :require_logged_in, only: [:index, :create, :destroy]
 
     def index
-       if params[:user_id]
-            @lists = List.where(user_id: params[:user_id])
+        # @lists = List.where(user_id: params[:user_id])
+        @lists = current_user.lists
+       if @lists
             render :index
        else
         render json: ["Nothing Here"], status: 422
@@ -17,6 +18,15 @@ class Api::ListsController < ApplicationController
         else
             render json: @list.errors.full_messages, status: 422
         end
+    end
+
+    def show 
+        @list = List.find(params[:id])
+        if @list 
+            render :show
+       else
+            render json: ["Nothing Here"], status: 422
+       end
     end
 
     def destroy

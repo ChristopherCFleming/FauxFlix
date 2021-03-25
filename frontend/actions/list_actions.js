@@ -26,8 +26,8 @@ const removeListItem = (videoId) => {
     }
 }
 
-export const fetchLists = (userId) => dispatch => {
-    return ListUtils.fetchLists(userId)
+export const fetchLists = () => dispatch => {
+    return ListUtils.fetchLists()
     .then(lists => dispatch(receiveLists(lists)));
 }
 
