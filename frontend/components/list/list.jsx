@@ -20,9 +20,9 @@ class List extends React.Component {
     render() {
         if (this.props.lists.length === 0) {
             return (
-                <div className="listComponent">
+                <div className="listComponent empty">
                     <Navi loggedIn={true} logout={this.props.logout}/>
-                    <p>Nothing in your list</p>
+                    <p>Add some videos from the <Link to="/browse">homepage</Link> to keep track of them here.</p>
                     <Footer />
                 </div>
             )

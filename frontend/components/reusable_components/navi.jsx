@@ -5,7 +5,7 @@ function Navi(props) {
 
     const [background, setBackground] = useState(false);
 
-    if (props.loggedIn) {
+    if (props.homepage) {
         useEffect(() => {
             window.addEventListener("scroll", () => {
                 if (window.scrollY > 50) {
