@@ -30,7 +30,7 @@ class Homepage extends React.Component {
             return (
                 <div>
                     <Navi logout={this.props.logout} loggedIn={true} homepage={true} />
-                    {/* <BannerVideo randVideo={randVideo} addToList={this.props.addToList} deleteListItem={this.props.deleteListItem} userId={this.props.id}/> */}
+                    <BannerVideo randVideo={randVideo} addToList={this.props.addToList} deleteListItem={this.props.deleteListItem} userId={this.props.id}/>
                     {/* below this is the functional version I hoped would work */}
                     <div className="carouselWrapper">
                         {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} allVideoObjects={this.props.videos}/>)}
