@@ -13,7 +13,8 @@ class Api::ListsController < ApplicationController
 
     def create 
         @list = List.new(list_params)
-        if @list.save!
+        # removed bang from below for Heroku
+        if @list.save
             render :show
         else
             render json: @list.errors.full_messages, status: 422
