@@ -10,9 +10,8 @@ const mSTP = (state, ownProps) => {
     return {
         videos: state.entities.videos,
         allVideosArray: Object.values(state.entities.videos),
-        //only adding currentUser below so I can pass it to the navi trial component
         allGenresArray: Object.values(state.entities.genres),
-        //only adding lists to pass to banner and individual video components
+        //only adding lists and ID to pass to banner and individual video components
         lists: state.entities.lists,
         id: state.session.id,
     }
@@ -26,6 +25,8 @@ const mDTP = (dispatch) => {
         logout: () => dispatch(logout()),
         allGenres: () => dispatch(allGenres()),
         fetchLists: () => dispatch(fetchLists()),
+        addToList: (list) => dispatch(addToList(list)),
+        deleteListItem: (videoId) => dispatch(deleteListItem(videoId)),
     }
 };
 

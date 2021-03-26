@@ -4,8 +4,23 @@ import { Link } from 'react-router-dom';
 function BannerVideo(props) {
 
     const [muted, setMuted] = useState(true);
+    
+    
+    function addToList(e){
+        e.preventDefault()
+        props.addToList({
+           video_id: props.randVideo.id,
+           user_id: props.userId,
+        })
+    }
 
-
+    function deleteListItem(e){
+        e.preventDefault()
+        props.deleteListItem({
+            video_id: props.randVideo.id,
+            user_id: props.userId,
+        })
+    }
     function toggleMute() {
         const bannerVideo = document.getElementById("bannerVideo");
 
