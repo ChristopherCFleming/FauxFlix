@@ -3,6 +3,7 @@ import React from 'react';
 import List from './list';
 import { logout } from '../../actions/session_actions';
 import { fetchLists } from '../../actions/list_actions';
+import { allVideos } from '../../actions/video_actions';
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -16,6 +17,7 @@ const mapDispatchToProps = dispatch => {
     return {
          logout: () => dispatch(logout()),
          fetchLists: () => dispatch(fetchLists()),
+         allVideos: () => dispatch(allVideos()),
     };
 };
 

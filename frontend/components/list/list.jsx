@@ -16,10 +16,11 @@ class List extends React.Component {
         //Reduce pull, will only run if lists aren't there. Come back to this.
         //If a user has no list, can return list id of -1, then if we find -1, we know they're new users
         this.props.list.length || this.props.fetchLists()
+        Object.values(this.props.videos).length || this.props.allVideos()
     }
 
     render() {
-        if (!this.props.list) {
+        if (!Object.values(this.props.videos).length) {
             return null;
         } else if (this.props.list.length === 0) {
             return (
