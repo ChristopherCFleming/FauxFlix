@@ -33,9 +33,9 @@ class Homepage extends React.Component {
                     <BannerVideo randVideo={randVideo} list={this.props.list} addToList={this.props.addToList} deleteListItem={this.props.deleteListItem} userId={this.props.userId}/>
                     {/* below this is the functional version I hoped would work */}
                     <div className="carouselWrapper">
-                        {/* {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} allVideoObjects={this.props.videos}/>)} */}
+                        {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} allVideoObjects={this.props.videos}/>)}
                         {/* below this is the mini version */}
-                        <GenreCarousel genre={this.props.allGenresArray[7]} key={7} allVideoObjects={this.props.videos} />
+                        {/* <GenreCarousel genre={this.props.allGenresArray[7]} key={7} allVideoObjects={this.props.videos} /> */}
                     </div>
                     <Footer />
                 </div>

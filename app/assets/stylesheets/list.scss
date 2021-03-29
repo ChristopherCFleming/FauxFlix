@@ -3,16 +3,24 @@
     .listVideosContainer {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        margin: 25vh 0 25vh 0;
+
+        .videoTile {
+            // margin: 50vh;
+
+            .carouselVideo {
+                // width: 200vh;
+            }
+
+    
+            &:hover {
+                z-index: 3;
+
+            }
+        }
     }
 
-    .videoTile {
-        margin: 5rem 0 0 5rem;
-
-
-        // &:hover {
-
-        // }
-    }
 }
 
 
