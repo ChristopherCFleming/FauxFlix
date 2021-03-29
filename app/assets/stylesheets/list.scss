@@ -6,19 +6,38 @@
         flex-wrap: wrap;
         margin: 25vh 0 25vh 0;
 
-        .videoTile {
-            // margin: 50vh;
+        .videoSlideContainer {
+            margin-top: 3vw;
+            margin-bottom: 3vw;
 
-            .carouselVideo {
-                // width: 200vh;
+            .muteButton {
+                position: absolute;
+                top: 4vw;
+                right: 2vw;
+                z-index: 3;
+                visibility: hidden;
             }
 
-    
-            &:hover {
-                z-index: 3;
 
+            &:hover {
+
+                .carouselVideo {
+                    z-index: 4;
+                }
+
+                .videoDropDown {
+                    z-index: 4;
+                }
+
+                .muteButton {
+                    visibility: visible;
+                }
             }
         }
+
+
+
+    
     }
 
 }
