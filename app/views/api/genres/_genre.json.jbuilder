@@ -1,4 +1,4 @@
 # 
 json.id genre.id
-json.name genre.name
+json.genre genre.genre
 json.videoIds genre.videos.ids.shuffle!

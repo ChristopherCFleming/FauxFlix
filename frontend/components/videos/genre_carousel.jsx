@@ -90,7 +90,7 @@ function GenreCarousel(props) {
                     <Swiper loop={true} navigation slidesPerView={6}>
                         {/* the shuffle function below keeps rerendering all the videos when I add them to my list */}
                         {/* {shuffleVideos(props.genre.video_ids).map( (each_id, index) => ( */}
-                        {props.genre.video_ids.map( (each_id, index) => (
+                        {props.genre.videoIds.map( (each_id, index) => (
                             <SwiperSlide className="slide" key={index} >
                                 <VideoTileContainer video={props.allVideoObjects[each_id]} className="videoTile" />
                             </SwiperSlide>
