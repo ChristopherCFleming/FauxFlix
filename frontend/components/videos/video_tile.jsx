@@ -19,7 +19,6 @@ class VideoTile extends React.Component {
 
 
     addToList(e){
-        e.preventDefault()
         this.props.addToList({
            video_id: this.props.video.id,
            user_id: this.props.id,
@@ -27,7 +26,6 @@ class VideoTile extends React.Component {
     }
 
     deleteListItem(e){
-        e.preventDefault()
         this.props.deleteListItem({
             video_id: this.props.video.id,
             user_id: this.props.id,
