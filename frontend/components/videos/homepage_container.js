@@ -12,8 +12,8 @@ const mSTP = (state, ownProps) => {
         allVideosArray: Object.values(state.entities.videos),
         allGenresArray: Object.values(state.entities.genres),
         //only adding lists and ID to pass to banner and individual video components
-        lists: state.entities.lists,
-        id: state.session.id,
+        list: state.entities.lists,
+        userId: state.session.id,
     }
 }
 
