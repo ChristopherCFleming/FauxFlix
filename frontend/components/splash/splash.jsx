@@ -48,15 +48,17 @@ class SplashPage extends React.Component {
                     <div className="subsection" id="firstSubsectionContainer">
                         <div className="firstSubsectionText">
                             <h1>MERN Project:</h1>
-                            <p className="description">Check out <a href="https://aapomegranate.herokuapp.com/#/" target="_blank">Pomegranate</a>, a recipe generator that reduces food waste in your kitchen!</p>
+                            <p className="description">Check out <a href="https://aapomegranate.herokuapp.com/#/" target="_blank">Pomegranate</a>, a recipe generator that reduces food waste in your kitchen.</p>
                         </div>
                         <a href="https://aapomegranate.herokuapp.com/#/" target="_blank"><img src={window.tvURL} alt="TV" className="TV"/></a>
                     </div>
                         <div className="secondSubsectionContainer subsection">
-                            <img src={window.handheldURL} alt="handheld" className="handheld"/>
+                            <a id="portfolio" href="https://christophercfleming.github.io/" target="_blank">
+                                <img src={window.handheldURL} alt="handheld" className="handheld"/>
+                            </a>
                             <div className="secondSubsectionText">
-                                <h1>Download your shows to watch offline.</h1>
-                                <p className="description">Save your favorites easily and always have something to watch.</p>
+                                <h1>My Portfolio Site.</h1>
+                                <p className="description">Wanna say hi? Drop on by! Resume? Si vous plait. How's the design? In a word: sublime.</p>
                             </div>
                         </div>
                         <div className="thirdSubsectionContainer subsection">
