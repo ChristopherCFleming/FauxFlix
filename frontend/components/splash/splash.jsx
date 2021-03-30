@@ -63,10 +63,12 @@ class SplashPage extends React.Component {
                         </div>
                         <div className="thirdSubsectionContainer subsection">
                             <div className="thirdSubsectionText">
-                                <h1>Watch everywhere.</h1>
-                                <p className="description">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</p>
+                                <h1>Pure JavaScript Project:</h1>
+                                <p className="description">Get Gov connects users with their representatives at all levels of government, increasing civic engagement.</p>
                             </div>
-                            <img src={window.allDevicesURL} alt="allDevices" className="allDevices"/>
+                            <a href="https://christophercfleming.github.io/Get-Gov/" target="_blank">
+                                <img src={window.allDevicesURL} alt="allDevices" className="allDevices"/>
+                            </a>
                         </div>
                         <div className="fourthSubsectionContainer subsection">
                             <div className="fourthSubsectionText">
