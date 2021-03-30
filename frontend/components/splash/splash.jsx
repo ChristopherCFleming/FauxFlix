@@ -47,10 +47,10 @@ class SplashPage extends React.Component {
                     </div>
                     <div className="subsection" id="firstSubsectionContainer">
                         <div className="firstSubsectionText">
-                            <h1>Enjoy on your TV.</h1>
-                            <p className="description">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                            <h1>MERN Project:</h1>
+                            <p className="description">Check out <a href="https://aapomegranate.herokuapp.com/#/" target="_blank">Pomegranate</a>, a recipe generator that reduces food waste in your kitchen!</p>
                         </div>
-                        <img src={window.tvURL} alt="TV" className="TV"/>
+                        <a href="https://aapomegranate.herokuapp.com/#/" target="_blank"><img src={window.tvURL} alt="TV" className="TV"/></a>
                     </div>
                         <div className="secondSubsectionContainer subsection">
                             <img src={window.handheldURL} alt="handheld" className="handheld"/>
