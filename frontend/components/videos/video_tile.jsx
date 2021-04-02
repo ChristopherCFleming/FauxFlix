@@ -9,8 +9,8 @@ class VideoTile extends React.Component {
         this.state = {
             muteStatus : true,
         };
-        this.playVideo = this.playVideo.bind(this);
         this.stopVideo = this.stopVideo.bind(this);
+        this.playVideo = this.playVideo.bind(this);
         this.shortenDescription = this.shortenDescription.bind(this);
         this.toggleMute = this.toggleMute.bind(this);
         this.addToList = this.addToList.bind(this);
@@ -31,7 +31,6 @@ class VideoTile extends React.Component {
             user_id: this.props.id,
         })
     }
-
 
     toggleMute() {
         if (this.state.muteStatus) {

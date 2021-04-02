@@ -57,7 +57,7 @@ function BannerVideo(props) {
                     <h5 className="bannerVideoDescription">{props.randVideo.description}</h5>
                     <div className="buttonsWrapper">
                         <Link to={`/videos/${props.randVideo.id}`} className="btn playButton" ><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" className="playicon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"></path></svg>Play</Link>
-                        <div className="btn addToListButton" onClick={addOrRemoveFromList}><span className="plusOrMinus">{props.list.includes(props.randVideo.id) ? "-" : "+"}</span><span className="buttonText"> Add To List</span></div>
+                        <div className="btn addToListButton" onClick={addOrRemoveFromList}><span className="plusOrMinus">{props.list.includes(props.randVideo.id) ? "-" : "+"}</span><span className="buttonText">{props.list.includes(props.randVideo.id) ? " Remove" : " Add To List"}</span></div>
 
                     </div>
                 </div>
