@@ -29,6 +29,7 @@ class Homepage extends React.Component {
 
             return (
                 <div>
+                    {/* only passing logout in case Navi is a functional component */}
                     <Navi logout={this.props.logout} loggedIn={true} homepage={true} />
                     <BannerVideo randVideo={randVideo} list={this.props.list} addToList={this.props.addToList} deleteListItem={this.props.deleteListItem} userId={this.props.userId}/>
                     {/* below this is the functional version I hoped would work */}

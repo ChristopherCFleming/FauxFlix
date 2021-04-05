@@ -33,6 +33,7 @@ class List extends React.Component {
         } else {
             return (
                 <div className="listComponent">
+                    {/* only passing logout below in case Navi is a functional component */}
                     <Navi loggedIn={true} logout={this.props.logout}/>
                     <div className="listVideosContainer">
                         {this.props.list.map((videoId, idx) => <VideoTileContainer key={idx} video={this.props.videos[videoId]} className="videoTile"/>) }
