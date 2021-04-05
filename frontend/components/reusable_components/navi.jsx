@@ -64,7 +64,7 @@ function Navi(props) {
                     </div>
                 </div>
                 <div className="secondSection">
-
+                    
                     <div className="searchContainer">
                         <div className="search" ref={searchMovie}>
                             <input
