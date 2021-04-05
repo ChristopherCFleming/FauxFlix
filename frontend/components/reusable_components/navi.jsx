@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 function Navi(props) {
 
     const [background, setBackground] = useState(false);
+    const [searchBarOpen, setSearchBarOpen] = useState(false);
 
     if (props.homepage) {
         useEffect(() => {
