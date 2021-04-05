@@ -6,8 +6,8 @@ function Navi(props) {
     const [background, setBackground] = useState(false);
     const [searchBarOpen, setSearchBarOpen] = useState(false);
 
-    const searchMovie = React.useRef();
-    const input = React.useRef();
+    const searchMovie = useRef();
+    const searchInput = useRef();
 
     if (props.homepage) {
         useEffect(() => {
@@ -22,6 +22,31 @@ function Navi(props) {
                 window.removeEventListener("scroll");
             };
         }, []);
+    }
+
+    function handleClickOpen(e) {
+        if (searchBarOpen === false) {
+            searchInput.current.focus();
+            setSearchBarOpen(true);
+            e.target.value = '';
+        }
+    }
+
+    function formatSearch(input) {
+        const query = input.toLowerCase();
+        return `/search/${query}`;
+    }
+
+    function search(e) {
+        if (e.target.value === '') {
+            props.history.push('/browse');
+        } else {
+            props.history.push(formatSearch(e.target.value));
+        }
+    }
+
+    function searchDebounce(e) {
+        setTimeout(() => search(e), 1000);
     }
 
     function endSession() {
@@ -39,6 +64,24 @@ function Navi(props) {
                     </div>
                 </div>
                 <div className="secondSection">
+
+                    <div className="searchContainer">
+                        <div className="search" ref={searchMovie}>
+                            <input
+                                id="searchEle"
+                                onChange={searchDebounce}
+                                className={searchBarOpen ? 'toggle input' : 'input'}
+                                type="text"
+                                placeholder="Movie Info"
+                                autoFocus
+                                ref={searchInput}>
+                            </input>
+                        <i onClick={handleClickOpen}
+                            className={searchBarOpen ? 'fas fa-search active sub-nav-logo' : 'fas fa-search sub-nav-logo'}>
+                        </i>
+                        </div>
+                    </div>
+
                     <img className="profilePic" src={window.profile_pic} alt="Profile Pic" />
                     <i className="fas fa-caret-down" id="downCaret"></i>
                     <ul className="profileDropdown">
