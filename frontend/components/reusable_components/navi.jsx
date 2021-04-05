@@ -24,10 +24,19 @@ function Navi(props) {
         }, []);
     }
 
+    // useEventListener('mousedown', handleClickClose);
+
+    // function handleClickClose(e) {
+    //     if (searchMovie && !searchMovie.current.contains(e.target)) {
+    //     setSearchBarOpen(false);
+    //     searchInput.value = '';
+    //     }
+    // }
+
     function handleClickOpen(e) {
         if (searchBarOpen === false) {
-            searchInput.current.focus();
             setSearchBarOpen(true);
+            searchInput.current.focus();
             e.target.value = '';
         }
     }
@@ -64,13 +73,13 @@ function Navi(props) {
                     </div>
                 </div>
                 <div className="secondSection">
-                    
+
                     <div className="searchContainer">
                         <div className="search" ref={searchMovie}>
                             <input
                                 id="searchEle"
                                 onChange={searchDebounce}
-                                className={searchBarOpen ? 'toggle input' : 'input'}
+                                className={searchBarOpen ? 'openedInput' : 'closedInput'}
                                 type="text"
                                 placeholder="Movie Info"
                                 autoFocus
