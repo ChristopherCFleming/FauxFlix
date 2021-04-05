@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navi from '../reusable_components/navi';
+// import Navi from '../reusable_components/navi';
+import Navi from '../reusable_components/navi_container';
 import Footer from '../reusable_components/footer';
 
 

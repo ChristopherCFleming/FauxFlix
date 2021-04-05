@@ -4,7 +4,10 @@ import GenreCarousel from './genre_carousel';
 // below this is the class version: 
 // import GenreCarousel from './genre_carousel_container';
 import Footer from '../reusable_components/footer';
-import Navi from '../reusable_components/navi';
+// class component Navi
+import Navi from '../reusable_components/navi_container';
+// functional component Navi
+// import Navi from '../reusable_components/navi'
 import BannerVideo from './banner_video';
 
 class Homepage extends React.Component {

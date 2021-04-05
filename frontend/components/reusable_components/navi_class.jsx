@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Navi extends React.component {
+class Navi extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -41,17 +41,16 @@ class Navi extends React.component {
     }
 
     handleClickClose(e) {
-       if (this.searchMovie && !this.searchMovie.current.contains(e.target)) {
+        if (this.searchMovie && !this.searchMovie.current.contains(e.target)) {
         this.setState({ searchBarOpen: false });
-        // document.getElementById('searchEle').value = '';
-        this.searchInput.value = '';
+        document.getElementById('searchEle').value = '';
         }
     }
 
     handleClickOpen(e) {
         if (this.state.searchBarOpen === false) {
+            this.searchInput.current.focus();
             this.setState({ searchBarOpen: true });
-            searchInput.current.focus();
             e.target.value = '';
         }
     }
