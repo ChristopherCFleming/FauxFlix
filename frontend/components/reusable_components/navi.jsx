@@ -1,10 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
 
 function Navi(props) {
 
     const [background, setBackground] = useState(false);
     const [searchBarOpen, setSearchBarOpen] = useState(false);
+
+    const searchMovie = React.useRef();
+    const input = React.useRef();
 
     if (props.homepage) {
         useEffect(() => {
