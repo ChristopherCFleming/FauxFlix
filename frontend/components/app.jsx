@@ -12,6 +12,7 @@ import SignupContainer from './session_form/signup_form_container';
 import HomepageContainer from './videos/homepage_container';
 import VideoContainer from './videos/video_container';
 import ListContainer from './list/list_container';
+import SearchContainer from './search/search_container';
 // import stylesheet from '../../app/assets/stylesheets/main_stylesheet.css'    //Do I even need this?
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -25,7 +26,7 @@ const App = () => (
             <ProtectedRoute path="/browse" component={HomepageContainer} />
             <ProtectedRoute path="/list" component={ListContainer} />
             <ProtectedRoute path="/videos/:id" component={VideoContainer} />
-            <ProtectedRoute path="/search/:query" component={ListContainer} search={true}/>
+            <ProtectedRoute path="/search/:query" component={SearchContainer} />
         </Switch>
     </main>
 

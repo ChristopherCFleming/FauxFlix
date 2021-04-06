@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// below was the functional navi
-// import Navi from '../reusable_components/navi';
 import Navi from '../reusable_components/navi_container';
 import Footer from '../reusable_components/footer';
 import VideoTileContainer from '../videos/video_tile_container';
 
 
-class List extends React.Component {
+class Search extends React.Component {
     constructor(props) {
         super(props);
         
@@ -16,6 +14,7 @@ class List extends React.Component {
     
     componentDidMount() {
         //Reduce pull, will only run if lists aren't there. Come back to this.
+        //If a user has no list, can return list id of -1, then if we find -1, we know they're new users
         this.props.list.length || this.props.fetchLists()
         Object.values(this.props.videos).length || this.props.allVideos()
     }
@@ -26,7 +25,6 @@ class List extends React.Component {
         } else if (this.props.list.length === 0) {
             return (
                 <div className="listComponent empty">
-                    {/* passing history prop to extend React Router's history to this child component */}
                     <Navi loggedIn={true} history={this.props.history}/>
                     <p>Add some videos from the <Link to="/browse">homepage</Link> to keep track of them here.</p>
                     <Footer />
@@ -35,8 +33,8 @@ class List extends React.Component {
         } else {
             return (
                 <div className="listComponent">
-                     {/* passing history prop to extend React Router's history to this child component */}
-                    <Navi loggedIn={true} history={this.props.history}/>
+                    {/* only passing logout below in case Navi is a functional component */}
+                    <Navi loggedIn={true} logout={this.props.logout}/>
                     <div className="listVideosContainer">
                         {this.props.list.map((videoId, idx) => <VideoTileContainer key={idx} video={this.props.videos[videoId]} className="videoTile"/>) }
                     </div>
@@ -47,5 +45,4 @@ class List extends React.Component {
     }
 }
 
-export default List;
-
+export default Search;

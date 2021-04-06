@@ -33,7 +33,6 @@ class Navi extends React.Component {
         if (this.props.homepage) {
             window.addEventListener("scroll", this.handleScroll);
         }
-        document.addEventListener("mousedown", this.handleClickClose)
     }
 
     componentWillUnmount() {
@@ -49,10 +48,8 @@ class Navi extends React.Component {
     }
 
     handleClickClose(e) {
-        const exitIcon = document.getElementById("exitIcon")
-        if (!this.searchMovie.current.contains(e.target) || e.target === exitIcon) {
-            this.setState({ searchBarOpen: false });
-        }
+        this.setState({ queryString: "" })
+        this.setState({ searchBarOpen: false });
     }
 
     handleClickOpen(e) {
@@ -79,7 +76,7 @@ class Navi extends React.Component {
 
     searchDebounce(e) {
         let timer = null;
-        timer = setTimeout(() => this.search(), 3000);
+        timer = setTimeout(() => search(), 3000);
     }
 
     endSession() {
@@ -103,13 +100,13 @@ class Navi extends React.Component {
                             <div className="search" ref={this.searchMovie}>
                                 <input
                                     id="searchEle"
-                                    onChange={this.searchDebounce()}
+                                    onChange={this.updateValue("queryString")}
                                     className={this.state.searchBarOpen ? 'openedInput' : ''}
                                     type="text"
                                     placeholder="Title, Description"
                                     autoFocus
                                     value={this.state.queryString}
-                                    onInput={this.updateValue("queryString")}
+                                    onInput={this.searchDebounce}
                                     ref={this.searchInput}>
                                 </input>
                                 <i onClick={this.handleClickOpen} className={this.state.searchBarOpen ? 'fas fa-search openedIcon' : 'fas fa-search'}/>

@@ -4,10 +4,7 @@ import GenreCarousel from './genre_carousel';
 // below this is the class version: 
 // import GenreCarousel from './genre_carousel_container';
 import Footer from '../reusable_components/footer';
-// class component Navi
 import Navi from '../reusable_components/navi_container';
-// functional component Navi
-// import Navi from '../reusable_components/navi'
 import BannerVideo from './banner_video';
 
 class Homepage extends React.Component {
@@ -32,8 +29,8 @@ class Homepage extends React.Component {
 
             return (
                 <div>
-                    {/* only passing logout in case Navi is a functional component */}
-                    <Navi logout={this.props.logout} loggedIn={true} homepage={true} />
+                     {/* passing history prop to extend React Router's history to this child component */}
+                    <Navi loggedIn={true} homepage={true} history={this.props.history}/>
                     <BannerVideo randVideo={randVideo} list={this.props.list} addToList={this.props.addToList} deleteListItem={this.props.deleteListItem} userId={this.props.userId}/>
                     {/* below this is the functional version I hoped would work */}
                     <div className="carouselWrapper">
