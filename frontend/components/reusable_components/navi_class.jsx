@@ -66,17 +66,19 @@ class Navi extends React.Component {
     }
 
     search() {
-        console.log(this.props)
         if (this.state.queryString === '') {
             this.props.history.push('/browse');
         } else {
-            this.props.history.push(formatSearch(this.state.queryString));
+            this.props.history.push(this.formatSearch(this.state.queryString));
         }
     }
 
     searchDebounce(e) {
+        if (timer) {
+            clearTimeout(timer);
+        }
         let timer = null;
-        timer = setTimeout(() => search(), 3000);
+        timer = setTimeout(() => this.search(), 3000);
     }
 
     endSession() {
@@ -98,19 +100,22 @@ class Navi extends React.Component {
     
                         <div className="searchContainer">
                             <div className="search" ref={this.searchMovie}>
-                                <input
-                                    id="searchEle"
-                                    onChange={this.updateValue("queryString")}
-                                    className={this.state.searchBarOpen ? 'openedInput' : ''}
-                                    type="text"
-                                    placeholder="Title, Description"
-                                    autoFocus
-                                    value={this.state.queryString}
-                                    onInput={this.searchDebounce}
-                                    ref={this.searchInput}>
-                                </input>
-                                <i onClick={this.handleClickOpen} className={this.state.searchBarOpen ? 'fas fa-search openedIcon' : 'fas fa-search'}/>
-                                <i onClick={this.handleClickClose} id="exitIcon" className={this.state.searchBarOpen ? 'far fa-times-circle' : ''}></i>
+                                <form onSubmit={this.search}>
+                                    <input
+                                        id="searchEle"
+                                        onChange={this.updateValue("queryString")}
+                                        className={this.state.searchBarOpen ? 'openedInput' : ''}
+                                        type="text"
+                                        placeholder="Title, Description"
+                                        autoFocus
+                                        value={this.state.queryString}
+                                        onInput={this.searchDebounce}
+                                        ref={this.searchInput}>
+                                        
+                                    </input>
+                                    <i onClick={this.handleClickOpen} className={this.state.searchBarOpen ? 'fas fa-search openedIcon' : 'fas fa-search'}/>
+                                    <i onClick={this.handleClickClose} id="exitIcon" className={this.state.searchBarOpen ? 'far fa-times-circle' : ''}></i>
+                                </form>
                             </div>
                         </div>
                         <div className="profileSection">
