@@ -5,8 +5,9 @@ class Navi extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            background : false,
-            searchBarOpen : false,
+            background: false,
+            searchBarOpen: false,
+            queryString: "", 
         };
         this.searchMovie = React.createRef();
         this.searchInput = React.createRef();
@@ -17,6 +18,7 @@ class Navi extends React.Component {
         this.search = this.search.bind(this);
         this.searchDebounce = this.searchDebounce.bind(this);
         this.endSession = this.endSession.bind(this);
+        this.updateValue = this.updateValue.bind(this)
     }
 
     handleScroll() {
@@ -40,6 +42,12 @@ class Navi extends React.Component {
         }
     }
 
+    updateValue(field) {
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+
     handleClickClose(e) {
         if (this.searchMovie && !this.searchMovie.current.contains(e.target)) {
         this.setState({ searchBarOpen: false });
@@ -61,6 +69,7 @@ class Navi extends React.Component {
     }
 
     search(e) {
+        console.log(this.props)
         if (e.target.value === '') {
             this.props.history.push('/browse');
         } else {
@@ -69,7 +78,8 @@ class Navi extends React.Component {
     }
 
     searchDebounce(e) {
-        setTimeout(() => search(e), 1000);
+        let timer = null;
+        timer = setTimeout(() => this.search(e), 3000);
     }
 
     endSession() {
@@ -93,11 +103,13 @@ class Navi extends React.Component {
                             <div className="search" ref={this.searchMovie}>
                                 <input
                                     id="searchEle"
-                                    onChange={this.searchDebounce}
+                                    onChange={this.searchDebounce()}
                                     className={this.state.searchBarOpen ? 'openedInput' : 'closedInput'}
                                     type="text"
                                     placeholder="Movie Info"
                                     autoFocus
+                                    value={this.state.queryString}
+                                    onInput={this.updateValue("queryString")}
                                     ref={this.searchInput}>
                                 </input>
                             <i onClick={this.handleClickOpen}
