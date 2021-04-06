@@ -15,8 +15,8 @@ VideoGenre.destroy_all
 demoUser = User.create(email:"testing0@gmail.com", password: "testing0");
 
 agatha = Video.create!(title: "Agatha All Along", description: "Who's been messing up everything? Wandavision's mysterious villan is finally revealed in her own camp Music Video.")
-agathav = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/agatha_all_along_final.mp4')
-agatha.video.attach(io: agathav, filename: 'agatha_all_along_final.mp4')
+agathav = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/agatha_final.mp4')
+agatha.video.attach(io: agathav, filename: 'agatha_final.mp4')
 agatha_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/agatha.jpg')
 agatha.thumbnail.attach(io: agatha_t, filename: "agatha.jpg")
 
