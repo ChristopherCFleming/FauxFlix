@@ -49,7 +49,8 @@ class Navi extends React.Component {
     }
 
     handleClickClose(e) {
-        if (!this.searchMovie.current.contains(e.target)) {
+        const exitIcon = document.getElementById("exitIcon")
+        if (!this.searchMovie.current.contains(e.target) || e.target === exitIcon) {
             this.setState({ searchBarOpen: false });
         }
     }
@@ -112,6 +113,7 @@ class Navi extends React.Component {
                                     ref={this.searchInput}>
                                 </input>
                                 <i onClick={this.handleClickOpen} className={this.state.searchBarOpen ? 'fas fa-search openedIcon' : 'fas fa-search'}/>
+                                <i onClick={this.handleClickClose} id="exitIcon" className={this.state.searchBarOpen ? 'far fa-times-circle' : ''}></i>
                             </div>
                         </div>
                         <div className="profileSection">
