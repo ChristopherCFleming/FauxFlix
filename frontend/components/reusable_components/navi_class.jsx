@@ -68,18 +68,18 @@ class Navi extends React.Component {
         return `/search/${query}`;
     }
 
-    search(e) {
+    search() {
         console.log(this.props)
-        if (e.target.value === '') {
+        if (this.state.queryString === '') {
             this.props.history.push('/browse');
         } else {
-            this.props.history.push(formatSearch(e.target.value));
+            this.props.history.push(formatSearch(this.state.queryString));
         }
     }
 
     searchDebounce(e) {
         let timer = null;
-        timer = setTimeout(() => this.search(e), 3000);
+        timer = setTimeout(() => this.search(), 3000);
     }
 
     endSession() {
@@ -112,29 +112,29 @@ class Navi extends React.Component {
                                     onInput={this.updateValue("queryString")}
                                     ref={this.searchInput}>
                                 </input>
-                            <i onClick={this.handleClickOpen}
-                                className={this.state.searchBarOpen ? 'fas fa-search active sub-nav-logo' : 'fas fa-search sub-nav-logo'}>
-                            </i>
+                                <i onClick={this.handleClickOpen} className='fas fa-search'/>
                             </div>
                         </div>
+                        <div className="profileSection">
+                            <img className="profilePic" src={window.profile_pic} alt="Profile Pic" />
+                            <i className="fas fa-caret-down" id="downCaret"></i>
+                            <ul className="profileDropdown">
+                                <li className="dropdownItem">
+                                    <a href="https://christophercfleming.github.io/" target="_blank">Portfolio</a>
+                                </li>
+                                <li className="dropdownItem">
+                                    <a id="linkedin" href="https://www.linkedin.com/in/christophercfleming/" target="_blank">LinkedIn</a>
+                                </li>
+                                <li className="dropdownItem">
+                                    <a id="github" href="https://github.com/ChristopherCFleming" target="_blank">Github</a>
+                                </li>
+                                <li className="dropdownItem secondToLast">
+                                    <a href="https://angel.co/u/christopher-c-fleming" target="_blank">AngelList</a>
+                                </li>
+                                <li className="dropdownItem Last" onClick={this.endSession}>Logout</li>
+                            </ul>
+                        </div>
     
-                        <img className="profilePic" src={window.profile_pic} alt="Profile Pic" />
-                        <i className="fas fa-caret-down" id="downCaret"></i>
-                        <ul className="profileDropdown">
-                            <li className="dropdownItem">
-                                <a href="https://christophercfleming.github.io/" target="_blank">Portfolio</a>
-                            </li>
-                            <li className="dropdownItem">
-                                <a id="linkedin" href="https://www.linkedin.com/in/christophercfleming/" target="_blank">LinkedIn</a>
-                            </li>
-                            <li className="dropdownItem">
-                                <a id="github" href="https://github.com/ChristopherCFleming" target="_blank">Github</a>
-                            </li>
-                            <li className="dropdownItem secondToLast">
-                                <a href="https://angel.co/u/christopher-c-fleming" target="_blank">AngelList</a>
-                            </li>
-                            <li className="dropdownItem Last" onClick={this.endSession}>Logout</li>
-                        </ul>
                     </div>
                 </header>
             )
