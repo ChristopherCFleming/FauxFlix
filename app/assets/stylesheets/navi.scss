@@ -66,17 +66,25 @@
         .searchContainer {
 
             .search {
+                position: relative;
+                margin-right: 10px;
 
                 input {
                     // width: 250px;
                     height: 35px;
-                    border: solid rgba(0, 0, 0, 0);
+                    border: 1px solid transparent;
                     background: black;
-                    text-decoration: white;
-                    // visibility: hidden;
+                    color: white;
+                    font-size: 15px;
+                    text-indent: 25px;
                     max-width: 0px;
                     transition: .5s;
+                    margin-right: 20px;
+                }
 
+                input::placeholder {
+                    text-align: left;
+                    text-indent: 25px;
                 }
 
                 .openedInput {
@@ -85,14 +93,21 @@
                 }
 
                 i {
+                    position: absolute;
+                    left: 5px;
+                    top: 7px;
                     font-size: 20px;
                     color: white;
                     text-shadow: 2px 2px 4px rgb(0, 0, 0);
-                    margin-right: 1rem;
 
                     &:hover {
-                        cursor: pointer;
+                        color: #9b9a9a;
                     }
+                }
+
+                .openedIcon {
+                    color: #9b9a9a;
+                    z-index: 0;
                 }
             }
         }

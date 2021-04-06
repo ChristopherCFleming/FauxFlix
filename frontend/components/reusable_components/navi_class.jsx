@@ -49,9 +49,8 @@ class Navi extends React.Component {
     }
 
     handleClickClose(e) {
-        if (this.searchMovie && !this.searchMovie.current.contains(e.target)) {
-        this.setState({ searchBarOpen: false });
-        document.getElementById('searchEle').value = '';
+        if (!this.searchMovie.current.contains(e.target)) {
+            this.setState({ searchBarOpen: false });
         }
     }
 
@@ -104,15 +103,15 @@ class Navi extends React.Component {
                                 <input
                                     id="searchEle"
                                     onChange={this.searchDebounce()}
-                                    className={this.state.searchBarOpen ? 'openedInput' : 'closedInput'}
+                                    className={this.state.searchBarOpen ? 'openedInput' : ''}
                                     type="text"
-                                    placeholder="Movie Info"
+                                    placeholder="Title, Description"
                                     autoFocus
                                     value={this.state.queryString}
                                     onInput={this.updateValue("queryString")}
                                     ref={this.searchInput}>
                                 </input>
-                                <i onClick={this.handleClickOpen} className='fas fa-search'/>
+                                <i onClick={this.handleClickOpen} className={this.state.searchBarOpen ? 'fas fa-search openedIcon' : 'fas fa-search'}/>
                             </div>
                         </div>
                         <div className="profileSection">
