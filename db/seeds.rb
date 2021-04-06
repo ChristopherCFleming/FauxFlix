@@ -14,6 +14,12 @@ VideoGenre.destroy_all
 
 demoUser = User.create(email:"testing0@gmail.com", password: "testing0");
 
+agatha = Video.create!(title: "Agatha All Along", description: "Who's been messing up everything? Wandavision's mysterious villan is finally revealed in her own camp Music Video.")
+agathav = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/agatha_all_along_final.mp4')
+agatha.video.attach(io: agathav, filename: 'agatha_all_along_final.mp4')
+agatha_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/agatha.jpg')
+agatha.thumbnail.attach(io: agatha_t, filename: "agatha.jpg")
+
 sense8 = Video.create!(title: "Sense 8", description: "Eight strangers from cities around the globe begin having experiences that defy explanation. The next step in human evolution.")
 sense8v = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/sense8_final.mp4')
 sense8.video.attach(io: sense8v, filename: 'sense8_final.mp4')
@@ -118,19 +124,15 @@ trending = Genre.create!(genre: "Trending")
 dark = Genre.create!(genre: "Dark")
 comedy = Genre.create!(genre: "Comedy")
 sci_fi = Genre.create!(genre: "Sci-Fi")
-drama = Genre.create!(genre: "Drama")
 psychological = Genre.create!(genre: "Psychological Thriller")
 politics = Genre.create!(genre: "Politics")
 reality_tv = Genre.create!(genre: "Reality Television")
 
-
 VideoGenre.create!(video_id: sabrina.id, genre_id: trending.id)
 VideoGenre.create!(video_id: sabrina.id, genre_id: dark.id)
 VideoGenre.create!(video_id: sabrina.id, genre_id: comedy.id)
-VideoGenre.create!(video_id: sabrina.id, genre_id: drama.id)
 
 VideoGenre.create!(video_id: sense8.id, genre_id: sci_fi.id)
-VideoGenre.create!(video_id: sense8.id, genre_id: drama.id)
 VideoGenre.create!(video_id: sense8.id, genre_id: trending.id)
 
 VideoGenre.create!(video_id: great_british.id, genre_id: reality_tv.id)
@@ -147,7 +149,6 @@ VideoGenre.create!(video_id: hill_house.id, genre_id: psychological.id)
 
 VideoGenre.create!(video_id: house_of_cards.id, genre_id: trending.id)
 VideoGenre.create!(video_id: house_of_cards.id, genre_id: psychological.id)
-VideoGenre.create!(video_id: house_of_cards.id, genre_id: drama.id)
 
 VideoGenre.create!(video_id: maniac.id, genre_id: dark.id)
 VideoGenre.create!(video_id: maniac.id, genre_id: sci_fi.id)
@@ -155,12 +156,10 @@ VideoGenre.create!(video_id: maniac.id, genre_id: psychological.id)
 VideoGenre.create!(video_id: maniac.id, genre_id: trending.id)
 
 VideoGenre.create!(video_id: queens_gambit.id, genre_id: dark.id)
-VideoGenre.create!(video_id: queens_gambit.id, genre_id: drama.id)
 VideoGenre.create!(video_id: queens_gambit.id, genre_id: psychological.id)
 VideoGenre.create!(video_id: queens_gambit.id, genre_id: trending.id)
 
 VideoGenre.create!(video_id: ratched.id, genre_id: dark.id)
-VideoGenre.create!(video_id: ratched.id, genre_id: drama.id)
 VideoGenre.create!(video_id: ratched.id, genre_id: psychological.id)
 VideoGenre.create!(video_id: ratched.id, genre_id: trending.id)
 
@@ -170,18 +169,13 @@ VideoGenre.create!(video_id: russian_doll.id, genre_id: psychological.id)
 
 VideoGenre.create!(video_id: space_force.id, genre_id: comedy.id)
 VideoGenre.create!(video_id: space_force.id, genre_id: sci_fi.id)
-VideoGenre.create!(video_id: space_force.id, genre_id: drama.id)
 VideoGenre.create!(video_id: space_force.id, genre_id: politics.id)
 
-
 VideoGenre.create!(video_id: stranger_things.id, genre_id: sci_fi.id)
-VideoGenre.create!(video_id: stranger_things.id, genre_id: drama.id)
 VideoGenre.create!(video_id: stranger_things.id, genre_id: trending.id)
-
 
 VideoGenre.create!(video_id: politician.id, genre_id: comedy.id)
 VideoGenre.create!(video_id: politician.id, genre_id: politics.id)
-VideoGenre.create!(video_id: politician.id, genre_id: drama.id)
 
 VideoGenre.create!(video_id: tidying_up.id, genre_id: reality_tv.id)
 VideoGenre.create!(video_id: tidying_up.id, genre_id: trending.id)
@@ -191,5 +185,7 @@ VideoGenre.create!(video_id: unbreakable.id, genre_id: comedy.id)
 VideoGenre.create!(video_id: unbreakable.id, genre_id: trending.id)
 
 VideoGenre.create!(video_id: witcher.id, genre_id: dark.id)
-VideoGenre.create!(video_id: witcher.id, genre_id: drama.id)
 VideoGenre.create!(video_id: witcher.id, genre_id: trending.id)
+
+VideoGenre.create!(video_id: agatha.id, genre_id: trending.id)
+VideoGenre.create!(video_id: agatha.id, genre_id: comedy.id)
