@@ -8,20 +8,7 @@ import VideoTileContainer from './video_tile_container';
 
 function GenreCarousel(props) {
 
-    function shuffleVideos(input) {
-        for (var i = input.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var temp = input[i];
-            input[i] = input[j];
-            input[j] = temp;
-        }
-        return input;
-    }
-
-      
     SwiperCore.use([Navigation]);
-
-    
     
     if (Object.values(props.allVideoObjects).length) {
             return (
@@ -88,8 +75,6 @@ function GenreCarousel(props) {
                 <div className="carousel" >
                     <p>{props.genre.genre}</p>
                     <Swiper loop={true} navigation slidesPerView={6}>
-                        {/* the shuffle function below keeps rerendering all the videos when I add them to my list */}
-                        {/* {shuffleVideos(props.genre.video_ids).map( (each_id, index) => ( */}
                         {props.genre.videoIds.map( (each_id, index) => (
                             <SwiperSlide className="slide" key={index} >
                                 <VideoTileContainer video={props.allVideoObjects[each_id]} className="videoTile" />
