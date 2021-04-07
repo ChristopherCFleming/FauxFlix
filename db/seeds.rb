@@ -5,8 +5,7 @@ require 'open-uri'
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
 Video.destroy_all   
 Genre.destroy_all
 User.destroy_all
@@ -119,13 +118,13 @@ witcher_t = open('https://fauxflix-seeds.s3.us-east-2.amazonaws.com/witcher.jpg'
 witcher.thumbnail.attach(io: witcher_t, filename: "witcher.jpg")
 
 
-
 trending = Genre.create!(genre: "Trending")
 comedy = Genre.create!(genre: "Comedy")
 politics = Genre.create!(genre: "Politics")
 psychological = Genre.create!(genre: "Psychological Thriller")
 sci_fi = Genre.create!(genre: "Sci-Fi and Fantasy")
 reality_tv = Genre.create!(genre: "Reality Television")
+
 
 VideoGenre.create!(video_id: sabrina.id, genre_id: trending.id)
 VideoGenre.create!(video_id: sense8.id, genre_id: trending.id)
