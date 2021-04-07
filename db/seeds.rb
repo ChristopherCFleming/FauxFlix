@@ -121,71 +121,52 @@ witcher.thumbnail.attach(io: witcher_t, filename: "witcher.jpg")
 
 
 trending = Genre.create!(genre: "Trending")
-dark = Genre.create!(genre: "Dark")
 comedy = Genre.create!(genre: "Comedy")
-sci_fi = Genre.create!(genre: "Sci-Fi")
-psychological = Genre.create!(genre: "Psychological Thriller")
 politics = Genre.create!(genre: "Politics")
+psychological = Genre.create!(genre: "Psychological Thriller")
+sci_fi = Genre.create!(genre: "Sci-Fi and Fantasy")
 reality_tv = Genre.create!(genre: "Reality Television")
 
 VideoGenre.create!(video_id: sabrina.id, genre_id: trending.id)
-VideoGenre.create!(video_id: sabrina.id, genre_id: dark.id)
-VideoGenre.create!(video_id: sabrina.id, genre_id: comedy.id)
-
-VideoGenre.create!(video_id: sense8.id, genre_id: sci_fi.id)
 VideoGenre.create!(video_id: sense8.id, genre_id: trending.id)
-
-VideoGenre.create!(video_id: great_british.id, genre_id: reality_tv.id)
-VideoGenre.create!(video_id: great_british.id, genre_id: trending.id)
-VideoGenre.create!(video_id: great_british.id, genre_id: comedy.id)
-
-VideoGenre.create!(video_id: becoming.id, genre_id: politics.id)
-VideoGenre.create!(video_id: becoming.id, genre_id: reality_tv.id)
 VideoGenre.create!(video_id: becoming.id, genre_id: trending.id)
-
-VideoGenre.create!(video_id: hill_house.id, genre_id: trending.id)
-VideoGenre.create!(video_id: hill_house.id, genre_id: dark.id)
-VideoGenre.create!(video_id: hill_house.id, genre_id: psychological.id)
-
-VideoGenre.create!(video_id: house_of_cards.id, genre_id: trending.id)
-VideoGenre.create!(video_id: house_of_cards.id, genre_id: psychological.id)
-
-VideoGenre.create!(video_id: maniac.id, genre_id: dark.id)
-VideoGenre.create!(video_id: maniac.id, genre_id: sci_fi.id)
-VideoGenre.create!(video_id: maniac.id, genre_id: psychological.id)
-VideoGenre.create!(video_id: maniac.id, genre_id: trending.id)
-
-VideoGenre.create!(video_id: queens_gambit.id, genre_id: dark.id)
-VideoGenre.create!(video_id: queens_gambit.id, genre_id: psychological.id)
 VideoGenre.create!(video_id: queens_gambit.id, genre_id: trending.id)
-
-VideoGenre.create!(video_id: ratched.id, genre_id: dark.id)
-VideoGenre.create!(video_id: ratched.id, genre_id: psychological.id)
+VideoGenre.create!(video_id: tidying_up.id, genre_id: trending.id)
+VideoGenre.create!(video_id: witcher.id, genre_id: trending.id)
+VideoGenre.create!(video_id: unbreakable.id, genre_id: trending.id)
+VideoGenre.create!(video_id: stranger_things.id, genre_id: trending.id)
+VideoGenre.create!(video_id: maniac.id, genre_id: trending.id)
+VideoGenre.create!(video_id: house_of_cards.id, genre_id: trending.id)
+VideoGenre.create!(video_id: hill_house.id, genre_id: trending.id)
+VideoGenre.create!(video_id: great_british.id, genre_id: trending.id)
 VideoGenre.create!(video_id: ratched.id, genre_id: trending.id)
 
-VideoGenre.create!(video_id: russian_doll.id, genre_id: dark.id)
-VideoGenre.create!(video_id: russian_doll.id, genre_id: comedy.id)
-VideoGenre.create!(video_id: russian_doll.id, genre_id: psychological.id)
-
-VideoGenre.create!(video_id: space_force.id, genre_id: comedy.id)
-VideoGenre.create!(video_id: space_force.id, genre_id: sci_fi.id)
-VideoGenre.create!(video_id: space_force.id, genre_id: politics.id)
-
-VideoGenre.create!(video_id: stranger_things.id, genre_id: sci_fi.id)
-VideoGenre.create!(video_id: stranger_things.id, genre_id: trending.id)
-
 VideoGenre.create!(video_id: politician.id, genre_id: comedy.id)
+VideoGenre.create!(video_id: unbreakable.id, genre_id: comedy.id)
+VideoGenre.create!(video_id: russian_doll.id, genre_id: comedy.id)
+VideoGenre.create!(video_id: space_force.id, genre_id: comedy.id)
+VideoGenre.create!(video_id: great_british.id, genre_id: comedy.id)
+VideoGenre.create!(video_id: sabrina.id, genre_id: comedy.id)
+
+VideoGenre.create!(video_id: space_force.id, genre_id: politics.id)
+VideoGenre.create!(video_id: becoming.id, genre_id: politics.id)
+VideoGenre.create!(video_id: house_of_cards.id, genre_id: politics.id)
 VideoGenre.create!(video_id: politician.id, genre_id: politics.id)
 
+VideoGenre.create!(video_id: russian_doll.id, genre_id: psychological.id)
+VideoGenre.create!(video_id: queens_gambit.id, genre_id: psychological.id)
+VideoGenre.create!(video_id: maniac.id, genre_id: psychological.id)
+VideoGenre.create!(video_id: hill_house.id, genre_id: psychological.id)
+VideoGenre.create!(video_id: ratched.id, genre_id: psychological.id)
+VideoGenre.create!(video_id: house_of_cards.id, genre_id: psychological.id)
+
+VideoGenre.create!(video_id: maniac.id, genre_id: sci_fi.id)
+VideoGenre.create!(video_id: witcher.id, genre_id: sci_fi.id)
+VideoGenre.create!(video_id: agatha.id, genre_id: sci_fi.id)
+VideoGenre.create!(video_id: stranger_things.id, genre_id: sci_fi.id)
+VideoGenre.create!(video_id: sabrina.id, genre_id: sci_fi.id)
+VideoGenre.create!(video_id: sense8.id, genre_id: sci_fi.id)
+VideoGenre.create!(video_id: space_force.id, genre_id: sci_fi.id)
+
+VideoGenre.create!(video_id: great_british.id, genre_id: reality_tv.id)
 VideoGenre.create!(video_id: tidying_up.id, genre_id: reality_tv.id)
-VideoGenre.create!(video_id: tidying_up.id, genre_id: trending.id)
-VideoGenre.create!(video_id: tidying_up.id, genre_id: comedy.id)
-
-VideoGenre.create!(video_id: unbreakable.id, genre_id: comedy.id)
-VideoGenre.create!(video_id: unbreakable.id, genre_id: trending.id)
-
-VideoGenre.create!(video_id: witcher.id, genre_id: dark.id)
-VideoGenre.create!(video_id: witcher.id, genre_id: trending.id)
-
-VideoGenre.create!(video_id: agatha.id, genre_id: trending.id)
-VideoGenre.create!(video_id: agatha.id, genre_id: comedy.id)
