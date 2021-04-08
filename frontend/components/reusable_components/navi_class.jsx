@@ -14,11 +14,11 @@ class Navi extends React.Component {
         this.handleClickClose = this.handleClickClose.bind(this);
         this.handleClickOpen = this.handleClickOpen.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
-        this.formatSearch = this.formatSearch.bind(this);
         this.search = this.search.bind(this);
         this.searchDebounce = this.searchDebounce.bind(this);
         this.endSession = this.endSession.bind(this);
-        this.updateValue = this.updateValue.bind(this)
+        this.updateValue = this.updateValue.bind(this);
+        this.test = this.test.bind(this);
     }
 
     handleScroll() {
@@ -60,20 +60,21 @@ class Navi extends React.Component {
         }
     }
 
-    formatSearch(input) {
-        const query = input.toLowerCase();
-        return `/search/${query}`;
-    }
-
     search() {
         if (this.state.queryString === '') {
             this.props.history.push('/browse');
         } else {
-            this.props.history.push(this.formatSearch(this.state.queryString));
+            this.props.history.push(`search?q=${this.state.queryString}`);
         }
     }
 
+    test(event) {
+        // event.persist();
+        console.log(event);
+    }
+
     searchDebounce(e) {
+        // e.persist();
         if (timer) {
             clearTimeout(timer);
         }

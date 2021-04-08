@@ -6,6 +6,8 @@ class VideoTile extends React.Component {
     constructor(props) {
         super(props)
         this.videoElement = React.createRef();
+        // Only using the below to try and throttle video play
+        this.videoContainer = React.createRef();
         this.state = {
             muteStatus : true,
         };
@@ -15,6 +17,8 @@ class VideoTile extends React.Component {
         this.toggleMute = this.toggleMute.bind(this);
         this.addToList = this.addToList.bind(this);
         this.deleteListItem = this.deleteListItem.bind(this);
+        this.testPlay = this.testPlay.bind(this);
+        this.throttle = this.throttle.bind(this);
     }
 
 
@@ -57,13 +61,35 @@ class VideoTile extends React.Component {
     shortenDescription(description) {
         return description.slice(0, 35) + "...";
     }
+
+
+    // These Last two functions are only to try and throttle video play. Not working.....
+    throttle(target) {
+        // if (currentlyHoveringOver.includes("video.carouselVideo")) {
+        //     console.log("Got it!");
+        // } else {
+        //     console.log("Ref not found in array");
+        // }
+
+        console.log(target);
+        
+    }
     
+
+    testPlay(e) {
+        setTimeout( function() {
+            const target = e.currentTarget;
+            console.log(target)
+        }, 1000)
+    }
+
     render() {
         if (this.props.video) {
             return (
                 <div className="videoSlideContainer" 
                     onMouseEnter={this.playVideo} 
-                    onMouseLeave={this.stopVideo}>
+                    onMouseLeave={this.stopVideo}
+                    ref={this.videoContainer}>
                     <Link to={`/videos/${this.props.video.id}`}>
                         <video 
                             ref={this.videoElement}

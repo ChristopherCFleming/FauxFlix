@@ -9,21 +9,44 @@ class Search extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            query: window.location.href.split("query=")[1],
+            query: window.location.href.split("q=")[1],
+            searchVideos: [],
         }
-        
+        this.filterMovies = this.filterMovies.bind(this);
     }
 
-    
-    componentDidMount() {
-        //Reduce pull, will only run if videos aren't there.
-        Object.values(this.props.videos).length || this.props.allVideos()
+    filterMovies() {
+        const vids = this.props.videosArray;
+        const query = this.state.query.toLowerCase();
+        let filtered = [];
+        for (let i = 0; i < vids.length; i++) {
+            if (vids[i].title.toLowerCase().includes(query) || vids[i].description.toLowerCase().includes(query)) {
+                filtered.push(vids[i]);
+            }
+        }
+        debugger;
+        this.setState({
+            searchVideos: filtered
+        });
     }
+
+    componentDidMount() {
+        // Reduce pull, will only run if videos aren't there.
+        if (this.props.videosArray.length === 0) {
+            this.props.allVideos();
+        }
+        this.filterMovies();
+
+        // this.props.allVideos()
+        // .then(this.filterMovies())
+    }
+
+
 
     render() {
-        if (!Object.values(this.props.videos).length) {
+        if (!this.props.videosArray.length) {
             return null;
-        } else if (this.props.videos) {
+        } else if (this.state.searchVideos.length === 0) {
             return (
                 <div className="listComponent empty">
                     {/* Passing history as a prop to allow Navi the same react router ability*/}
@@ -31,23 +54,20 @@ class Search extends React.Component {
                     <p>Your search for "{this.state.query}" returned no results.</p>
                     <ul className="suggestionsList">Suggestions:
                         <li className="suggestion">Search for a title</li>
-                        <li className="suggestion">Try keywords from a video's description</li>
-                        <li className="suggestion">Type "The Chilling Adventures of Sabrina" because it's an amazing series</li>
-                        <li className="suggestion">Hire me as a thank you for introducing you to "The Chilling Adventures of Sabrina"</li>
-                        <li className="suggestion">Hire me if you don't like the series because you got a chuckle out of this</li>
+                        <li className="suggestion">Type "Sabrina" because The Chilling Adventures of Sabrina is an amazing series</li>
+                        <li className="suggestion">Hire me for introducing you to "The Chilling Adventures of Sabrina"</li>
+                        <li className="suggestion">If you don't like the series, hire me because you got a chuckle out of this</li>
                         <li className="suggestion">In case none of the above apply: hire me anyways</li>
                     </ul>
-
                     <Footer />
                 </div>
             )
         } else {
             return (
                 <div className="listComponent">
-                    {/* only passing logout below in case Navi is a functional component */}
-                    <Navi loggedIn={true} logout={this.props.logout}/>
+                    <Navi loggedIn={true} />
                     <div className="listVideosContainer">
-                        {this.props.list.map((videoId, idx) => <VideoTileContainer key={idx} video={this.props.videos[videoId]} className="videoTile"/>) }
+                        {this.state.searchVideos.map((video, idx) => <VideoTileContainer key={idx} video={video} className="videoTile"/>) }
                     </div>
                     <Footer />
                 </div>

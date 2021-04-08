@@ -75,12 +75,18 @@
                     height: 35px;
                     border: 1px solid white;
                     background: black;
-                    color: white;
+                    color: rgb(211, 208, 208);
                     font-size: 15px;
                     text-indent: 28px;
                     visibility: hidden;
                     transition: .5s;
                     margin-right: 20px;
+                }
+
+                // this is to override browser's autofill background options:
+                input:-webkit-autofill {
+                    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+                    -webkit-text-fill-color: rgb(211, 208, 208);
                 }
 
                 input::placeholder {

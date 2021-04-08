@@ -6,7 +6,7 @@ import { allVideos } from '../../actions/video_actions';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        videos: state.entities.videos,
+        videosArray: Object.values(state.entities.videos),
     };
 };
 
