@@ -1,0 +1,36 @@
+.emptySearch {
+width: 100%;
+
+    .emptySearchTitle {
+        font-size: 2vw;
+    }
+
+    .textContainer {
+        position: relative;
+        margin: 4rem auto;
+        padding-top: 10vw;
+        align-items: center;
+        text-align: center;
+        width: 44vw;
+        
+
+        .suggestionsContainer {
+            margin-top: 3vw;
+            text-align: left;
+
+            .suggestionsList {
+                font-size: 1.8vw;
+            }
+
+            li {
+                list-style-type: disc;
+            }
+        }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
