@@ -17,6 +17,7 @@ class VideoTile extends React.Component {
         this.toggleMute = this.toggleMute.bind(this);
         this.addToList = this.addToList.bind(this);
         this.deleteListItem = this.deleteListItem.bind(this);
+        // still working on the two below
         this.testPlay = this.testPlay.bind(this);
         this.throttle = this.throttle.bind(this);
     }

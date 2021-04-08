@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// below was the functional navi
-// import Navi from '../reusable_components/navi';
-import Navi from '../reusable_components/navi_container';
-import Footer from '../reusable_components/footer';
-import VideoTileContainer from '../videos/video_tile_container';
+import Navi from '../header_and_footer/navi_container';
+import Footer from '../header_and_footer/footer';
+import VideoTileContainer from '../video_tile/video_tile_container';
 
 
 class List extends React.Component {

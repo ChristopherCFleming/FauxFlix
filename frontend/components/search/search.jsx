@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navi from '../reusable_components/navi_container';
-import Footer from '../reusable_components/footer';
-import VideoTileContainer from '../videos/video_tile_container';
+import Navi from '../header_and_footer/navi_container';
+import Footer from '../header_and_footer/footer';
+import VideoTileContainer from '../video_tile/video_tile_container';
 
 
 class Search extends React.Component {
@@ -57,7 +57,7 @@ class Search extends React.Component {
                                 <li className="suggestion">Try keyword from title or description</li>
                                 <li className="suggestion">Type "Sabrina" (spectacular series!)</li>
                                 <li className="suggestion">Hire me for introducing you to "The Chilling Adventures of Sabrina"</li>
-                                <li className="suggestion">In case none of the above apply: hire me anyways</li>
+                                <li className="suggestion">In case of none of the above: hire me anyways</li>
                             </ul>
                         </div>
                     </div>

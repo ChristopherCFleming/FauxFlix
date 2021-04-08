@@ -1,7 +1,6 @@
 import React from 'react';
-// import Navi from '../reusable_components/navi';
-import Navi from '../reusable_components/navi_container';
-import Footer from '../reusable_components/footer';
+import Navi from '../header_and_footer/navi_container';
+import Footer from '../header_and_footer/footer';
 import { Link } from 'react-router-dom';
 
 class SignupForm extends React.Component {
@@ -60,7 +59,6 @@ class SignupForm extends React.Component {
                         <h2>Just a few more steps and you're done! <br />We hate paperwork, too.</h2>
                         <form onSubmit={this.handleSubmit} className="signupInputForm">
                             <input type="email" name="email" className="emailBar" value={this.state.email} placeholder="Email address" onChange={this.update("email")}></input>
-                            {/* {this.renderErrors()} */}
                             <br />
                             <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" className="passwordBar"/>
                             {this.renderErrors()}

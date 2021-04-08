@@ -1,7 +1,6 @@
 import React from 'react';
-// import Navi from '../reusable_components/navi';
-import Navi from '../reusable_components/navi_container';
-import Footer from '../reusable_components/footer';
+import Navi from '../header_and_footer/navi_container';
+import Footer from '../header_and_footer/footer';
 import { Link } from 'react-router-dom';
 
 class SignupFormP1 extends React.Component {

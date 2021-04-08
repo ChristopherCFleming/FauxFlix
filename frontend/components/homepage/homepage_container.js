@@ -11,7 +11,6 @@ const mSTP = (state, ownProps) => {
         videos: state.entities.videos,
         allVideosArray: Object.values(state.entities.videos),
         allGenresArray: Object.values(state.entities.genres),
-        //only adding lists and ID to pass to banner and individual video components
         list: state.entities.lists,
         userId: state.session.id,
     }
@@ -21,8 +20,6 @@ const mDTP = (dispatch) => {
     return {
         allVideos: () => dispatch(allVideos()),
         showVideo: (video_id) => dispatch(showVideo(video_id)),
-        //again, only adding logout so I can pass it to navi trial component
-        logout: () => dispatch(logout()),
         allGenres: () => dispatch(allGenres()),
         fetchLists: () => dispatch(fetchLists()),
         addToList: (list) => dispatch(addToList(list)),
