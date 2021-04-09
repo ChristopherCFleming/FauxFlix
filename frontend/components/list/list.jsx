@@ -24,8 +24,8 @@ class List extends React.Component {
         } else if (this.props.list.length === 0) {
             return (
                 <div className="listComponent empty">
-                    {/* passing history prop to extend React Router's history to this child component */}
-                    <Navi loggedIn={true} history={this.props.history}/>
+            
+                    <Navi loggedIn={true}/>
                     <p>Add some videos from the <Link to="/browse">homepage</Link> to keep track of them here.</p>
                     <Footer />
                 </div>
@@ -33,8 +33,7 @@ class List extends React.Component {
         } else {
             return (
                 <div className="listComponent">
-                     {/* passing history prop to extend React Router's history to this child component */}
-                    <Navi loggedIn={true} history={this.props.history}/>
+                    <Navi loggedIn={true} />
                     <div className="listVideosContainer">
                         {this.props.list.map((videoId, idx) => <VideoTileContainer key={idx} video={this.props.videos[videoId]} className="videoTile"/>) }
                     </div>
