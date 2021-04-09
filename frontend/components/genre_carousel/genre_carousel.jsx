@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import VideoTileContainer from '../video_tile/video_tile_container';
 
 

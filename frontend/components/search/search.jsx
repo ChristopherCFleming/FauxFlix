@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Navi from '../header_and_footer/navi_container';
 import Footer from '../header_and_footer/footer';
 import VideoTileContainer from '../video_tile/video_tile_container';

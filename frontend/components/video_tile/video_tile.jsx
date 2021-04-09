@@ -6,7 +6,6 @@ class VideoTile extends React.Component {
     constructor(props) {
         super(props)
         this.videoElement = React.createRef();
-        // Only using the below to try and throttle video play
         this.videoContainer = React.createRef();
         this.state = {
             muteStatus : true,
@@ -17,7 +16,7 @@ class VideoTile extends React.Component {
         this.toggleMute = this.toggleMute.bind(this);
         this.addToList = this.addToList.bind(this);
         this.deleteListItem = this.deleteListItem.bind(this);
-        // still working on the two below
+        // testing the two below to throttle and delay video playback
         this.testPlay = this.testPlay.bind(this);
         this.throttle = this.throttle.bind(this);
     }
@@ -64,7 +63,7 @@ class VideoTile extends React.Component {
     }
 
 
-    // These Last two functions are only to try and throttle video play. Not working.....
+    // These Last two functions are only to try and throttle video play.
     throttle(target) {
         // if (currentlyHoveringOver.includes("video.carouselVideo")) {
         //     console.log("Got it!");

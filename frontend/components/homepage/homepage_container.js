@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import { allVideos } from '../../actions/video_actions';
 import Homepage from './homepage';
-import { logout } from '../../actions/session_actions';
 import { allGenres } from '../../actions/genre_actions';
 import { fetchLists, addToList, deleteListItem } from '../../actions/list_actions';
 

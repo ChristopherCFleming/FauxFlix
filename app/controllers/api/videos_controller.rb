@@ -13,9 +13,6 @@ class Api::VideosController < ApplicationController
 
     def show
         @video = Video.find(params[:id])
-        # render "api/videos/show"
         render :show
-        #    here, no difference. BUT, if wanted to render a different show page from a different controller, must use the above version.
     end
-
 end

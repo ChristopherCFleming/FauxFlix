@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import React from 'react';
 import SignupFormP1 from './signup_form_p1';
 
 const mapStateToProps = (state, ownProps) => {

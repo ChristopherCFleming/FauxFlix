@@ -19,7 +19,6 @@ class User < ApplicationRecord
       class_name: :List,
       foreign_key: :user_id
 
-      # Do we need this part below? I 
     has_many :videos,
       through: :lists,
       source: :video
@@ -66,5 +65,4 @@ class User < ApplicationRecord
     end
     self.session_token
   end
-
 end

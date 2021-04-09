@@ -1,4 +1,3 @@
-
 export const addToList = (list)=>{
     return $.ajax({
         url: `api/lists`,

@@ -42,7 +42,17 @@ class VideoShow extends React.Component {
                             </div>
                         </Link>
                     </div>
-                    <video muted={false} controls={true} autoPlay={true} loop={true} src={this.props.video.video} width="100%" height="50%" className="videoShow" type="video/mp4"></video>
+                    <video 
+                        muted={false} 
+                        controls={true} 
+                        autoPlay={true} 
+                        loop={true} 
+                        src={this.props.video.video} 
+                        width="100%" 
+                        height="50%" 
+                        className="videoShow" 
+                        type="video/mp4">
+                    </video>
                     <Footer />
                 </div>
             )

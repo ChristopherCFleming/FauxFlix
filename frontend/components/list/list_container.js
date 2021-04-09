@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import React from 'react';
 import List from './list';
 import { fetchLists } from '../../actions/list_actions';
 import { allVideos } from '../../actions/video_actions';

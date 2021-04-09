@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom';
 //Components
 import Root from './components/root';
 import configureStore from './store/store';
-//must remove below before production
-import * as APIVideoUtil from './util/video_api_util';
 
 
 

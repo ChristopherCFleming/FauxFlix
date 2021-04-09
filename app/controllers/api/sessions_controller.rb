@@ -1,7 +1,4 @@
 class Api::SessionsController < ApplicationController
-  
-  # skip_before_action :verify_authenticity_token
-
 
   def create
     @user = User.find_by_credentials(
@@ -11,7 +8,7 @@ class Api::SessionsController < ApplicationController
   
     if @user
       login(@user)
-      render "api/users/show"   #Show isn't defined here. How can we get to show?
+      render "api/users/show" 
     else
       render json: ["We can't find an account with this email address. Please try again, create a new account, or use the demo login."], status: 401
     end
@@ -23,7 +20,6 @@ class Api::SessionsController < ApplicationController
       logout
       render "api/users/show"
     else
-      # render json: ["Nobody signed in"], status: 404  #was this, but need to redirect to login page
       render "api/session/create"
     end
   end
