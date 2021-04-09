@@ -78,7 +78,7 @@ class Navi extends React.Component {
             clearTimeout(timer);
         }
         let timer = null;
-        timer = setTimeout(() => this.search(), 3000);
+        timer = setTimeout(() => this.search(), 1500);
     }
 
     endSession() {
