@@ -56,7 +56,7 @@ class VideoTile extends React.Component {
     }
 
     stopVideo(e) {
-         this.videoElement.current.load(); 
+        this.videoElement.current.load(); 
     }
 
     shortenDescription(description) {
@@ -85,6 +85,8 @@ class VideoTile extends React.Component {
     }
 
     render() {
+
+
         if (this.props.video) {
             return (
                 <div className="videoSlideContainer" 
