@@ -8,7 +8,7 @@ class LoginPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: this.props.email,
+            email: "",
             password: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -64,7 +64,6 @@ class LoginPage extends React.Component {
                                 <h5>New to FauxFlix? 
                                     <Link to="/signup1?email=" className="signUpLink"> Sign up now</Link>.
                                 </h5>
-                                {/* <br/> */}
                                 <Link to="/browse" className="btn demoLogin" onClick={this.demoLogin}>Demo Login</Link>
                             </form>
                         </div>
