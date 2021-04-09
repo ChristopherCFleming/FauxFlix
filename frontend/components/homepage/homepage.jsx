@@ -29,8 +29,7 @@ class Homepage extends React.Component {
 
             return (
                 <div>
-                     {/* passing history prop to extend React Router's history to this child component */}
-                    <Navi loggedIn={true} homepage={true} history={this.props.history}/>
+                    <Navi loggedIn={true} homepage={true}/>
                     <BannerVideo randVideo={randVideo} list={this.props.list} addToList={this.props.addToList} deleteListItem={this.props.deleteListItem} userId={this.props.userId}/>
                     <div className="carouselWrapper">
                         {this.props.allGenresArray.map((genre, idx) => <GenreCarousel genre={genre} key={idx} allVideoObjects={this.props.videos}/>)}

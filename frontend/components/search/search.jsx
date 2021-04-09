@@ -9,7 +9,6 @@ class Search extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            query: window.location.href.split("q=")[1],
             searchVideos: [],
         }
         this.filterMovies = this.filterMovies.bind(this);
@@ -17,7 +16,7 @@ class Search extends React.Component {
 
     filterMovies() {
         const vids = this.props.videosArray;
-        const query = this.state.query.toLowerCase();
+        const query = this.props.query.toLowerCase();
         let filtered = [];
         for (let i = 0; i < vids.length; i++) {
             if (vids[i].title.toLowerCase().includes(query) || vids[i].description.toLowerCase().includes(query)) {
@@ -34,11 +33,19 @@ class Search extends React.Component {
         if (this.props.videosArray.length === 0) {
             this.props.allVideos();
         }
-        this.filterMovies();
-
-        // this.props.allVideos()
-        // .then(this.filterMovies())
     }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log(this.props.query);
+        if (this.props.query !== prevProps.query) {
+            debugger;
+            this.filterMovies();
+        }
+         if (this.props.videosArray.length !== prevProps.videosArray.length) {
+            this.filterMovies();
+        } 
+    }
+
 
 
 
@@ -48,10 +55,9 @@ class Search extends React.Component {
         } else if (this.state.searchVideos.length === 0) {
             return (
                 <div className="emptySearch">
-                    {/* Passing history as a prop to allow Navi the same react router ability*/}
-                    <Navi loggedIn={true} history={this.props.history}/>
+                    <Navi loggedIn={true} />
                     <div className="textContainer">
-                        <h1 className="emptySearchTitle">Your search for "{this.state.query}" returned no results.</h1>
+                        <h1 className="emptySearchTitle">Your search for "{this.props.query}" returned no results.</h1>
                         <div className="suggestionsContainer">
                             <ul className="suggestionsList">Suggestions:
                                 <li className="suggestion">Try keyword from title or description</li>

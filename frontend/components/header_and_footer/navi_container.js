@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import Navi from './navi_class';
+import { withRouter } from 'react-router';
+import Navi from './navi';
 import { logout } from '../../actions/session_actions';
 
 const mSTP = (state, ownProps) => {
@@ -16,4 +17,4 @@ const mDTP = (dispatch) => {
     }
 };
 
-export default connect(mSTP, mDTP)(Navi)
+export default connect(mSTP, mDTP)(withRouter(Navi))
