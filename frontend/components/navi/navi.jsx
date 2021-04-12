@@ -134,7 +134,7 @@ class Navi extends React.Component {
                                 <li className="dropdownItem secondToLast">
                                     <a href="https://angel.co/u/christopher-c-fleming" target="_blank">AngelList</a>
                                 </li>
-                                <li className="dropdownItem Last" onClick={this.endSession}>Logout</li>
+                                <li className="dropdownItem Last" onClick={this.endSession}>Log Out</li>
                             </ul>
                         </div>
     
