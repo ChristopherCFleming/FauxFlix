@@ -41,7 +41,33 @@ All the same functionality of the videos in the carousel is available in the vid
 
 # Challenges
 
+I had a tough time mimicking the Netflix navi bar. On the homepage, its background changes from a slight black gradient to solid black after you scroll 50 pixels down, then reverts to a gradient when you scroll back up. I managed to get this functionality by adding an event listener and adjusting React state. In the navi component's HTML, I conditionally add "active" to the component's className so the SCSS can change the background color.
 
+```JavaScript
+handleScroll() {
+    if (window.scrollY > 50) {
+        this.setState({ background: true });
+    } else {
+        this.setState({ background: false });
+    }
+}
+
+componentDidMount() {
+    if (this.props.homepage) {
+        window.addEventListener("scroll", this.handleScroll);
+    }
+}
+
+componentWillUnmount() {
+    if (this.props.homepage) {
+        window.removeEventListener("scroll", this.handleScroll);
+    }
+}
+```
+
+```JavaScript 
+ <header className={`pageHeader loggedIn ${this.state.background ? "active" : ""}`}>
+```
 
 # Future Features
 
