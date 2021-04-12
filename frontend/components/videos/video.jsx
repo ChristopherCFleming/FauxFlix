@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../header_and_footer/footer';
+import Footer from '../footer/footer';
 import { Link } from 'react-router-dom';
 
 class VideoShow extends React.Component {

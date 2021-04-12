@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navi from '../header_and_footer/navi_container';
-import Footer from '../header_and_footer/footer';
+import Navi from '../navi/navi_container';
+import Footer from '../footer/footer';
 
 
 class LoginPage extends React.Component {

@@ -1,7 +1,7 @@
 import React from 'react';
 import GenreCarousel from '../genre_carousel/genre_carousel';
-import Footer from '../header_and_footer/footer';
-import Navi from '../header_and_footer/navi_container';
+import Footer from '../footer/footer';
+import Navi from '../navi/navi_container';
 import BannerVideo from '../videos/banner_video';
 
 class Homepage extends React.Component {

@@ -59,7 +59,7 @@ class Navi extends React.Component {
         }
     }
 
-    search() {
+    search(e) {
         if (this.state.queryString === '') {
             this.props.history.push('/browse');
         } else {
@@ -78,7 +78,7 @@ class Navi extends React.Component {
             clearTimeout(timer);
         }
         let timer = null;
-        timer = setTimeout(() => this.search(), 1500);
+        timer = setTimeout(() => this.search(e), 3000);
     }
 
     endSession() {

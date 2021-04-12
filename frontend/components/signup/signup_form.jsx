@@ -1,6 +1,6 @@
 import React from 'react';
-import Navi from '../header_and_footer/navi_container';
-import Footer from '../header_and_footer/footer';
+import Navi from '../navi/navi_container';
+import Footer from '../footer/footer';
 import { Link } from 'react-router-dom';
 
 class SignupForm extends React.Component {

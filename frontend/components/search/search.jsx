@@ -1,6 +1,6 @@
 import React from 'react';
-import Navi from '../header_and_footer/navi_container';
-import Footer from '../header_and_footer/footer';
+import Navi from '../navi/navi_container';
+import Footer from '../footer/footer';
 import VideoTileContainer from '../video_tile/video_tile_container';
 
 
@@ -16,7 +16,8 @@ class Search extends React.Component {
     filterMovies() {
         const vids = this.props.videosArray;
         const query = this.props.query.toLowerCase();
-    
+
+        
         let filtered = [];
         for (let i = 0; i < vids.length; i++) {
             if (vids[i].title.toLowerCase().includes(query) || vids[i].description.toLowerCase().includes(query)) {
