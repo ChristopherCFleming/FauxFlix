@@ -16,7 +16,7 @@ The backend of Fauxflix is implemented using the Ruby on Rails framework with a 
   <img src="extra_media/user_auth.gif">
 </p>
 
-Signing up and logging in from the splash page takes users to two destinct pages with different styling. If a user adds their email on the splashpage and clicks "GET STARTED", that info is passed through as a URL parameter and prefills the email input section with React state. The Rails backend handles all validations and passes any error messages to the frontend to help the user complete the process. A user's password is then salted and hashed by BCrypt to either create their password digest which is then stored in the PostGres database (sign up), or compared with an existing password digest (log in). Upon successful login or signup, React Router grants the user access to all of Fauxflix's protected routes. A user can log out by hovering over the profile pic and clicking "Log Out."
+Signing up and logging in from the splash page takes users to two distinct pages with different styling. If a user adds their email on the splash page and clicks "GET STARTED", that info is passed through as a URL parameter and prefills the email input section with React state. The Rails backend handles all validations and passes any error messages to the frontend to help the user complete the process. A user's password is then salted and hashed by BCrypt to either create their password digest which is then stored in the PostGres database (sign up), or compared with an existing password digest (log in). Upon successful login or signup, React Router grants the user access to all of Fauxflix's protected routes. A user can log out by hovering over the profile pic and clicking "Log Out."
 
 ## Display Videos by Genre
 
@@ -40,6 +40,33 @@ All the same functionality of the videos in the carousel is available in the vid
 
 
 # Challenges
+
+## Play Video on Hover
+
+As you hover over each video tile, you'll notice it expands to display the video description and automatically starts to play. The former part was easy to manage with SCSS, but the latter required some out of the box thinking with React createRef (or useRef in React Hooks). I needed a way to refer to each specific video on MouseEnter and on MouseLeave, but regular DOM manipulation kept playing all videos instead of the one I was hovering over. I solved this with createRef. 
+
+```JavaScript 
+constructor(props) {
+  super(props)
+  this.videoElement = React.createRef();
+```
+```JavaScript
+<div className="videoSlideContainer" 
+  onMouseEnter={this.playVideo} 
+  onMouseLeave={this.stopVideo}
+  ref={this.videoContainer}>
+  <Link to={`/videos/${this.props.video.id}`}>
+      <video 
+          ref={this.videoElement}
+          loop={true}
+          muted={true}
+          poster={this.props.video.thumbnail} 
+          src={this.props.video.video} 
+          className="carouselVideo" />
+  </Link>
+```
+
+## Dynamic Navi Background on Homepage
 
 I had a tough time mimicking the Netflix navi bar. On the homepage, its background changes from a slight black gradient to solid black after you scroll 50 pixels down, then reverts to a gradient when you scroll back up. I managed to get this functionality by adding an event listener and adjusting React state. In the navi component's HTML, I conditionally add "active" to the component's className so the SCSS can change the background color.
 

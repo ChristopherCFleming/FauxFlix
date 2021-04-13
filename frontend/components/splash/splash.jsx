@@ -22,7 +22,7 @@ class SplashPage extends React.Component {
 
     handleAccordionClick(accordionNumber) { 
         return event => {
-            event.preventDefault()
+            // event.preventDefault()
             if (this.state.activeAccordion === accordionNumber) {
                 this.setState({activeAccordion: -1})
             } else {
