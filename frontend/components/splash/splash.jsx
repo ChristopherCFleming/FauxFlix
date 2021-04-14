@@ -22,7 +22,6 @@ class SplashPage extends React.Component {
 
     handleAccordionClick(accordionNumber) { 
         return event => {
-            // event.preventDefault()
             if (this.state.activeAccordion === accordionNumber) {
                 this.setState({activeAccordion: -1})
             } else {
@@ -63,7 +62,7 @@ class SplashPage extends React.Component {
                         </div>
                         <div className="thirdSubsectionContainer subsection">
                             <div className="thirdSubsectionText">
-                                <h1>Pure JavaScript Project:</h1>
+                                <h1>Work In Progress:</h1>
                                 <p className="description">Get Gov connects users with their representatives at all levels of government, increasing civic engagement.</p>
                             </div>
                             <a href="https://christophercfleming.github.io/Get-Gov/" target="_blank">
@@ -99,7 +98,7 @@ class SplashPage extends React.Component {
                                             <button type="button" className={`status${this.state.activeAccordion === 3 ? "--active" : ""} accordion__button`} onClick={this.handleAccordionClick(3)}>Other Projects?
                                                 <svg viewBox="0 0 26 26" className="svg-icon svg-icon-thin-x svg-closed" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                                                 <div className="accordion__content">
-                                                    <p>Get Gov is a pure JavaScript website that can connect you with your representatives at all levels of government.<br /><br />Pomegranate is a MERN web app that helps reduce food waste by finding recipes for you to try based on the ingredients already in your kitchen.<br/><br/>Feel free to check them out by navigating to my portfolio site in the footer below.</p>
+                                                    <p>Pomegranate is a MERN web app that helps reduce food waste by finding recipes for you to try based on the ingredients already in your kitchen.<br/><br/>Though it's still a work in progress, Get Gov is a pure JavaScript website that can connect you with your representatives at all levels of government.<br /><br />Find them in my portfolio site (link in footer) or by clicking on the pictures above.</p>
                                                 </div>
                                             </button>
                                         </div>

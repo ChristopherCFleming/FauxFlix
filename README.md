@@ -43,7 +43,7 @@ All the same functionality of the videos in the carousel is available in the vid
 
 ## Play Video on Hover
 
-As you hover over each video tile, you'll notice it expands to display the video description and automatically starts to play. The former part was easy to manage with SCSS, but the latter required some out of the box thinking with React createRef (or useRef in React Hooks). I needed a way to refer to each specific video on MouseEnter and on MouseLeave, but regular DOM manipulation kept playing all videos instead of the one I was hovering over. I solved this with createRef. 
+As you hover over each video tile, you'll notice it expands to display the video description and automatically plays the video. The former part was easy to manage with SCSS, but the latter required some out of the box thinking with React createRef (or useRef in React Hooks). I needed a way to refer to each specific video on MouseEnter and on MouseLeave, but regular DOM manipulation couldn't cut it.
 
 ```JavaScript 
 constructor(props) {
@@ -64,6 +64,72 @@ constructor(props) {
           src={this.props.video.video} 
           className="carouselVideo" />
   </Link>
+```
+
+## Styling Genre Carousels
+
+Everything about the Swiper API carousel excited me: it can be used with touch controls or a regular mouse, it automatically creates virtual clones of your items if you reach the end, it lazy loads everything, it looks clean, and it has good documentation. Unfortunately, it gave me buggy behavior when I imported it. Eventually, I found out the React compiler was getting confused by the style page I wrote and the styles in the swiper component. To solve this, I moved all the files together and leveraged the superior targeting ability of SCSS to transform everything into the Netflix style. 
+
+```JavaScript 
+.carousel {
+        
+    p {
+        color: #e5e5e5;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 2rem 0 .5rem .5rem;
+    }
+        
+    .swiper-container {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        z-index: 0;
+        padding: 0 2.5vw 0 2.5vw;
+
+        .swiper-button-prev, 
+        .swiper-button-next {
+            font-family: swiper-icons;
+            color: white;
+            height: 11vw;
+            width: 70px;
+            position: absolute;
+            text-decoration: none;
+            text-align: center;
+            top: 0;
+            z-index: 4;
+            opacity: 0;
+            transition: .2s;
+        }
+        
+        .swiper-button-prev {
+            left: 0;
+        
+            &:after {
+                content: 'prev';
+                font-size: 30px;
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, .5);
+                font-size: 40px;
+            }
+        }
+        
+        .swiper-button-next {
+            right: 0;
+        
+            &:after {
+                content: 'next';
+                font-size: 30px;
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, .5);
+                font-size: 40px;
+            }
+        }
+}
 ```
 
 ## Dynamic Navi Background on Homepage
@@ -100,3 +166,5 @@ componentWillUnmount() {
 
 * Modal to display detailed video information on click before video show page
 * Cache videos to reduce pull on Amazon AWS
+* Make mobile friendly
+* Currently, only the banner video uses React hooks. I'd like to update all components to use them.
