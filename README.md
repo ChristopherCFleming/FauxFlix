@@ -167,4 +167,4 @@ componentWillUnmount() {
 * Modal to display detailed video information on click before video show page
 * Cache videos to reduce pull on Amazon AWS
 * Make mobile friendly
-* Currently, only the banner video uses React hooks. I'd like to update all components to use them.
+* Currently, only the banner video and genre carousels use React hooks. I'd like to update all components to use them.
