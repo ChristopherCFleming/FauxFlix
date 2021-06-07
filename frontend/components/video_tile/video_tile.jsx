@@ -9,6 +9,7 @@ class VideoTile extends React.Component {
         this.videoContainer = React.createRef();
         this.state = {
             muteStatus : true,
+            hovering : false,
         };
         this.stopVideo = this.stopVideo.bind(this);
         this.playVideo = this.playVideo.bind(this);
@@ -17,8 +18,7 @@ class VideoTile extends React.Component {
         this.addToList = this.addToList.bind(this);
         this.deleteListItem = this.deleteListItem.bind(this);
         // testing the two below to throttle and delay video playback
-        this.testPlay = this.testPlay.bind(this);
-        this.throttle = this.throttle.bind(this);
+        this.throttlePlay = this.throttlePlay.bind(this);
     }
 
 
@@ -50,11 +50,13 @@ class VideoTile extends React.Component {
         }
     }
 
-    playVideo(e) {
-        this.videoElement.current.play();
+    playVideo() {
+        if (this.state.hovering === true) {
+            this.videoElement.current.play();
+        }
     }
 
-    stopVideo(e) {
+    stopVideo() {
         this.videoElement.current.load(); 
     }
 
@@ -63,25 +65,15 @@ class VideoTile extends React.Component {
     }
 
 
-    // These Last two functions are only to try and throttle video play.
-    throttle(target) {
-        // if (currentlyHoveringOver.includes("video.carouselVideo")) {
-        //     console.log("Got it!");
-        // } else {
-        //     console.log("Ref not found in array");
-        // }
 
-        console.log(target);
-        
+    throttlePlay() {
+        this.setState({
+                hovering: true
+            });
+        setTimeout(this.playVideo, 1000)
     }
     
 
-    testPlay(e) {
-        setTimeout( function() {
-            const target = e.currentTarget;
-            console.log(target)
-        }, 1000)
-    }
 
     render() {
 
@@ -89,7 +81,7 @@ class VideoTile extends React.Component {
         if (this.props.video) {
             return (
                 <div className="videoSlideContainer" 
-                    onMouseEnter={this.playVideo} 
+                    onMouseEnter={this.throttlePlay} 
                     onMouseLeave={this.stopVideo}
                     ref={this.videoContainer}>
                     <Link to={`/videos/${this.props.video.id}`}>
