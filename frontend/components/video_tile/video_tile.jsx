@@ -10,6 +10,7 @@ class VideoTile extends React.Component {
         this.state = {
             muteStatus : true,
             hovering : false,
+            videoPlaying: 0,
         };
         this.stopVideo = this.stopVideo.bind(this);
         this.playVideo = this.playVideo.bind(this);
@@ -53,11 +54,21 @@ class VideoTile extends React.Component {
     playVideo() {
         if (this.state.hovering === true) {
             this.videoElement.current.play();
+            this.setState({
+                videoPlaying: this.props.video.id
+            });
+            console.log(this.state.videoPlaying);
         }
     }
 
     stopVideo() {
-        this.videoElement.current.load(); 
+        this.setState({
+            hovering: false
+        });
+
+        if (this.state.videoPlaying === this.props.video.id) {
+            this.videoElement.current.load(); 
+        }
     }
 
     shortenDescription(description) {
