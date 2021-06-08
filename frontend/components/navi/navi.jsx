@@ -18,6 +18,7 @@ class Navi extends React.Component {
         this.endSession = this.endSession.bind(this);
         this.updateValue = this.updateValue.bind(this);
         this.test = this.test.bind(this);
+        this.debounce = this.debounce.bind(this);
     }
 
     handleScroll() {
@@ -59,7 +60,7 @@ class Navi extends React.Component {
         }
     }
 
-    search(e) {
+    search() {
         if (this.state.queryString === '') {
             this.props.history.push('/browse');
         } else {
@@ -68,18 +69,29 @@ class Navi extends React.Component {
     }
 
     test(event) {
-        // event.persist();
         console.log(event);
     }
 
-    searchDebounce(e) {
-        // e.persist();
-        if (timer) {
-            clearTimeout(timer);
-        }
-        let timer = null;
-        timer = setTimeout(() => this.search(e), 3000);
+    // searchDebounce(e) {
+    //     if (timer) {
+    //         clearTimeout(timer);
+    //     }
+    //     let timer = null;
+    //     timer = setTimeout(() => this.search(e), 3000);
+    // }
+
+    searchDebounce() {
+        this.debounce(() => this.search());
     }
+
+    debounce(func, timeout = 3000){
+        let timer;
+        return (...args) => {
+            clearTimeout(timer);
+            timer = setTimeout(() => { func.apply(this, args); }, timeout);
+        };
+    }
+
 
     endSession() {
         this.props.logout();
