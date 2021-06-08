@@ -14,11 +14,8 @@ class Navi extends React.Component {
         this.handleClickOpen = this.handleClickOpen.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.search = this.search.bind(this);
-        this.searchDebounce = this.searchDebounce.bind(this);
         this.endSession = this.endSession.bind(this);
         this.updateValue = this.updateValue.bind(this);
-        this.test = this.test.bind(this);
-        this.debounce = this.debounce.bind(this);
     }
 
     handleScroll() {
@@ -68,31 +65,6 @@ class Navi extends React.Component {
         }
     }
 
-    test(event) {
-        console.log(event);
-    }
-
-    // searchDebounce(e) {
-    //     if (timer) {
-    //         clearTimeout(timer);
-    //     }
-    //     let timer = null;
-    //     timer = setTimeout(() => this.search(e), 3000);
-    // }
-
-    searchDebounce() {
-        this.debounce(() => this.search());
-    }
-
-    debounce(func, timeout = 3000){
-        let timer;
-        return (...args) => {
-            clearTimeout(timer);
-            timer = setTimeout(() => { func.apply(this, args); }, timeout);
-        };
-    }
-
-
     endSession() {
         this.props.logout();
     }
@@ -121,9 +93,7 @@ class Navi extends React.Component {
                                         placeholder="Title, Description"
                                         autoFocus
                                         value={this.state.queryString}
-                                        onInput={this.searchDebounce}
                                         ref={this.searchInput}>
-                                        
                                     </input>
                                     <i onClick={this.handleClickOpen} className={this.state.searchBarOpen ? 'fas fa-search openedIcon' : 'fas fa-search'}/>
                                     <i onClick={this.handleClickClose} id="exitIcon" className={this.state.searchBarOpen ? 'far fa-times-circle' : ''}></i>
