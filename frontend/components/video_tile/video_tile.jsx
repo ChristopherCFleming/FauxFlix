@@ -57,7 +57,6 @@ class VideoTile extends React.Component {
             this.setState({
                 videoPlaying: this.props.video.id
             });
-            console.log(this.state.videoPlaying);
         }
     }
 
@@ -87,8 +86,6 @@ class VideoTile extends React.Component {
 
 
     render() {
-
-
         if (this.props.video) {
             return (
                 <div className="videoSlideContainer" 
