@@ -18,7 +18,6 @@ class VideoTile extends React.Component {
         this.toggleMute = this.toggleMute.bind(this);
         this.addToList = this.addToList.bind(this);
         this.deleteListItem = this.deleteListItem.bind(this);
-        // testing the two below to throttle and delay video playback
         this.throttlePlay = this.throttlePlay.bind(this);
     }
 
@@ -64,9 +63,11 @@ class VideoTile extends React.Component {
         this.setState({
             hovering: false
         });
-
         if (this.state.videoPlaying === this.props.video.id) {
             this.videoElement.current.load(); 
+            this.setState({
+                videoPlaying: 0
+            });
         }
     }
 
