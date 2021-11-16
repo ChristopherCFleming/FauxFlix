@@ -65,7 +65,7 @@ class SplashPage extends React.Component {
                                 <h1>Work In Progress:</h1>
                                 <p className="description">Get Gov connects users with their representatives at all levels of government, increasing civic engagement.</p>
                             </div>
-                            <a href="https://christophercfleming.github.io/Get-Gov/" target="_blank">
+                            <a href="https://github.com/ChristopherCFleming" target="_blank">
                                 <img src={window.allDevicesURL} alt="allDevices" className="allDevices"/>
                             </a>
                         </div>
