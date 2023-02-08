@@ -13,7 +13,6 @@ import SearchContainer from './search/search_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-    
     <main className="entireApp">
         <Switch>
             <AuthRoute exact path="/" component={SplashContainer} />
