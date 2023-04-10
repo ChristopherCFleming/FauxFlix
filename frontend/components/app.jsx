@@ -24,7 +24,6 @@ const App = () => (
             <ProtectedRoute path="/videos/:id" component={VideoContainer} />
             <ProtectedRoute path="/search" component={SearchContainer} />
         </Switch>
-        
     </main>
 
     
